@@ -1,0 +1,1347 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro-Health Poddębice — Centrum Sportu i Usług Prozdrowotnych</title>
+<meta name="description" content="Centrum sportu i usług prozdrowotnych w Poddębicach: treningi personalne i grupowe, masaże, podologia, fizjoterapia i szkoła karate z medalami Mistrzostw Polski.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pro-Health Poddębice">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Pro-Health Poddębice — Ruch, dotyk i stopy — jedno miejsce, cały człowiek">
+<meta property="og:description" content="Centrum sportu i usług prozdrowotnych: treningi personalne i grupowe, masaże, podologia, fizjoterapia i szkoła karate z medalami Mistrzostw Polski. Sienkiewicza 48, Poddębice.">
+<meta property="og:image" content="zdjecia/hero_ph.jpg">
+<meta property="og:image:alt" content="Pro-Health Poddębice">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pro-Health Poddębice — Centrum Sportu i Usług Prozdrowotnych">
+<meta name="twitter:description" content="Treningi, masaże, podologia, fizjoterapia i karate. Sienkiewicza 48, Poddębice.">
+<meta name="twitter:image" content="zdjecia/hero_ph.jpg">
+<link rel="icon" href="logo_ph.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f5f2; --panel:#ffffff; --ink:#111418; --muted:#6b7078;
+    --sage:#0e2a3b; --sage-d:#071b28; --sage-tint:#e8eef2; --sand:#f0ede6; --clay:#c9a25b; --gold:#c9a25b;
+    --rose:#f4e9d6; --lav:#e3e8ee;
+    --line:#e3e1db; --maxw:1200px; --r:18px;
+    --serif:"Fraunces","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"JetBrains Mono","Space Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0c1216;--panel:#121a21;--ink:#edf0f2;--muted:#98a2ab;--sage:#4a7a97;--sage-d:#8fb4c9;
+      --sage-tint:#16222b;--sand:#131b21;--clay:#d4af6a;--gold:#d4af6a;--rose:#2a2418;--lav:#1c2630;--line:#232e37;}
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.13;letter-spacing:-.01em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:inherit}img{max-width:100%;display:block}
+  .eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-d);font-weight:700;font-family:var(--mono)}
+  .btn{display:inline-block;padding:14px 28px;border-radius:100px;font-weight:600;text-decoration:none;cursor:pointer;border:none;font-size:.95rem;transition:.2s;font-family:var(--sans)}
+  .btn-primary{background:var(--sage);color:#fff;box-shadow:0 8px 24px -12px var(--sage)}
+  .btn-primary:hover{background:var(--sage-d);transform:translateY(-2px)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--sage);color:var(--sage-d)}
+  .btn-light{background:#fff;color:var(--sage-d)}
+  .btn-gold{background:var(--gold);color:#fff}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:16px;height:72px}
+  .brand{display:flex;align-items:center;gap:10px;cursor:pointer}
+  .brand img{width:34px;height:34px}
+  .brand span{font-family:var(--serif);font-weight:700;font-size:1.28rem;letter-spacing:-.02em}
+  .brand span em{color:var(--sage-d);font-style:normal}
+  .tabs{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+  .tabs button{background:none;border:none;font:inherit;font-size:.9rem;color:var(--muted);padding:8px 12px;border-radius:100px;cursor:pointer;transition:.15s}
+  .tabs button:hover{color:var(--ink);background:var(--sage-tint)}
+  .tabs button.active{color:var(--sage-d);font-weight:700;background:var(--sage-tint)}
+  .burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;font-size:1.3rem;color:var(--ink);line-height:1}
+  @media(max-width:1100px){
+    nav .wrap{height:64px;flex-wrap:nowrap}
+    .burger{display:block}
+    .tabs{position:absolute;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 16px 16px;margin:0;display:none;box-shadow:0 16px 30px -20px rgba(0,0,0,.3)}
+    .tabs.open{display:flex}
+    .tabs button{width:100%;text-align:left;padding:14px 12px;font-size:1rem;border-bottom:1px solid var(--line);border-radius:0}
+    .tabs button:last-child{border-bottom:none}
+  }
+  @media(max-width:700px){
+    .hero{min-height:78vh}
+    .hero .trust{gap:10px;font-size:.84rem;flex-direction:column}
+    .para{background-attachment:scroll;padding:64px 0}
+    .modal .head{flex-direction:column;text-align:center;gap:14px;padding:22px 20px}
+    .modal .head img{width:100px;height:118px}
+    .modal .body{padding:22px 20px}
+    section{padding:52px 0}
+    .band{padding:36px 22px;border-radius:18px}
+    .stat .n{font-size:2rem}
+    .gallery img{height:120px}
+  }
+  /* PANEL */
+  .panel{display:none}.panel.active{display:block}
+  section{padding:70px 0}
+  .sec-head{max-width:64ch;margin-bottom:38px}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin:10px 0}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+  .lead{color:var(--muted);font-size:1.12rem;max-width:60ch}
+  /* REVEAL animacja */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  /* HERO z tłem + kenburns */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero .bgwrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hero .bgwrap img{width:100%;height:100%;object-fit:cover;animation:kenburns 26s ease-in-out infinite alternate}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(118deg,rgba(7,27,40,.90) 0%,rgba(9,32,47,.55) 52%,rgba(4,12,18,.82) 100%)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.08;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+  .hero .wrap{position:relative;z-index:3;padding:60px 24px}
+  @keyframes kenburns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.1) translate(-2%,-2%)}}
+  .hero .eyebrow{color:#d9b877}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.8rem);max-width:19ch;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+  .hero .lead{color:rgba(255,255,255,.92);font-size:1.22rem;margin:22px 0 30px;max-width:58ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:42px;font-size:.86rem;color:rgba(255,255,255,.82);font-family:var(--mono);letter-spacing:.04em}
+  .hero .trust b{color:#d9b877}
+  /* MARQUEE usług */
+  .marquee{background:var(--sage-d);color:rgba(255,255,255,.85);overflow:hidden;padding:13px 0;border-top:1px solid rgba(201,162,91,.35);border-bottom:1px solid rgba(201,162,91,.35)}
+  .marquee .track{display:flex;gap:0;white-space:nowrap;width:max-content;animation:marq 42s linear infinite}
+  .marquee span{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;padding:0 26px;position:relative}
+  .marquee span::after{content:"";position:absolute;right:-2px;top:50%;width:4px;height:4px;border-radius:50%;background:var(--gold);transform:translateY(-50%)}
+  @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  /* PARALLAX band */
+  .para{position:relative;color:#fff;padding:96px 0;background-size:cover;background-position:center;background-attachment:fixed}
+  .para::before{content:"";position:absolute;inset:0;background:rgba(45,48,32,.6)}
+  .para .wrap{position:relative}
+  .para h2{color:#fff;font-size:clamp(1.8rem,4vw,2.7rem);max-width:20ch}
+  .para p{color:rgba(255,255,255,.9);max-width:56ch;margin-top:14px}
+  @media(max-width:820px){.para{background-attachment:scroll}}
+  /* GRID */
+  .grid{display:grid;gap:20px}
+  .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:960px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.2s}
+  .card h3{font-size:1.2rem;margin-bottom:8px}.card p{color:var(--muted);font-size:.95rem}
+  .tag{display:inline-block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-d);font-weight:700;margin-bottom:6px}
+  .tag.gold{color:var(--gold)}.tag.clay{color:var(--clay)}
+  .hoverable{cursor:pointer;position:relative}
+  .hoverable::before{content:"";position:absolute;top:0;left:26px;right:26px;height:2px;border-radius:2px;background:var(--gold);opacity:0;transition:.25s}
+  .hoverable:hover::before{opacity:1}
+  .hoverable:hover{transform:translateY(-4px);box-shadow:0 20px 44px -24px rgba(14,42,59,.38);border-color:var(--sage)}
+  .soft{background:var(--sand)}
+  /* GALERIA strip */
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+  .gallery img{width:100%;height:150px;object-fit:cover;border-radius:12px;transition:.35s;filter:saturate(.9)}
+  .gallery img:hover{transform:scale(1.03);filter:sepia(.4) hue-rotate(168deg) saturate(1.5)}
+  @media(max-width:900px){.gallery{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:520px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  /* TEAM */
+  .team-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:.2s}
+  .team-card:hover{transform:translateY(-6px);box-shadow:0 26px 48px -26px rgba(80,70,40,.5)}
+  .team-card .ph{aspect-ratio:3/3.5;overflow:hidden;background:var(--sand)}
+  .team-card .ph img{width:100%;height:100%;object-fit:cover;transition:.55s;filter:saturate(.92) contrast(1.02)}
+  .team-card:hover .ph img{transform:scale(1.05);filter:sepia(.45) hue-rotate(168deg) saturate(1.5) contrast(1.04)}
+  .team-card .b{padding:18px 20px}
+  .team-card h3{font-size:1.14rem}
+  .team-card .role{color:var(--sage-d);font-size:.82rem;font-weight:600;margin:3px 0 8px;font-family:var(--sans)}
+  .team-card .intro{font-size:.86rem;color:var(--muted)}
+  /* MODAL */
+  .modal-bg{position:fixed;inset:0;background:rgba(30,28,18,.6);backdrop-filter:blur(5px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto}
+  .modal-bg.open{display:flex}
+  .modal{background:var(--bg);border-radius:22px;max-width:780px;width:100%;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.5)}
+  .modal .head{display:flex;gap:22px;padding:28px 30px;background:var(--sage-tint);align-items:center}
+  .modal .head img{width:118px;height:140px;object-fit:cover;border-radius:14px;flex:none}
+  .modal .head h2{font-size:1.75rem}
+  .modal .head .role{color:var(--sage-d);font-weight:600;margin-top:4px;font-family:var(--sans)}
+  .modal .body{padding:26px 30px}
+  .modal .body p{color:var(--ink);margin-bottom:13px}
+  .modal .body h4{margin:18px 0 8px;font-size:1.05rem}
+  .modal ul{margin:0 0 14px 18px;color:var(--muted)}.modal ul li{margin-bottom:6px}
+  .modal .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .modal .links a{font-size:.85rem;padding:8px 14px;border-radius:100px;background:var(--panel);border:1px solid var(--line);text-decoration:none}
+  .modal .links a:hover{border-color:var(--sage);color:var(--sage-d)}
+  .modal .close{float:right;margin:14px 14px -42px auto;background:var(--panel);border:1px solid var(--line);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.1rem;color:var(--ink);position:relative;z-index:3}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .chip{font-size:.72rem;background:var(--panel);border:1px solid var(--line);padding:4px 10px;border-radius:100px;color:var(--muted)}
+  /* EBOOK */
+  .ebook{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:.2s;border-left:4px solid var(--gold)}
+  .ebook:hover{transform:translateY(-3px);box-shadow:0 16px 34px -24px rgba(80,70,40,.5)}
+  .ebook .num{font-size:.72rem;color:var(--gold);font-weight:700}
+  .ebook h3{font-size:1.05rem;line-height:1.28}.ebook .aut{font-size:.82rem;color:var(--muted)}
+  .ebook .peek{font-size:.8rem;color:var(--sage-d);font-weight:600;margin-top:auto}
+  /* SHOP */
+  .shop-note{background:var(--sand);border:1px dashed var(--gold);border-radius:14px;padding:16px 20px;font-size:.9rem;color:var(--muted);margin-bottom:26px}
+  .prod{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+  .prod:hover{transform:translateY(-4px);box-shadow:0 18px 38px -26px rgba(80,70,40,.5)}
+  .prod .img{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--sage-tint)}
+  .prod .b{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .prod h3{font-size:1.02rem}.prod .desc{font-size:.84rem;color:var(--muted);flex:1}
+  .prod .row{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+  .prod .price{font-weight:700;font-size:1.05rem;font-family:var(--serif)}
+  .prod button{font-size:.82rem;padding:8px 14px;border-radius:100px;border:1px solid var(--sage);color:var(--sage-d);background:transparent;cursor:pointer}
+  .prod button:hover{background:var(--sage);color:#fff}
+  /* SIGNATURE */
+  .sig{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;border-top:4px solid var(--sage)}
+  .sig .code{font-family:var(--serif);font-size:1.4rem;color:var(--sage-d)}
+  .sig h3{font-size:1.15rem;margin:6px 0}
+  .sig .who{font-size:.76rem;color:var(--clay);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  .sig p{font-size:.9rem;color:var(--muted);margin-top:8px}
+  /* STEPS */
+  .step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .step .n{font-family:var(--serif);font-size:2.1rem;color:var(--sage);flex:none;width:58px}
+  .step h3{font-size:1.15rem}.step p{color:var(--muted);font-size:.95rem;margin-top:4px}
+  /* PRICING */
+  .ptable{display:grid;gap:26px}
+  .pblock h3{font-size:1.15rem;margin-bottom:14px;color:var(--sage-d)}
+  .prows{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:820px){.prows{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.prows{grid-template-columns:1fr}}
+  .prow{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-align:center}
+  .prow.hi{border-color:var(--gold)}
+  .prow .amt{font-family:var(--serif);font-size:1.5rem;margin:4px 0}
+  .prow small{color:var(--muted);display:block;font-size:.8rem}
+  /* BAND */
+  .band{background:var(--sage);color:#fff;border-radius:26px;padding:56px;text-align:center}
+  .band h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem)}
+  .band p{color:rgba(255,255,255,.92);max-width:52ch;margin:14px auto 24px}
+  .band .btn{background:#fff;color:var(--sage-d)}
+  /* FOOTER */
+  footer{padding:56px 0 40px;border-top:1px solid var(--line);background:var(--panel);color:var(--muted);font-size:.92rem}
+  footer .cols{display:flex;flex-wrap:wrap;gap:38px;justify-content:space-between}
+  footer b{color:var(--ink);display:block;margin-bottom:8px;font-family:var(--serif)}
+  footer a{color:var(--muted);text-decoration:none;display:block;margin:5px 0}
+  footer a:hover{color:var(--sage-d)}
+  .soc a{display:inline-block;margin:0 12px 0 0;font-size:1.5rem}
+  /* === ANIMACJE ATV === */
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--sage),var(--gold));z-index:99;transition:width .15s linear}
+  nav{transition:box-shadow .3s, padding .3s}
+  nav.shrunk{box-shadow:0 6px 24px -14px rgba(80,70,40,.35)}
+  nav.shrunk .wrap{height:56px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+  @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat .n{font-family:var(--serif);font-size:2.6rem;color:var(--sage-d)}
+  .stat .l{font-size:.82rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .sig{position:relative;overflow:hidden}
+  .sig::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);transition:none}
+  .sig:hover::after{left:130%;transition:left .7s ease}
+  .gallery img{cursor:zoom-in}
+  .lb{position:fixed;inset:0;background:rgba(25,24,18,.88);z-index:120;display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
+  .lb.open{display:flex}
+  .lb img{max-width:92vw;max-height:88vh;border-radius:14px;box-shadow:0 40px 90px rgba(0,0,0,.5);animation:lbin .3s ease}
+  @keyframes lbin{from{transform:scale(.94);opacity:0}to{transform:none;opacity:1}}
+  .fut{background:linear-gradient(150deg,var(--lav),var(--sage-tint));border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .fut h3{font-size:1.12rem;margin:6px 0}
+  .fut p{font-size:.9rem;color:var(--muted)}
+  /* FAQ akordeon */
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;background:none;border:none;text-align:left;font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--ink);padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq-q:hover{color:var(--sage-d)}
+  .faq-q span{color:var(--sage);font-size:1.5rem;flex:none;font-family:var(--sans)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease,padding .3s;color:var(--muted);font-size:.98rem}
+  .faq-a.open{max-height:400px;padding-bottom:20px}
+  .wcard{animation:cardin .7s ease backwards}
+  @keyframes cardin{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+  .modal{animation:modalin .32s cubic-bezier(.2,.9,.3,1.2)}
+  @keyframes modalin{from{opacity:0;transform:translateY(26px) scale(.96)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}.hero .bgwrap img{animation:none}.sig::after{display:none}.wcard,.modal{animation:none}.marquee .track{animation:none}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}.chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 14px;border-radius:999px;font-size:13px;cursor:pointer}.chip.on{background:var(--sage);color:#fff;border-color:var(--sage)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<nav><div class="wrap">
+  <div class="brand" onclick="tab('start')"><img src="logo_ph.svg" alt="Pro-Health" style="width:auto;height:40px"><span>PRO-HEALTH</span></div>
+  <button class="burger" id="burger" aria-label="Menu" onclick="document.getElementById('tabs').classList.toggle('open')">☰</button>
+  <div class="tabs" id="tabs"></div>
+</div></nav>
+
+<!-- ===== START ===== -->
+<div class="panel active" id="start">
+  <header class="hero">
+    <div class="bgwrap"><img src="zdjecia/hero_ph.jpg" alt="Pro-Health Poddębice"></div>
+    <div class="wrap">
+      <div class="eyebrow">PODDĘBICE · SIENKIEWICZA 48 · OD 2010</div>
+      <h1>Ruch, dotyk i stopy — jedno miejsce, cały człowiek.</h1>
+      <p class="lead">Centrum sportu i usług prozdrowotnych: treningi personalne i grupowe, masaże, podologia, fizjoterapia i szkoła karate z medalami Mistrzostw Polski.</p>
+      <div class="cta">
+        <a class="btn btn-primary" onclick="tab('zajecia')">Zobacz usługi</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="tel:+48609037081">Umów wizytę: 609 037 081</a>
+      </div>
+      <div class="trust">
+        <div><b>16 lat</b> w Poddębicach</div>
+        <div><b>8 specjalistów</b> w zespole</div>
+        <div><b>Mistrzostwa Polski 2026</b> — 4 złota</div>
+        <div><b>Malta Cup 2026</b> — mistrzyni</div>
+        <div><b>12 edycji</b> Turnieju Małego Karateki</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true"><div class="track">
+    <span>Masaż klasyczny</span><span>Masaż leczniczy</span><span>Bańka chińska</span><span>Kobido</span><span>Gorące kamienie</span><span>Podologia</span><span>Klamra na paznokieć</span><span>Trening personalny</span><span>Babska siła</span><span>Fizjoterapia</span><span>Karate dzieci</span><span>Turniej Małego Karateki</span>
+    <span>Masaż klasyczny</span><span>Masaż leczniczy</span><span>Bańka chińska</span><span>Kobido</span><span>Gorące kamienie</span><span>Podologia</span><span>Klamra na paznokieć</span><span>Trening personalny</span><span>Babska siła</span><span>Fizjoterapia</span><span>Karate dzieci</span><span>Turniej Małego Karateki</span>
+  </div></div>
+
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Dlaczego my</div><h2>Cztery rzemiosła pod jednym dachem</h2>
+      <p>Jedyne miejsce w promieniu 30 km, które łączy trening personalny, masaż, podologię, fizjoterapię i szkołę karate. Jedna wizyta może obsłużyć całego człowieka — od stóp po plan treningowy.</p></div>
+    <div class="grid g4">
+      <div class="card hoverable" onclick="tab('zajecia')"><div class="tag">Dotyk</div><h3>Masaże</h3><p>Klasyczne, lecznicze i relaksacyjne, bańka chińska, kobido, gorące kamienie — 8 form masażu.</p></div>
+      <div class="card hoverable" onclick="tab('zajecia')"><div class="tag">Stopy</div><h3>Podologia</h3><p>Zabiegi podologiczne, klamry, wrastające paznokcie, brodawki — profesjonalny gabinet.</p></div>
+      <div class="card hoverable" onclick="tab('kursy')"><div class="tag">Ruch</div><h3>Treningi</h3><p>Personalne i grupowe, w tym „babska siła” — z trenerem medycznym w zespole.</p></div>
+      <div class="card hoverable" onclick="tab('kursy')"><div class="tag gold">Droga</div><h3>Karate</h3><p>Szkoła z medalami Mistrzostw Polski i własnym turniejem — 12 edycji cyklu.</p></div>
+    </div>
+  </div></section>
+
+  <div class="para reveal" style="background-image:url('zdjecia/stock/stock_ph_1.jpg')"><div class="wrap">
+    <div class="eyebrow" style="color:#d9b877">Nasza metoda</div>
+    <h2>Ruch + terapia manualna + stopy</h2>
+    <p>Większość dolegliwości, z którymi przychodzą do nas klienci, ma kilka przyczyn naraz: przeciążenie, zaniedbane stopy, brak ruchu, stres. Dlatego pracujemy zespołowo — masażysta, fizjoterapeuta, podolog i trener widzą tego samego człowieka z czterech stron i ustawiają jeden plan.</p>
+  </div></div>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Ścieżki</div><h2>Przyjdź po swoje</h2>
+      <p>Nie musisz wiedzieć, od czego zacząć — wybierz sytuację, a podpowiemy drogę.</p></div>
+    <div class="grid g4">
+      <div class="card"><div class="tag">01</div><h3>Boli plecy od pracy</h3><p>Masaż + fizjoterapia + trening medyczny — „W Dobrych Rękach” i Hubert w jednym miejscu.</p></div>
+      <div class="card"><div class="tag">02</div><h3>Czas na stopy</h3><p>Od odcisków po paznokieć wrastający — gabinet podologiczy z pełnym zakresem zabiegów.</p></div>
+      <div class="card"><div class="tag">03</div><h3>Dziecko ma się ruszać</h3><p>Karate od 5. roku życia: dyscyplina, sprawność i turnieje w rodzinnej atmosferze.</p></div>
+      <div class="card"><div class="tag">04</div><h3>Wrócić do formy</h3><p>Trening personalny dla początkujących i „babska siła” dla kobiet w każdym wieku.</p></div>
+    </div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n" data-n="16">0</div><div class="l">lat w Poddębicach</div></div>
+      <div class="stat"><div class="n" data-n="8">0</div><div class="l">specjalistów w zespole</div></div>
+      <div class="stat"><div class="n" data-n="4">0</div><div class="l">złota MP 2026</div></div>
+      <div class="stat"><div class="n" data-n="12">0</div><div class="l">edycji turnieju</div></div>
+    </div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Nasza przestrzeń</div><h2>Centrum, dojo i gabinety</h2></div>
+    <div class="gallery" id="gallery"></div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Wydarzenia sportowe</div><h2>Sezon 2026 w medalach</h2>
+      <p>Karate to w Pro-Health nie zajęcia dodatkowe — to szkoła mistrzów z własnym turniejem i kadrą medalową.</p></div>
+    <div class="grid g2" style="margin-bottom:34px">
+      <div class="team-card" style="cursor:default">
+        <div class="ph" style="aspect-ratio:16/9"><img src="zdjecia/raw/fb_medale_crop.jpg" alt="Medale Mistrzostw Polski 2026" loading="lazy"></div>
+        <div class="b"><div class="tag">Czerwiec 2026 · Mistrzostwa Polski</div><h3>Cztery złota zespołu</h3>
+          <p>Zawodnicy szkoły zdobyli 4 złote medale Mistrzostw Polski. „Nie odbierałam telefonów gabinetowych — moje pitbulle zdobywały Mistrzostwa Polski” — relacjonowała Maja po zawodach.</p></div>
+      </div>
+      <div class="team-card" style="cursor:default">
+        <div class="ph" style="aspect-ratio:16/9"><img src="zdjecia/raw/fb_malta_podium_crop.jpg" alt="Podium Malta Cup 2026" loading="lazy"></div>
+        <div class="b"><div class="tag">Marzec 2026 · Malta Cup</div><h3>Podium i mistrzyni z własnej drużyny</h3>
+          <p>Malta Cup 2026 przyniósł medale kadrze — w tym złoto Oliwii Staniak, zawodniczki, która dziś pracuje w zespole jako masażystka. Ścieżka „zawodnik → instruktor” działa.</p></div>
+      </div>
+    </div>
+    <div class="card soft">
+      <div class="tag">XII edycja · 30 maja 2026</div>
+      <h3 style="font-size:1.4rem">Turniej Małego Karateki — impreza, którą prowadzimy od 12 lat</h3>
+      <p style="margin-top:10px">Cykliczny turniej dla najmłodszych karateków, organizowany w Uniejowie przez Maię Ostrowską-Gralkę. Jubileuszowa, dwunasta edycja odbyła się 30 maja 2026; dziesiąta zgromadziła <b>136 zawodników z 6 klubów</b>. Stałymi partnerami są Gmina Uniejów i Termy Uniejów.</p>
+      <p style="margin-top:10px">Turniej to dla dzieci pierwszy start w bezpiecznych warunkach, a dla rodziców — dowód, że klub myśli o rozwoju, nie tylko o składkach. Informacje o kolejnej edycji: <b>609 037 081</b> i profil klubu na Facebooku.</p>
+    </div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Opinie</div><h2>Co mówią o nas klienci</h2>
+      <p>Realne opinie z Facebooka — kolejne zbieramy po naprawie profilu Google.</p></div>
+    <div class="grid g4" id="opinie"></div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">FAQ</div><h2>Najczęstsze pytania</h2>
+      <p>Wszystko, co warto wiedzieć przed pierwszą wizytą — od masażu po karate.</p></div>
+    <div id="faq"></div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap"><div class="band">
+    <h2>Umów wizytę lub trening</h2>
+    <p>Zadzwoń — doradzimy, czy zacząć od masażu, zabiegu podologicznego, fizjoterapii czy treningu. Razem ułożymy plan.</p>
+    <a class="btn" href="tel:+48609037081">Zadzwoń: 609 037 081</a>
+  </div></div></section>
+</div>
+
+<!-- ===== ZAJECIA ===== -->
+<div class="panel" id="zajecia">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Oferta gabinetu i sali</div><h2>Usługi</h2>
+      <p>Wszystkie pozycje z cennika z 1 września 2026 — kliknij kartę, by zobaczyć przebieg zabiegu, czas, cenę i osobę wykonującą. Płatność na miejscu: gotówka lub karta.</p></div>
+    <div class="grid g3" id="classes"></div>
+  </div></section>
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Cennik</div><h2>Ceny z gabarytu centrum</h2>
+      <p>Pełny cennik masażu i podologii obowiązujący od 1.09.2026. Pozycje „po konsultacji” wyceniamy indywidualnie — bez ukrytych dopłat.</p></div>
+    <div class="ptable">
+      <div class="pblock"><h3>Masaże</h3><div class="prows">
+        <div class="prow"><small>Klasyczny / leczniczy / relaksacyjny — plecy</small><div class="amt">150 zł</div><small>45 min</small></div>
+        <div class="prow"><small>Klasyczny / leczniczy / relaksacyjny — nogi i plecy</small><div class="amt">150 zł</div><small>45 min</small></div>
+        <div class="prow hi"><small>Klasyczny / leczniczy / relaksacyjny — całe ciało</small><div class="amt">180 zł</div><small>60 min</small></div>
+        <div class="prow"><small>Bańka chińska — nogi</small><div class="amt">120 zł</div><small>30 min</small></div>
+        <div class="prow"><small>Bańka chińska — całe ciało</small><div class="amt">170 zł</div><small>55 min</small></div>
+        <div class="prow"><small>Kobido (twarz)</small><div class="amt">150 zł</div><small>55 min</small></div>
+        <div class="prow"><small>Gorące kamienie — plecy</small><div class="amt">150 zł</div><small>45 min</small></div>
+        <div class="prow"><small>Gorące kamienie — całe ciało</small><div class="amt">180 zł</div><small>60 min</small></div>
+      </div></div>
+      <div class="pblock"><h3>Podologia</h3><div class="prows">
+        <div class="prow hi"><small>Podstawowy zabieg podologiczny</small><div class="amt">180 zł</div><small>paznokcie, pięty, maska, masaż</small></div>
+        <div class="prow"><small>Opracowanie podeszew / odciski (z maską i masażem)</small><div class="amt">150 zł</div><small>—</small></div>
+        <div class="prow"><small>Usunięcie odcisków</small><div class="amt">80–120 zł</div><small>wg liczby zmian</small></div>
+        <div class="prow"><small>Klamra / przełożenie</small><div class="amt">150 zł</div><small>2 klamry 250 zł</small></div>
+        <div class="prow"><small>Wrastający paznokieć / tamponada</small><div class="amt">100 zł</div><small>—</small></div>
+        <div class="prow"><small>Brodawka wirusowa (lek + materiał)</small><div class="amt">150 zł</div><small>—</small></div>
+      </div></div>
+      <div class="pblock"><h3>Treningi i fizjoterapia</h3><div class="prows">
+        <div class="prow"><small>Trening personalny</small><div class="amt">po konsultacji</div><small>lokalnie ok. 100 zł/sesję</small></div>
+        <div class="prow"><small>Treningi grupowe „babska siła”</small><div class="amt">karnet do ustalenia</div><small>widełki regionu 160–200 zł/mc</small></div>
+        <div class="prow"><small>Fizjoterapia „W Dobrych Rękach”</small><div class="amt">po konsultacji</div><small>rynkowo 120–250 zł/wizyta</small></div>
+        <div class="prow"><small>Karate dzieci i młodzież</small><div class="amt">składka do ustalenia</div><small>benchmark PL ok. 130 zł/mc</small></div>
+      </div></div>
+    </div>
+    <p style="margin-top:18px;color:var(--muted);font-size:.9rem">Ceny z cennika graficznego z 1.09.2026 — mogą się nieznacznie różnić wg liczby wizyt i uwarunkowań (zastrzeżenie z oryginału). Karnet miesięczny na masaż pleców: 4×45 min w pakiecie 540 zł (−10%, propozycja). Vouchery prezentowe dostępne w Sklepie.</p>
+  </div></section>
+</div>
+
+<!-- ===== KURSY / TRENINGI I KARATE ===== -->
+<div class="panel" id="kursy">
+  <header class="hero" style="min-height:62vh">
+    <div class="bgwrap"><img src="zdjecia/raw/fb_karate_uscisk_crop.jpg" alt="Trening karate Pro-Health"></div>
+    <div class="wrap">
+      <div class="eyebrow">TRENINGI PERSONALNE · GRUPOWE · KARATE · PODDĘBICE I UNIEJÓW</div>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">Trening, który prowadzi dorosłych — i karate, które wychowuje dzieci</h1>
+      <p class="lead">Cztery filary na jednej sali: trening personalny (w tym medyczny), kobiece grupy „babska siła”, karate dla dzieci od 5. roku życia i grupa zawodnicza z medalami Mistrzostw Polski. Pierwszy trening lub konsultacja — zawsze próbny i bez zobowiązań.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="tel:+48609037081">Umów trening: 609 037 081</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" onclick="tab('zajecia')">Zobacz cennik</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="reveal"><div class="wrap">
+    <div class="stats" style="margin-bottom:50px">
+      <div class="stat"><div class="n" data-n="4">0</div><div class="l">filary treningowe</div></div>
+      <div class="stat"><div class="n" data-n="4">0</div><div class="l">złota MP 2026</div></div>
+      <div class="stat"><div class="n" data-n="12">0</div><div class="l">edycji turnieju</div></div>
+      <div class="stat"><div class="n" data-n="136">0</div><div class="l">zawodników na X edycji</div></div>
+    </div>
+    <div class="sec-head"><div class="eyebrow">Grupy i filary</div><h2>Cztery drogi na naszą matę</h2>
+      <p>Karate dzielimy na grupy wiekowe (5–8, 9–12, młodzież i kadra), a dorosłych prowadzimy personalnie i w grupach — w tym trening medyczny dla osób z bólem przewlekłym. Kliknij filar, by zobaczyć szczegóły: dla kogo, co daje i kto prowadzi.</p></div>
+    <div class="grid g4" id="kursMod"></div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Program karate</div><h2>Z czego składa się trening</h2>
+      <p>Sześć stałych elementów szkoły — od kata po własny turniej. Każdy blok jest dostosowany do grupy wiekowej: w najmłodszych przez zabawę, w kadrze pod starty.</p></div>
+    <div class="grid g3" id="kursBloki"></div>
+    <div class="sec-head" style="margin:44px 0 20px"><div class="eyebrow">Efekty</div><h2 style="font-size:1.6rem">Co daje dziecku rok na macie</h2></div>
+    <div class="grid g2">
+      <div class="val"><div class="dot"></div><p><b>Dyscyplinę bez krzyku</b> — zasady, rytuały i kolejność, które dziecko przyjmuje dobrowolnie, bo widzi ich sens w grupie rówieśników.</p></div>
+      <div class="val"><div class="dot"></div><p><b>Kontrolę ciała i emocji</b> — karate uczy najpierw nie walczyć: rozpoznawać złość, hamować odruch, reagować spokojnie.</p></div>
+      <div class="val"><div class="dot"></div><p><b>Postęp, który widać</b> — egzaminy na stopnie (pasy) i medale turniejowe dają mierzalne sukcesy w skali miesiąca, nie lat.</p></div>
+      <div class="val"><div class="dot"></div><p><b>Sprawność na całe życie</b> — szybkość, gibkość i siła budowane wszechstronnie, bez jednostronnego przeciążenia rosnącego organizmu.</p></div>
+    </div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="grid g2">
+      <div class="card" style="border-top:4px solid var(--gold)">
+        <div class="tag gold">Składka i start</div>
+        <h3 style="font-size:1.5rem">Ile kosztuje trening</h3>
+        <div style="font-family:var(--serif);font-size:2.2rem;margin:12px 0;color:var(--gold)">do ustalenia</div>
+        <p style="margin-bottom:10px">Ceny treningów personalnych, karnetów grupowych i składki karate ustalamy po rozmowie o celu i częstotliwości. Punkt odniesienia dla karate w Polsce to <b>ok. 130 zł/mc</b>; dla treningu personalnego lokalnie <b>ok. 100 zł za sesję</b>; karnety grupowe w regionie <b>160–250 zł/mc</b>.</p>
+        <p style="font-size:.88rem">Pierwszy trening dziecka oraz pierwsza konsultacja treningowa są <b>próbne i bezpłatne</b>. Kimono kupujemy dopiero, gdy dziecko zostaje — na start wystarczą sportowe ciuchy. Wpisowe i koszty egzaminów omawiamy przy zapisie.</p>
+        <a class="btn btn-gold" style="margin-top:16px" href="tel:+48609037081">Zapytaj o składkę: 609 037 081</a>
+      </div>
+      <div class="card soft">
+        <div class="tag">Kalendarz</div>
+        <h3 style="font-size:1.5rem">Sezon 2026/2027 — co przed nami</h3>
+        <p style="margin:10px 0"><b>Nabór do grup karate trwa</b> — zapisy telefonicznie i na treningu próbnym. Grupy 5–8, 9–12 oraz kadra.</p>
+        <p style="font-size:.9rem;color:var(--muted);line-height:2">Czerwiec 2026 · Mistrzostwa Polski — <b>4 złote medale</b> zespołu<br>Marzec 2026 · Malta Cup — <b>złoto Oliwii Staniak</b><br>30 maja 2026 · <b>XII Turniej Małego Karateki</b> (X edycja: 136 zawodników, 6 klubów)<br>Sezon letni · obozy sportowe<br>Jesień 2026 · cykl egzaminów na stopnie</p>
+        <p style="font-size:.86rem;margin-top:12px">Turniej Małego Karateki organizujemy od 12 lat z partnerami: <b>Gmina Uniejów</b> i <b>Termy Uniejów</b>. Kolejna edycja — maj 2027; informacje o zapisach klubów na profilu klubu Bassai i pod telefonem centrum.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap"><div class="band">
+    <h2>Pierwszy trening jest próbny</h2>
+    <p>Przyprowadź dziecko na zajęcia albo umów własną konsultację treningową — zobaczysz salę, trenera i grupę, zanim cokolwiek zdecydujesz.</p>
+    <a class="btn" href="tel:+48609037081">Zadzwoń: 609 037 081</a>
+  </div></div></section>
+</div>
+
+<!-- ===== ZESPOL ===== -->
+<div class="panel" id="zespol">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Ludzie z pasją</div><h2>Nasz zespół — kliknij, by poznać całą historię</h2>
+      <p>Nasz zespół to osiem osób i pięć rzemiosł: masaż leczniczy i sportowy, podologia, fizjoterapia, trening medyczny i personalny oraz karate sportowe. To właśnie <b>połączenie tych kompetencji</b> — obok indywidualnego podejścia do każdej osoby — jest sercem Pro-Health: jedyny zespół w powiecie, który widzi klienta całościowo, od stóp po formę i charakter.</p></div>
+    <div class="grid g4" id="team"></div>
+  </div></section>
+  <div class="para reveal" style="background-image:url('zdjecia/stock/stock_ph_1.jpg')"><div class="wrap">
+    <div class="eyebrow" style="color:#e7ddb9">Efekt synergii</div>
+    <h2>Zespół, który zna się od turniejów</h2>
+    <p>Masażystka, podolog, fizjoterapeuci, trenerzy medyczni i trenerzy karate — jedna siedziba, jeden wywiad, jedno przekierowanie „to nie temat na masaż, umów się do Kamila”. Takiego zespołu nie złoży się z ogłoszeń: on wyrosł.</p>
+    <a class="btn btn-light" style="margin-top:22px" onclick="tab('mozliwosci')">Zobacz, co z tego tworzymy →</a>
+  </div></div>
+</div>
+
+<!-- ===== WIEDZA ===== -->
+<div class="panel" id="wiedza">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Baza wiedzy</div><h2>Wiedza</h2>
+      <p>Wyjaśniamy prosto to, co klienci pytają na wizytach: stopy, plecy, regeneracja, trening dziecka. Poniżej fundamenty naszego podejścia — więcej w ebookach i nagraniach audio zespołu.</p></div>
+    <div class="grid g3" id="wiedzaCards"></div>
+  </div></section>
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Więcej treści</div><h2>Czytaj, słuchaj, obserwuj</h2></div>
+    <div class="grid g4">
+      <a class="card hoverable" href="https://www.facebook.com/firmaPH" target="_blank"><div class="tag">Facebook</div><h3>Pro-Health</h3><p>Centrum na co dzień: zabiegi, treningi, turnieje.</p></a>
+      <a class="card hoverable" href="https://www.facebook.com/profile.php?id=100057403962256" target="_blank"><div class="tag">Facebook</div><h3>Klub Bassai</h3><p>Sekcja karate: kadra, egzaminy i starty zawodników.</p></a>
+      <a class="card hoverable" onclick="tab('ebooki')"><div class="tag gold">Ebooki</div><h3>20 przewodników</h3><p>Od stopy diabetyka po pierwszy turniej dziecka.</p></a>
+      <a class="card hoverable" onclick="tab('ebooki')"><div class="tag clay">Audio</div><h3>Audiobooki i praktyki</h3><p>Głosem zespołu — w samochodzie i przed snem.</p></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ===== EBOOKI ===== -->
+<div class="panel" id="ebooki">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Biblioteka · 20 tytułów</div><h2>Ebooki — kliknij, by zobaczyć spis treści</h2>
+      <p>Przewodniki głębsze niż u konkurencji — każdy pisany przez osobę z zespołu w jej dziedzinie. Produkt cyfrowy: edukuje, buduje autorytet i jest pasywnym źródłem przychodu. Każdy tytuł może powstać także jako <b>audiobook</b> — czytany głosem autorki lub autora.</p></div>
+    <div class="grid g3" id="ebooks"></div>
+    <div class="grid g2" style="margin-top:26px">
+      <div class="card" style="border-top:4px solid var(--gold)">
+        <div class="tag gold">Biblioteka Pro-Health</div>
+        <h3 style="font-size:1.4rem">Wszystkie 20 ebooków w pakiecie</h3>
+        <div style="font-family:var(--serif);font-size:2.4rem;color:var(--gold);margin:10px 0">149 zł</div>
+        <p>Cała wiedza zespołu w jednym pakiecie — osobno wartość ponad 700 zł. Naturalny prezent dla stałego klienta i wejście do biblioteki audio.</p>
+      </div>
+      <div class="card soft">
+        <div class="tag">Uczciwie o statusie</div>
+        <h3 style="font-size:1.4rem">Propozycje produktów, nie gotowe pliki</h3>
+        <p style="margin-top:8px">Ebooki to <b>propozycje do decyzji właścicielki</b>: spisy treści są rozpisane, ceny zgodne z rynkiem poradników (29–49 zł). Pierwszy tytuł rekomendujemy z linii STOPY — naturalne zaplecze gabinetu podologicznego.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Nowe · słuchaj zamiast czytać</div><h2>Audiobooki i praktyki audio</h2>
+      <p>Klient centrum słucha w samochodzie, na spacerze i przed snem — dlatego każdy przewodnik ma naturalną drugą postać: <b>audio</b>, którego słuchasz w drodze albo zasypiając. To ten sam materiał, drugi produkt i drugi strumień przychodu — bez pisania ani jednej nowej strony. A dzięki syntezie głosu z krótkiej próbki <b>każdy tytuł przemawia głosem swojego autora lub autorki</b> — bez tygodni w studiu (nagrania z syntezą zawsze oznaczamy).</p></div>
+    <div class="grid g3" id="audio"></div>
+    <div class="card soft" style="margin-top:26px;border:1px dashed var(--gold)">
+      <div class="tag gold">Pakiet audio</div>
+      <h3 style="font-size:1.35rem">Cała biblioteka audio — 199 zł</h3>
+      <p style="margin-top:8px">Osiem audiobooków i praktyk prowadzonych (wartość ponad 300 zł kupowanych osobno). Jedna płatność, słuchanie od razu — naturalny pierwszy krok klienta, który chce spróbować, zanim kupi ebook.</p>
+    </div>
+  </div></section>
+</div>
+
+<!-- ===== SKLEP ===== -->
+<div class="panel" id="sklep">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Sklep</div><h2>Sklep Pro-Health</h2>
+      <p>Vouchery i karnety na usługi gabinetu, wyposażenie karate, akcesoria do automasażu oraz produkty cyfrowe. Zamówienia telefonicznie lub na miejscu — bez pośredników.</p></div>
+    <div class="shop-note">🛈 <b>To propozycja asortymentu.</b> Sklep celowo nie ma koszyka ani płatności online: ceny voucherów pochodzą z cennika 01.09.2026, akcesoria i pakiety cyfrowe to propozycje do decyzji właścicielki. Realizacja: odbiór w centrum lub telefon.</div>
+    <div id="shopFilters" class="chips"></div>
+<div class="grid g4" id="shop"></div>
+  </div></section>
+</div>
+
+<!-- ===== MOZLIWOSCI ===== -->
+<div class="panel" id="mozliwosci">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Strategia rozwoju</div><h2>Co odkryliśmy — i co możecie z tym zrobić</h2>
+      <p>Pro-Health to jedyne w powiecie poddębickim miejsce, gdzie pod jednym dachem pracują masażystka, podolog, fizjoterapeuci, trenerzy medyczni i sekcja karate z medalami MP. Największy, dziś niesprzedawany kapitał to <b>8 specjalistów = 4 rzemiosła, które widzą tego samego klienta</b>. Kierunek: sprzedawać <b>całego człowieka</b> (regenerację, stopy, ruch i charakter dziecka), a nie pojedyncze wejściówki — wyższa półka bez utraty kameralnego klimatu.</p></div>
+    <div class="card soft" style="margin-bottom:34px">
+      <div class="tag gold">Koronny ruch</div>
+      <h3 style="font-size:1.4rem">„Cały człowiek pod jednym dachem” jako metoda (IP)</h3>
+      <p style="margin-top:8px;color:var(--muted)">Skodyfikować sposób, w jaki zespół już dziś wymienia się klientem: wspólny wywiad, zasada przekierowań wewnętrznych („to nie temat na masaż — umów się do Kamila”) i kwartalny <b>Przegląd całego człowieka</b>. Rzemiosło, które centrum wykonuje od lat, dostaje nazwę — i staje się know-how niekopiowalnym lokalnie, bo wymaga zespołu.</p>
+    </div>
+  </div></section>
+
+  <!-- CZĘŚĆ I — MOŻLIWOŚCI -->
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Część I · Możliwości</div><h2>Co da się zrobić — zanim porozmawiamy o pieniądzach</h2>
+      <p>Najpierw pokazujemy, na co centrum jest gotowe dzięki swoim ludziom i lokalnej pozycji. Dopiero w części drugiej — jak zamienić to w przychód.</p></div>
+    <div class="sec-head" style="margin-bottom:24px"><div class="eyebrow">Kierunki rozwoju</div><h2 style="font-size:1.7rem">Co z tym kapitałem można jeszcze zrobić</h2>
+      <p>Pięć kierunków, które wyrastają wprost z zespołu i sali: od kart sportowych po podologa mobilnego. Każdy opisany uczciwie — z warunkami, dla kogo i na jakim rynku.</p></div>
+    <div class="grid g3" id="futGrid"></div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Plan promocji · fundamenty zanim kampanie</div><h2>Promocja, która pracuje, gdy Wy prowadzicie zajęcia</h2>
+      <p>Sześć kroków, które zaczynają się od naprawy tego, co już jest (profil FB, profil Google), a kończą na rezerwacjach online z przypomnieniami SMS. Wszystkie tanie albo darmowe — w Poddębicach wygrywa systematyczność, nie budżet. <b>Zespół zostaje przy zabiegach i treningach; promocja działa obok, nie zamiast.</b></p></div>
+    <div class="grid g3" id="mktGrid"></div>
+  </div></section>
+
+  <!-- CZĘŚĆ II — MONETYZACJA -->
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Część II · Monetyzacja</div><h2>Jak zamienić te możliwości w przychód</h2>
+      <p>Trzy warstwy: produkty z połączenia kompetencji zespołu, doświadczenia budujące markę oraz sprzedaż internetowa bez ścian.</p></div>
+    <div class="sec-head" style="margin-bottom:24px"><div class="eyebrow">Produkty z połączenia zdolności zespołu</div><h2 style="font-size:1.7rem">6 pomysłów sygnaturowych</h2>
+      <p>Każdy to kombinacja min. dwóch osób z zespołu — trudna do skopiowania, wyższa marża niż pojedynczy zabieg.</p></div>
+    <div class="grid g3" id="sigs"></div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Tożsamość — trzy kierunki do decyzji</div><h2>Głębiej: dusza centrum w trzech zdaniach i jeden znak</h2>
+      <p>Kandydaci na rdzeń marki wypisani wprost z tego, co centrum już robi — plus trzy kierunki logo do decyzji właścicielki, z rekomendacją roboczą.</p></div>
+    <div class="grid g4" id="duszaGrid"></div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Sprzedaż online</div><h2>Karate i turniej jako marka internetowa — przychód bez ścian</h2>
+      <p>Turniej, obozy, egzaminy i sklep klubowy to wydarzenia, które sami organizujecie — wystarczy je sprzedawać jako pakiety i cykle. Zapisy i zaliczki online tym samym narzędziem co rezerwacje: zero nowej technologii.</p></div>
+    <div class="grid g3" id="onlineGrid"></div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Cennik i przychód · z tego, co już działa</div><h2>Pakiety i karnety: podnieść wartość klienta, nie ceny</h2>
+      <p>Sześć nowych pozycji cennika zbudowanych na usługach, które centrum już świadczy — z benchmarkami regionalnymi zamiast kwot „z sufitu”. Karnety i pakiety sprzedają nawyk z góry: kalendarz gabinetu zapełnia się przewidywalnie, a klient kupuje cel, nie pojedynczą wizytę. Kwoty „do ustalenia” zebrane są w sekcji na dole panelu.</p></div>
+    <div class="grid g4" id="noweGrid"></div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Plan naprawy fundamentów</div><h2>Pięć kroków — od naprawy profilu do rezerwacji online</h2>
+      <p>Nie „wszystko naraz”, tylko kolejność od fundamentów: zanim centrum zacznie się reklamować, musi przestać komunikować, że się zamyka. Każdy krok jest tani albo darmowy, a efekty pierwszego widać w tydzień.</p></div>
+    <div id="steps"></div>
+
+    <div class="grid g2" style="margin-top:40px">
+      <div class="card" style="border-left:4px solid var(--clay)">
+        <div class="tag clay">Uczciwie · nie sprzedajemy tego</div>
+        <h3>Karty sportowe</h3>
+        <p style="margin-top:8px">Programy typu Multisport formalnie obejmują treningi grupowe i karate — ale stawki partnerskie są niejawne i obniżają średnią cenę wejścia. W małym mieście penetracja kart jest i tak niższa niż w aglomeracji, a wiele kameralnych ośrodków świadomie z nich rezygnuje bez utraty ruchu. Zostawiamy to jako <b>opcję, nie rekomendację</b> — decyzja należy do właścicielki (szczegóły w sekcji „Kierunki rozwoju” wyżej).</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--clay)">
+        <div class="tag clay">Uczciwie · to hipoteza, nie fakt</div>
+        <h3>Ceny treningów, grup i karate</h3>
+        <p style="margin-top:8px">Trening personalny, „babska siła”, karnet OPEN i składka karate nie mają dziś opublikowanych cen — na stronie podajemy wyłącznie benchmarki regionalne (PT ok. 100 zł, grupy 160–250 zł/mc, karate ok. 130 zł/mc). <b>To otwarta kwestia, nie ukryty koszt.</b> Pełna lista czterech pytań do domknięcia — w sekcji „Czego jeszcze nie wiemy” na dole panelu.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Krok 4 w praktyce</div><h2>Systemy rezerwacji dostępne w Polsce</h2>
+      <p>Sprawdziliśmy realne rozwiązania, z których korzystają polskie gabinety i kluby — z cenami, prowizjami i tym, które pasują do ośmioosobowego zespołu w małym mieście.</p></div>
+    <div class="grid g3" id="rezGrid"></div>
+    <div class="card soft" style="margin-top:26px" id="rezRek"></div>
+  </div></section>
+
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Symulacja · liczby, nie obietnice</div><h2>Ile może przynosić sekcja karate</h2>
+      <p>Poniższa kalkulacja to <b>SYMULACJA na potrzeby decyzji, nie cennik</b>: składka 130 zł/mc to średnia polskich sekcji karate, liczba dzieci — scenariusze od 10 do 60. Realne stawki centrum ustala właścicielka; tu liczymy potencjał.</p></div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="tag">SYMULACJA przychodu</div>
+        <h3 style="margin-bottom:14px">Składka 130 zł × liczba trenujących dzieci</h3>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums">
+            <thead><tr style="border-bottom:2px solid var(--line)">
+              <th style="text-align:left;padding:8px 6px">Dzieci w sekcji</th>
+              <th style="text-align:right;padding:8px 6px">Przychód / mc</th>
+              <th style="text-align:right;padding:8px 6px">Sezon (10 mc)</th></tr></thead>
+            <tbody id="fitTbl"></tbody>
+          </table>
+        </div>
+        <p style="font-size:.86rem;color:var(--muted);margin-top:12px">SYMULACJA przy składce 130 zł/mc (benchmark polskich sekcji). Poza tabelą: wpisowe na start sezonu oraz pakiety sponsorskie turnieju 500–2000 zł (partnerzy jak Gmina Uniejów i Termy Uniejów).</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--gold)">
+        <div class="tag gold">SYMULACJA · rachunek dodatkowy</div>
+        <h3 style="margin-bottom:14px">Wpisowe, turniej i sponsoring</h3>
+        <div id="roi"></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:22px;border-left:4px solid var(--sage)">
+      <h3 style="font-size:1.2rem">System rezerwacji: koszt przy skali centrum (3 kafle)</h3>
+      <div class="grid g3" style="margin-top:16px">
+        <div style="text-align:center;padding:16px;background:var(--sage-tint);border-radius:12px;border:1px solid var(--sage)">
+          <div style="font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Fitssey · rekomendacja</div>
+          <div style="font-family:var(--serif);font-size:2rem;color:var(--sage-d);margin:6px 0">0 zł</div>
+          <div style="font-size:.84rem;color:var(--muted)">do 50 rezerwacji/mc · dalej od 29 netto · zero prowizji</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:var(--sand);border-radius:12px">
+          <div style="font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Booksy</div>
+          <div style="font-family:var(--serif);font-size:2rem;color:var(--clay);margin:6px 0">145 zł</div>
+          <div style="font-size:.84rem;color:var(--muted)">netto/mc · +35 zł/pracownik · Boost zabiera 45%</div>
+        </div>
+        <div style="text-align:center;padding:16px;background:var(--sand);border-radius:12px">
+          <div style="font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">GYM System</div>
+          <div style="font-family:var(--serif);font-size:2rem;color:var(--muted);margin:6px 0">199 zł</div>
+          <div style="font-size:.84rem;color:var(--muted)">netto/mc · pełny pakiet klubowy</div>
+        </div>
+      </div>
+      <p style="margin-top:16px;font-size:.95rem"><b>Fitssey na starcie nie kosztuje nic</b> (do 50 rezerwacji miesięcznie) i nie bierze prowizji od zabiegów — a Booksy przy pełnym Boost oddaje 45% przychodu z rezerwacji online. Przy cenie masażu 150 zł jedna rezerwacja „w Boost" kosztuje więcej niż cały miesiąc Fitssey.</p>
+    </div>
+  </div></section>
+  <section class="reveal soft"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Uczciwie · otwarte pytania</div><h2>Czego jeszcze nie wiemy</h2>
+      <p>Cztery kwestie, które blokują część decyzji — zebrane w jednym miejscu, z opisem, co trzeba zrobić, by je domknąć. Strona działa także bez odpowiedzi, ale z nimi będzie mocniejsza.</p></div>
+    <div class="grid g4" id="nwmGrid"></div>
+  </div></section>
+  <section class="reveal"><div class="wrap"><div class="band">
+    <h2>Porozmawiajmy o rozwoju centrum</h2>
+    <p>Mamy gotowy cennik, plan promocji, symulację sekcji karate i listę pytań do domknięcia. Zróbmy następny krok razem — konkretnie i na liczby, nie na obietnice.</p>
+    <a class="btn" onclick="tab('kontakt')">Kontakt</a>
+  </div></div></section>
+</div>
+
+<!-- ===== KONTAKT ===== -->
+<div class="panel" id="kontakt">
+  <section class="reveal"><div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Kontakt</div><h2>Odwiedź nas</h2></div>
+    <div class="grid g2">
+      <div class="card"><h3>Pro-Health</h3>
+        <p style="margin:10px 0;color:var(--muted)">ul. Sienkiewicza 48<br>99-200 Poddębice</p>
+        <p><a href="tel:+48609037081" style="color:var(--sage-d);font-weight:600">tel. 609 037 081</a></p>
+        <p style="margin:10px 0;color:var(--muted)">Fizjoterapia „W Dobrych Rękach” przyjmuje w tej samej siedzibie — wizyty umawiamy telefonicznie.</p>
+        <div class="soc" style="margin-top:16px">
+          <a href="https://www.facebook.com/firmaPH" target="_blank" title="Facebook Pro-Health" style="color:var(--sage-d);font-weight:600;margin-right:14px">Facebook Pro-Health →</a>
+          <a href="https://www.facebook.com/profile.php?id=100057403962256" target="_blank" title="Facebook klub Bassai" style="color:var(--sage-d);font-weight:600">Facebook klub Bassai →</a>
+        </div>
+      </div>
+      <div class="card soft"><h3>Godziny otwarcia</h3>
+        <p style="margin:10px 0;color:var(--muted)">poniedziałek–piątek 10–18<br>sobota 10–14</p>
+        <p style="color:var(--muted)">Parking pod budynkiem, wejście od ulicy. Treningi karate i zajęcia grupowe odbywają się pasmami po południu — aktualny grafik podajemy telefonicznie i na profilu Facebook.</p>
+        <a class="btn" style="margin-top:8px" href="tel:+48609037081">Zadzwoń i umów wizytę</a>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<footer><div class="wrap"><div class="cols">
+  <div style="max-width:260px">
+    <div class="brand" style="margin-bottom:10px"><img src="logo_ph.svg" alt="Pro-Health" style="width:30px;height:30px"><span>Pro<em>Health</em></span></div>
+    <p>Centrum sportu i usług prozdrowotnych w Poddębicach. Masaż, podologia, fizjoterapia, treningi i karate — od 2010 roku.</p>
+  </div>
+  <div><b>Centrum</b><a onclick="tab('start')">Start</a><a onclick="tab('zajecia')">Usługi i cennik</a><a onclick="tab('kursy')">Treningi &amp; Karate</a><a onclick="tab('zespol')">Zespół</a></div>
+  <div><b>Oferta</b><a onclick="tab('wiedza')">Wiedza</a><a onclick="tab('ebooki')">Ebooki i audio</a><a onclick="tab('sklep')">Sklep</a><a onclick="tab('mozliwosci')">Możliwości</a></div>
+  <div><b>Kontakt</b>
+    <a href="tel:+48609037081">tel. 609 037 081</a>
+    <a href="https://www.facebook.com/firmaPH" target="_blank">Facebook Pro-Health</a>
+    <a href="https://www.facebook.com/profile.php?id=100057403962256" target="_blank">Facebook klub Bassai</a></div>
+</div>
+<p style="margin-top:30px;opacity:.7;font-size:.82rem">© Pro-Health Poddębice · 2026. Wersja podglądowa dla właścicielki: ceny z cennika z 01.09.2026; pozycje „do ustalenia” wymagają potwierdzenia; ebooki, audiobooki i sklep to propozycje produktów.</p>
+</div></footer>
+
+<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()"><div class="modal" id="modal"></div></div>
+
+<script>
+const NAV=[["start","Start"],["zajecia","Usługi"],["kursy","Treningi & Karate"],["zespol","Zespół"],["wiedza","Wiedza"],["ebooki","Ebooki"],["sklep","Sklep"],["mozliwosci","Możliwości"],["kontakt","Kontakt"]];
+
+const FAQ=[
+ [`Jak umówić wizytę?`,`Zadzwoń pod 609 037 081 (pn–pt 10–18, sob 10–14). Jeśli nie odbieramy — jesteśmy w gabinecie przy kliencie; zadzwoń ponownie lub zostaw SMS. Wdrażamy rezerwacje online, żeby telefon przestał być jedyną drogą (szczegóły w zakładce Możliwości).`],
+ [`Jaką usługę wybrać, jeśli nie wiem, od czego zacząć?`,`Zadzwoń i opowiedz, co Ci dolega. Zwykła kolejność: ból lub napięcie → masaż; problem ze stopami → podologia; po urazie lub ze skierowaniem → fizjoterapia; chcesz wrócić do formy → trening personalny. W razie wątpliwości zapraszamy na rozmowę konsultacyjną — doradzimy bez sprzedaży na siłę.`],
+ [`Czy masaż boli?`,`Masaż relaksacyjny nie powinien boleć w ogóle. Masaż leczniczy bywa mocniejszy — pracuje na napiętych tkankach — ale zawsze w granicach Twojej tolerancji: mówisz, masażystka dostosowuje nacisk. Ból „na złość” nie jest dowodem skuteczności.`],
+ [`Co zabrać na pierwszą wizytę?`,`Wygodne ubranie i krótką historię problemu (od kiedy, co nasila). Na masaż wystarczy bielizna — ręcznik i podkład są po naszej stronie. Na trening personalne: buty sportowe i butelka wody. Na karate dla dziecka: sportowe ciuchy — kimono kupujemy dopiero, gdy dziecko zostaje.`],
+ [`Od ilu lat dziecko może zacząć karate?`,`Najczęściej od 5–6 roku życia — ale wszystko zależy od dziecka. Pierwszy trening jest próbny i bez zobowiązań: dziecko patrzy i próbuje, rodzic obserwuje grupę. Grupy dzielimy wiekowo (5–8, 9–12, młodzież i zawodnicy).`],
+ [`Ile kosztuje trening personalny i karnet na grupowe?`,`Ceny treningów personalnych i karnetów ustalane są indywidualnie po konsultacji — celowo publikujemy je dopiero po rozmowie o celu i częstotliwości. Lokalny punkt odniesienia dla treningu personalnego to ok. 100 zł za sesję; widełki dla karnetów grupowych w regionie to 160–250 zł/mc. Dzwoniąc, dowiesz się aktualnych stawek w minutę.`],
+ [`Czy honorujecie karty sportowe (Multisport, Medicover)?`,`Dziś nie — treningi grupowe i karate formalnie kwalifikują się do programów partnerskich, ale stawki tych programów są niejawne i wymagają negocjacji. Traktujemy to jako opcję do decyzji właścicielki, nie zobowiązanie. Stan na wrzesień 2026: płatność gotówką i kartą w centrum.`],
+ [`Gdzie jesteście i kiedy otwarte?`,`Ul. Sienkiewicza 48, 99-200 Poddębice. Godziny: poniedziałek–piątek 10–18, sobota 10–14. Parking pod budynkiem, wejście od ulicy. Fizjoterapia „W Dobrych Rękach” przyjmuje w tych samych godzinach — umów wizytę telefonicznie.`],
+];
+
+const OPINIE=[
+ [`Joanna Jaruga`,`Super ekipa i wspaniałe miejsce.`,`Facebook · stała komentatorka profilu`],
+ [`Twoja opinia`,`Zeskanuj kod QR przy recepcji albo oceń nas w Google — każda opinia po zabiegu pomaga kolejnym klientom trafić do dobrych rąk.`,`w przygotowaniu`],
+ [`Twoja opinia`,`Praktykujesz u nas? Napisz dwa zdania — opublikujemy je tutaj i na profilu centrum.`,`w przygotowaniu`],
+ [`Twoja opinia`,`Trenujesz z nami lub Twoje dziecko chodzi na karate? Podziel się wrażeniami z turniejów i zajęć grupowych.`,`w przygotowaniu`],
+];
+const KURSMOD=[
+ {tag:`Grupa wiekowa`,t:`Karate 5–8 lat — „Mały Karateka”`,d:`Zabawa w formie treningu: zasady, słuchanie, kontrola ciała. Dziecko uczy się stać w szeregu, czekać na swoją kolej i pierwszych ukłonów — medale przychodzą później.`,
+  full:`<p>Najmłodsza grupa to przede wszystkim nauka bycia na treningu: dzieci uczą się słuchać instrukcji, pracować w grupie i kontrolować swoje ciało w przestrzeni, gdzie ćwiczą inni. Formą zajęć jest zabawa ruchowa z elementami karate — proste techniki rąk i nóg, równowaga, koordynacja.</p><p>Grupa jest bezpiecznym pierwszym krokiem: bez presji startów, z pierwszym treningiem próbnym. Rodzic może obserwować zajęcia i zobaczyć, jak trener pracuje z grupą.</p><p><b>Prowadzą:</b> Maja Ostrowska-Gralka, Mateusz Gralka.</p>`,
+  dla:`Dla dzieci 5–8 lat — także nieśmiałych i nadpobudliwych (obie grupy dzieci skorzystają najwięcej).`,ben:[`dyscyplina i zasady bez krzyku`,`koordynacja i sprawność ogólna`,`pierwszy sukces — ukłon, pas, medal`]},
+ {tag:`Grupa wiekowa`,t:`Karate 9–12 lat — technika i pierwsze starty`,d:`Systematyczna nauka kata i technik podstawowych, pierwsze kontrolowane walki. Grupa dla dzieci, które znają już zasady i chcą robić postępy.`,
+  full:`<p>W grupie 9–12 lat trening nabiera struktury: kata (formy) ćwiczone są co do kreski, techniki podstawowe dopracowywane indywidualnie, dochodzą pierwsze kontrolowane walki i przygotowanie do startów w zawodach.</p><p>Dzieci w tym wieku przechodzą ścieżkę stopni: egzaminy na kolejne pasy dają widoczny, mierzalny postęp — to działa na motywację lepiej niż jakiekolwiek tablica wyników.</p><p><b>Prowadzą:</b> Maja Ostrowska-Gralka, Mateusz Gralka.</p>`,
+  dla:`Dla dzieci, które „złapały bakcyla” i chcą trenować poważniej — oraz rodziców szukających sportu, który uczy cierpliwości.`,ben:[`technika kata i kihon krok po kroku`,`egzaminy na stopnie — widoczny postęp`,`pierwszy start na Turnieju Małego Karateki`]},
+ {tag:`Kadra`,t:`Młodzież i grupa zawodnicza`,d:`Trening kadry dla zawodników z ambicjami: kumite, przygotowanie motoryczne, starty w Mistrzostwach Polski i pucharach. Tu wychowaliśmy 4 złota MP 2026.`,
+  full:`<p>Grupa zawodnicza to trening pod starty: intensywne kumite, przygotowanie motoryczne, taktyka walki i praca nad kondycją. Zawodnicy startują w Mistrzostwach Polski (4 złote medale w 2026), Malta Cup (złoto Oliwii Staniak w 2026) i Turnieju Małego Karateki.</p><p>To także ścieżka rozwoju wewnętrznego: wychowankowie klubu zostają instruktorami. Oliwia Staniak — dziś masażystka centrum — zaczynała jako zawodniczka. Droga „zawodnik → instruktor → pracownik” działa.</p><p><b>Prowadzą:</b> Maja Ostrowska-Gralka (sędzia główny turniejów), Mateusz Gralka.</p>`,
+  dla:`Dla młodzieży, która chce trenować na wyniki — i dla rodziców, którzy szukają klubu z realnymi medalami MP.`,ben:[`trening pod zawody z kadrą medalową`,`starty w MP i pucharach (Malta Cup)`,`ścieżka: zawodnik → instruktor`]},
+ {tag:`Trening`,t:`Trening personalny i grupowe`,d:`Jeden na jeden z trenerem (Hubert — trener medyczny, Adam — sylwetka, Bartek — pierwsze kroki) plus grupy: „babska siła” i trening medyczny.`,
+  full:`<p>Druga połowa sali: trening personalny i grupowy dla dorosłych. Trzej trenerzy personalnych o różnych specjalizacjach (praca z bólem, sylwetka i siła, początkujący i online) plus kobiece zajęcia „babska siła” — najpopularniejsze w komunikacji centrum (rolki po 1–3,5 tys. wyświetleń).</p><p>Pętla domyka się z gabinetem: pacjent po fizjoterapii przechodzi do treningu medycznego Huberta, a masaż regeneracyjny wspiera treningujących.</p><p><b>Prowadzą:</b> Hubert Kowalczyk, Adam Burski, Bartek Mikołajczyk, Maja Ostrowska-Gralka.</p>`,
+  dla:`Dla dorosłych wracających do formy, kobiet szukających grupy wsparcia i osób z bólem przewlekłym (trening medyczny).`,ben:[`plan pod cel i możliwości ciała`,`trener medyczny w zespole`,`grupa „babska siła” — społeczność, nie tablica wyników`]},
+];
+
+const KURSBLOK=[
+ [`Kata`,`Formy — układy ruchów ćwiczone co do kreski. Kata uczy precyzji, pamięci ruchowej i obecności; na egzaminach stopniowych jest sprawdzianem techniki. Grupy wiekowe ćwiczą kata dostosowane poziomem.`],
+ [`Kumite`,`Walki kontrolowane — od umówionych kombinacji po wolne sparingi w grupie zawodniczej. Bezpieczeństwo zapewnia kontrola i ochraniacze; agresja nie jest celem, tylko precyzja i dystans.`],
+ [`Egzaminy na stopnie`,`Cykl pasów od białego wzwyż: wymogi techniczne rosną z każdym stopniem. Egzamin to rytuał postępu — dziecko uczy się pracować na cel dłuższy niż tydzień.`],
+ [`Obozy`,`Obozy sportowe w sezonie letnim: intensywny trening, integracja i zajęcia uzupełniające. Dla rodziców — bezpieczne wakacje w ruchu; dla zawodników — skok formy przed sezonem.`],
+ [`Turniej Małego Karateki`,`Własna impreza cyklu, 12 edycji: 30 maja 2026 odbyła się XII edycja; dziesiąta zgromadziła 136 zawodników z 6 klubów. Partnerzy: Gmina Uniejów, Termy Uniejów. Pierwszy start dziecka w bezpiecznej, rodzinnej atmosferze.`],
+ [`Przygotowanie motoryczne`,`Rozwój cech motorycznych pod karate: szybkość, siła, wytrzymałość, gibkość. Grupa kadry trenuje obciążenia okresowo; młodsze grupy — przez zabawę i wszechstronność.`],
+];
+
+
+const GALLERY=[
+ [`zdjecia/gal_ph_4.jpg`,`Dojo — Maja prowadzi trening grupy dziecięcej`],
+ [`zdjecia/gal_ph_1.jpg`,`Medale i puchary — Mistrzostwa Polski Karate 2026`],
+ [`zdjecia/gal_ph_7.jpg`,`Maja z zawodniczkami — zakończenie roku szkolnego`],
+ [`zdjecia/gal_ph_8.jpg`,`Trening karate — mata, praca w parach`],
+ [`zdjecia/gal_ph_2.jpg`,`Drużyna po zawodach — emocje, które budują klub`],
+ [`zdjecia/gal_ph_3.jpg`,`Malta Open 2026 — podium zawodniczek Bassai`]
+];
+
+const CLASSES=[
+ {t:`Masaż pleców — klasyczny / leczniczy / relaksacyjny`,lvl:`Masaż · 45 min · 150 zł`,d:`Praca z plecami i karkiem w trzech technikach — dobieranych do potrzeby: rozluźnienie, terapia czy relaks.`,
+  full:`<p>Podstawowa usługa gabinetu: 45 minut pracy z plecami i karkiem. Masażystka dobiera technikę do celu — klasyczną dla rozluźnienia napięć, leczniczą przy przeciążeniach i dolegliwościach, relaksacyjną dla wyciszenia i regeneracji.</p><p><b>Czas:</b> 45 minut · <b>Cena:</b> 150 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Dla osób z napięciem karku i pleców od pracy biurowej, kierowców, po treningu — oraz każdego, kto potrzebuje chwili dla siebie.`,ben:[`rozluźnienie napięć karku i pleców`,`lepszy ruch w kręgosłupie`,`efekt odprężenia i lepszy sen`]},
+ {t:`Masaż nóg i pleców`,lvl:`Masaż · 45 min · 150 zł`,d:`Dwie najbardziej przeciążone strefy codzienności: nogi i plecy w jednym zabiegu.`,
+  full:`<p>Kombinacja skierowana do osób stojących, chodzących i trenujących: najpierw praca z nogami — od stóp po uda — potem plecy i kark. Idealna po długim dniu na nogach i jako regularna profilaktyka.</p><p><b>Czas:</b> 45 minut · <b>Cena:</b> 150 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Dla pracujących na stojąco, biegaczy i osób z ciężkimi nogami wieczorem.`,ben:[`lżejsze, wypoczęte nogi`,`mniejsze obrzęki`,`rozluźnione plecy w tym samym zabiegu`]},
+ {t:`Masaż całego ciała`,lvl:`Masaż · 60 min · 180 zł`,d:`Pełna godzina pracy z całym ciałem — od stóp po kark, w technice klasycznej, leczniczej lub relaksacyjnej.`,
+  full:`<p>Najpełniejsza forma masażu w cenniku: 60 minut, podczas których masażystka przechodzi przez całe ciało, poświęcając więcej czasu strefom, które tego potrzebują. Do wyboru charakter zabiegu: klasyczny, leczniczy albo relaksacyjny.</p><p><b>Czas:</b> 60 minut · <b>Cena:</b> 180 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Dla osób, które chcą raz na jakiś czas zająć się całą sylwetką — najlepszy stosunek czasu do efektu.`,ben:[`całościowa regeneracja`,`głębokie odprężenie`,`przegląd wszystkich napiętych stref`]},
+ {t:`Bańka chińska — nogi`,lvl:`Masaż · 30 min · 120 zł`,d:`Zabieg bańką chińską na nogi — dla ciężkich, zmęczonych nóg i lepszego krążenia.`,
+  full:`<p>Masaż bańką chińską na nogach: delikatne ssące działanie banek poprawia miejscowe krążenie i rozluźnia tkanki. Krótki, celowany zabieg dla nóg obciążonych staniem, chodzeniem lub treningiem.</p><p><b>Czas:</b> 30 minut · <b>Cena:</b> 120 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Dla osób z ciężkimi nogami, po długim staniu, dla pracujących fizycznie.`,ben:[`lżejsze nogi`,`wsparcie krążenia`,`szybki zabieg w 30 minut`]},
+ {t:`Bańka chińska — całe ciało`,lvl:`Masaż · 55 min · 170 zł`,d:`Pełny zabieg bańką chińską — głęboka praca z tkankami całego ciała.`,
+  full:`<p>Pełne 55 minut masażu bańką chińską: kombinacja technik przesuwanych i stacjonarnych na plecach, nogach i pozostałych strefach. Zabieg intensywniejszy niż klasyczny masaż — warto zaplanować spokojny wieczór po wizycie.</p><p><b>Czas:</b> 55 minut · <b>Cena:</b> 170 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Dla fanów mocniejszej pracy z ciałem i osób, które znają już działanie baniek.`,ben:[`głębokie rozluźnienie tkanek`,`poprawa krążenia`,`intensywna regeneracja`]},
+ {t:`Kobido — masaż twarzy`,lvl:`Masaż · 55 min · 150 zł`,d:`Japoński masaż liftingujący twarz — praca z napięciami mimicznymi i owalem twarzy.`,
+  full:`<p>Kobido to japońska technika masażu twarzy łącząca elementy liftingujące, limfatyczne i rozluźniające. Regularne zabiegi wspierają owal twarzy, pracują z napięciami żuchwy i czoła oraz dają głęboki relaks.</p><p><b>Czas:</b> 55 minut · <b>Cena:</b> 150 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka.</p>`,
+  dla:`Dla osób, które chcą zadbać o twarz naturalnymi metodami oraz z napięciem żuchwy i bruzdami od stresu.`,ben:[`rozluźnienie napięcia mimicznego`,`wsparcie owalu twarzy`,`głęboki relaks`]},
+ {t:`Gorące kamienie — plecy`,lvl:`Masaż · 45 min · 150 zł`,d:`Masaż ogrzewanymi kamieniami na plecy — ciepło dociera tam, gdzie ręka sama nie dosięgnie.`,
+  full:`<p>Masaż z użyciem ogrzanych kamieni: ciepło rozluźnia mięśnie głębiej i szybciej niż sama ręka, a zabieg ma wyjątkowo wyciszający charakter. Świetny wybór na zimne miesiące i przy chronicznym napięciu.</p><p><b>Czas:</b> 45 minut · <b>Cena:</b> 150 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Dla osób z głębokim napięciem pleców i tych, którzy zasługują na maksymalny relaks.`,ben:[`głębokie ogrzanie tkanek`,`rozluźnienie chronicznego napięcia`,`silny efekt antystresowy`]},
+ {t:`Gorące kamienie — całe ciało`,lvl:`Masaż · 60 min · 180 zł`,d:`Rytuał na całe ciało z gorącymi kamieniami — 60 minut ciepła i spokoju.`,
+  full:`<p>Pełna godzina masażu gorącymi kamieniami: całe ciało, stopniowe rozgrzewanie tkanek, powolne tempo. To najbardziej ceremonialny zabieg w cenniku — chętnie kupowany jako voucher prezentowy.</p><p><b>Czas:</b> 60 minut · <b>Cena:</b> 180 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka lub Oliwia Staniak.</p>`,
+  dla:`Na prezent, na okazję i dla każdego, kto chce się wyłączyć z codzienności na pełną godzinę.`,ben:[`kompletny relaks`,`głęboka regeneracja`,`prezent, który pamięta się latami`]},
+ {t:`Podstawowy zabieg podologiczny`,lvl:`Podologia · 180 zł`,d:`Kompletna pielęgnacja stóp: paznokcie, skórki, pięty, odciski, maska i krótki masaż.`,
+  full:`<p>Podstawowy zabieg podologiczny obejmuje obcięcie i opracowanie paznokci, usunięcie skórek, opracowanie pięt i odcisków, na koniec maska i krótki masaż stóp. To pełna profesjonalna pielęgnacja wykonywana narzędziami medycznymi.</p><p><b>Cena:</b> 180 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka (podolog).</p>`,
+  dla:`Dla każdego, kto chce raz na kilka tygodni mieć stopy zrobione profesjonalnie — także dla seniorów i osób z cukrzycą (wizyty planowane indywidualnie).`,ben:[`stopy zrobione kompleksowo`,`bezpieczne narzędzia medyczne`,`maska i masaż w cenie`]},
+ {t:`Opracowanie podeszew i usunięcie odcisków`,lvl:`Podologia · 150 zł`,d:`Zabieg skupiony na podeszwach: opracowanie zrogowaceń, pięty, maska i krótki masaż.`,
+  full:`<p>Zabieg skierowany na podeszwy stóp: opracowanie zrogowaceń, wygładzenie pięt, na koniec maska i krótki masaż. Dla stóp zmęczonych chodzeniem, pracą i niewygodnym obuwiem.</p><p><b>Cena:</b> 150 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka (podolog).</p>`,
+  dla:`Dla osób z zrogowaciałymi podeszwami, modzelami i szorstkimi piętami.`,ben:[`gładkie, odciążone podeszwy`,`mniej ucisku przy chodzeniu`,`maska i masaż w cenie`]},
+ {t:`Usunięcie odcisków`,lvl:`Podologia · 80–120 zł`,d:`Precyzyjne usunięcie odcisków — cena zależna od liczby zmian i materiałów.`,
+  full:`<p>Celowane usunięcie odcisków z użyciem profesjonalnych narzędzi. Cena 80–120 zł zależy od liczby zmian i zużytych materiałów — ostateczna kwota podawana jest przed zabiegiem.</p><p><b>Cena:</b> 80–120 zł (wg liczby zmian) · <b>Wykonuje:</b> Maja Ostrowska-Gralka (podolog).</p>`,
+  dla:`Dla osób z bolesnymi odciskami uciskowymi, które utrudniają chodzenie.`,ben:[`natychmiastowa ulga w chodzeniu`,`bezpieczne usunięcie zmian`,`porada, jak zapobiegać nawrotom`]},
+ {t:`Klamra na paznokieć / przełożenie`,lvl:`Podologia · 150 zł`,d:`Klamra korygująca wrastający paznokieć — 2 klamry 250 zł (z opracowaniem paznokci).`,
+  full:`<p>Założenie lub przełożenie klamry korygującej paznokieć: klamra delikatnie prostuje płytkę i prowadzi paznokieć do prawidłowego wzrostu. Jedna klamra to 150 zł, dwie klamry 250 zł — cena zawiera opracowanie wszystkich paznokci.</p><p><b>Cena:</b> 150 zł (2 szt. 250 zł) · <b>Wykonuje:</b> Maja Ostrowska-Gralka (podolog).</p>`,
+  dla:`Dla osób z wrastającym paznokciem — konserwatywna metoda korekcji zamiast drogi operacji.`,ben:[`korekcja wzrostu paznokcia`,`uniknięcie zabiegu chirurgicznego`,`plan wizyt kontrolnych`]},
+ {t:`Podcięcie wrastającego paznokcia / tamponada`,lvl:`Podologia · 100 zł`,d:`Zabieg na wrastający paznokieć z tamponadą — ulga już na pierwszej wizycie.`,
+  full:`<p>Podcięcie części wrastającej paznokcia i założenie tamponady odciążającej: zabieg przynosi ulgę od pierwszej wizyty i zabezpiecza bruzdę paznokciową na czas gojenia.</p><p><b>Cena:</b> 100 zł · <b>Wykonuje:</b> Maja Ostrowska-Gralka (podolog).</p>`,
+  dla:`Przy stanie zapalnym i bólu palca — szybka interwencja bez skierowania.`,ben:[`ulga od pierwszej wizyty`,`zabezpieczenie bruzdy`,`ocena, czy potrzebna jest klamra`]},
+ {t:`Leczenie brodawki wirusowej`,lvl:`Podologia · 150 zł`,d:`Zabieg z lekiem i materiałem na pierwsze dni leczenia — wszystko w cenie.`,
+  full:`<p>Zabieg leczenia brodawki wirusowej na stopie: opracowanie zmiany, aplikacja leku i materiał opatrunkowy na pierwsze dni terapii. Cena obejmuje lek i materiał; dalsze wizyty planowane są indywidualnie.</p><p><b>Cena:</b> 150 zł (lek + materiał) · <b>Wykonuje:</b> Maja Ostrowska-Gralka (podolog).</p>`,
+  dla:`Dla osób z bolesnymi brodawkami podeszwowymi — szczególnie sportowców i dzieci (basen, szatnie).`,ben:[`lek i opatrunek w cenie`,`plan dalszego leczenia`,`ulga przy chodzeniu`]},
+ {t:`Trening personalny`,lvl:`Trening · 60 min · cena po konsultacji`,d:`Jeden na jeden z trenerem: Hubert (trener medyczny), Adam lub Bartek — plan pod cel i możliwości.`,
+  full:`<p>Trening personalny prowadzony przez trenerów o różnych specjalizacjach: Hubert Kowalczyk (trener medyczny, praca z bólem i przewlekłymi dolegliwościami), Adam Burski (rozwój sylwetki i siły) i Bartek Mikołajczyk (pierwsze kroki w treningu, dieta, trening online). Pierwsza rozmowa ustala cel, historię zdrowotną i harmonogram.</p><p><b>Czas:</b> 60 minut · <b>Cena:</b> po konsultacji (lokalny punkt odniesienia: ok. 100 zł za sesję) · <b>Prowadzą:</b> Hubert Kowalczyk, Adam Burski, Bartek Mikołajczyk.</p>`,
+  dla:`Dla początkujących, którzy chcą bezpiecznie zacząć, osób po kontuzjach i tych, którym brakuje dyscypliny samodzielnego treningu.`,ben:[`plan pod Twoje ciało i cel`,`nadzór techniki przy każdym powtórzeniu`,`regularność, której trudno dorównać samemu`]},
+ {t:`Treningi grupowe „babska siła”`,lvl:`Trening grupowy · karnet do ustalenia`,d:`Kobieca grupa siłowo-kondycyjna: obwody 4×6 ćwiczeń — najpopularniejsze zajęcia w rolkach centrum (1–3,5 tys. wyświetleń).`,
+  full:`<p>„Babska siła” to trening grupowy dla kobiet w formie obwodów: 4 rundy po 6 ćwiczeń, skalowane do poziomu uczestniczek. Zajęcia cieszą się największą popularnością w komunikacji centrum — rolki z treningów zbierają po 1–3,5 tys. wyświetleń.</p><p><b>Czas:</b> ok. 60 minut · <b>Cena:</b> karnet do ustalenia (lokalne widełki 160–200 zł/mc) · <b>Prowadzą:</b> Maja Ostrowska-Gralka, Mateusz Gralka.</p>`,
+  dla:`Dla kobiet, które chcą trenować w głośnej, wspierającej grupie — bez porównywania się i bez tablic z wynikami.`,ben:[`siła i kondycja w przyjaznej grupze`,`motywacja wspólnoty`,`skalowanie poziomów na każdych zajęciach`]},
+ {t:`Fizjoterapia „W Dobrych Rękach”`,lvl:`Fizjoterapia · cena po konsultacji`,d:`Terapia manualna, masaż leczniczy i ćwiczenia korekcyjne — gabinet Kamila Kacprzaka i Marcina Myszki w naszym centrum.`,
+  full:`<p>Od września 2026 w Pro-Health działa gabinet fizjoterapeutyczny „W Dobrych Rękach”: mgr Kamil Kacprzak i mgr Marcin Myszka prowadzą terapię manualną, masaż leczniczy i ćwiczenia korekcyjne. To fizjoterapia na miejscu — bez jeżdżenia po mieście między specjalistami.</p><p><b>Cena:</b> po konsultacji (rynkowo 120–250 zł za wizytę) · <b>Prowadzą:</b> Kamil Kacprzak, Marcin Myszka.</p>`,
+  dla:`Dla osób po urazach, z bólem przewlekłym, ze skierowaniem od lekarza — i takich, dla których sam masaż już nie wystarcza.`,ben:[`diagnoza i plan terapeutyczny`,`terapia manualna`,`kontynuacja w treningu w tym samym miejscu`]},
+];
+
+const TEAM=[
+ {slug:"maja",name:"Maja Ostrowska-Gralka",role:"Właścicielka · 5 zawodów w jednej osobie",img:"team_placeholder.jpg",
+  intro:`Fundament całego centrum: podolog, masażystka, trenerka i organizatorka turniejów — od 2010 roku.`,
+  chips:["podolog","masażystka","trenerka grupowa","trenerka karate","sędzia główny turniejów"],
+  bio:`<p>Właścicielka Centrum Sportu i Usług Prozdrowotnych Pro-Health, prowadząca je nieprzerwanie od 2010 roku — to szesnaście sezonów z klientami z Poddębic i okolic. Łączy pięć ról: masażystki (klasyczny, leczniczy, relaksacyjny, bańka, kobido, gorące kamienie), podologa, trenerki zajęć grupowych, trenerki karate i sędziego głównego turniejów.</p>
+  <p>To ona stoi za organizacją Turnieju Małego Karateki — dwunastu edycji cyklu z partnerami takimi jak Gmina Uniejów i Termy Uniejów. W 2026 roku uhonorowana lokalnym wyróżnieniem „trener roku”, a jej podologiczne gabinety są polecane w lokalnych grupach jako punkt zaufania.</p>`,
+  extra:["<b>Największe ryzyko i największy kapitał zarazem:</b> gdy Maja jest na urlopie lub zawodach, gabinet podologiczny stoi — to argument za budową zespołu i rezerwacji online (opisane w zakładce Możliwości).",
+  "Sędzia główny i organizatorka 12 edycji Turnieju Małego Karateki w Uniejowie — partnerzy: Gmina Uniejów, Termy Uniejów, szkoły i sponsorzy lokalni.",
+  "Prowadzi karate dla dzieci od września 2026 także pod szyldem Pro-Health w Poddębicach (dotąd w Uniejowskim Klubie Karate Bassai).",
+  "Cennik masażu i podologii z 1.09.2026 — jej ręce i wiedza są za każdą pozycją z grafiki, którą centrum publikuje."],
+  links:[["Facebook: Pro-Health","https://www.facebook.com/firmaPH"]]},
+ {slug:"mateusz",name:"Mateusz Gralka",role:"Karate 2 Dan · treningi grupowe",img:"team_placeholder.jpg",
+  intro:`Drugi trener karate i współprowadzący grupowe — środowisko klubu Bassai z Uniejowa.`,
+  chips:["karate 2 Dan","treningi grupowe","klub Bassai Uniejów"],
+  bio:`<p>Karateka z Uniejowskiego Klubu Karate „Bassai”, gdzie prowadzi treningi dzieci i młodzieży obok Mai. W briefingach centrum figuruje jako posiadacz 2 Dan — stopień ten, podobnie jak dokładna przynależność stylowa, czeka na potwierdzenie w źródłach klubowych, dlatego podajemy go za przekazem właścicielki.</p>
+  <p>W źródłach sieciowych widnieje jako zawodnik en-bu juniorów (z Dawidem Gralką) na II Mistrzostwach Świata Karate Fudokan w Łodzi w 2007 roku — karate to w tej rodzinie sprawa pokoleniowa.</p>`,
+  extra:["Prowadzi treningi grupowe Pro-Health (m.in. „babska siła”) razem z Mają.",
+  "Środowisko klubu: UKK Fudokan „Bassai” Uniejów, ul. Orzechowa 6 — 12 km od centrum Poddębic.",
+  "Rodzina w ekosystemie centrum: Dorota Gralka (opieka medyczna turniejów), Melania Gralka (zawodniczka) — naturalny trzon kadry szkoleniowej."],
+  links:[["Klub Bassai na Facebooku","https://www.facebook.com/profile.php?id=100057403962256"]]},
+ {slug:"oliwia",name:"Oliwia Staniak",role:"Masażystka · mistrzyni Malta Cup 2026",img:"team_placeholder.jpg",
+  intro:`Wychowanka klubu, która została masażystką centrum — i mistrzynią Malta Cup w kumite.`,
+  chips:["masażystka certyfikowana","studentka fizjoterapii","Malta Cup 2026 — 1. miejsce","sportowiec roku 2025"],
+  bio:`<p>Certyfikowana masażystka i studentka fizjoterapii, prowadząca zabiegi masażu w Pro-Health obok Mai. Równocześnie zawodniczka karate kadry klubu — mistrzyni Malta Cup 2026 w kumite, wyróżniona lokalnie jako „sportowiec roku 2025”.</p>
+  <p>To żywy dowód na działającą w klubie ścieżkę „zawodnik → instruktor → pracownik”: dziewczyna, która zaczynała na macie, dziś przyjmuje klientów gabinetu. Prowadzi też równolegle własną stronę „Oliwia Staniak – Masaże”.</p>`,
+  extra:["Wykonuje masaże z cennika centrum: klasyczne, lecznicze, relaksacyjne, bańka, gorące kamienie.",
+  "Jej własna marka masażów (FB) działa równolegle do Pro-Health — centrum może na tym budować współpracę zamiast konkurencji.",
+  "Historia Oliwii to gotowy materiał narracyjny na rekrutację do karate: „tu możesz kiedyś sam prowadzić zajęcia”."],
+  links:[["Facebook: Oliwia Staniak – Masaże","https://www.facebook.com/p/Oliwia-Staniak-Masa%C5%BCe-61580317552026"]]},
+ {slug:"hubert",name:"Hubert Kowalczyk",role:"Trener medyczny · bóle przewlekłe",img:"team_placeholder.jpg",
+  intro:`Specjalista od pracy z bólem: trening medyczny dla osób, którym zwykły trening nie pomaga.`,
+  chips:["trener medyczny","bóle przewlekłe","własne IG trenerskie"],
+  bio:`<p>Trener medyczny — rzadka specjalizacja między fizjoterapią a treningiem personalnym. Pracuje głównie z osobami z przewlekłymi bólami (pleców, kręgosłupa), dla których standardowy plan na siłowni nie wystarcza albo jest ryzykowny.</p>
+  <p>Prowadzi własny profil trenerski, dzięki któremu pozyskuje klientów indywidualnych — a w Pro-Health stanowi trzon propozycji „trening terapeutyczny”. To naturalny partner dla gabinetu fizjoterapii: pacjent po terapii manualnej przechodzi u niego do wzmacniania.</p>`,
+  extra:["Propozycja produktowa z nim w roli głównej: program „Ból pleców w 6 tygodni” — opisany w zakładce Możliwości.",
+  "Współpraca z fizjoterapeutami „W Dobrych Rękach” domyka pętlę: terapia → trening medyczny → samodzielny trening.",
+  "Prowadzi klientów także poza centrum (własne social media) — warto to ukierunkować na wspólny lejek rezerwacji."],
+  links:[]},
+ {slug:"adam",name:"Adam Burski",role:"Trener personalny · sylwetka i siła",img:"team_placeholder.jpg",
+  intro:`Trener personalny z wizją rozwoju „ciała, ducha i intelektu” — siła, sylwetka, dyscyplina.`,
+  chips:["trener personalny","rozwój sylwetki","IG: Trener Personalny Poddębice"],
+  bio:`<p>Trener personalny specjalizujący się w pracy nad sylwetką i siłą. Aktywny zawodowo w Poddębicach od lat, prowadzi klientów indywidualnych w Pro-Health — od pierwszego wejścia na siłownię po przygotowanie do konkretnych celów sylwetkowych.</p>
+  <p>Jego profil „Trener Personalny Poddębice” jest aktywny i rozpoznawalny lokalnie, a wpis firmowy w kategorii kluby sportowo-rekreacyjne potwierdza ciągłość działalności.</p>`,
+  extra:["Cel klientów: rekompozycja sylwetki, siła podstawowa, powrót do formy po przerwie.",
+  "Współpracuje z pozostałymi trenerami przy obsłudze godzin szczytu i zastępstwach.",
+  "Kandydat do prowadzenia treningów pakietowych 4/8/12 (model opisany w Możliwościach)."],
+  links:[]},
+ {slug:"bartek",name:"Bartek Mikołajczyk",role:"Trener personalny · pierwsze kroki i online",img:"team_placeholder.jpg",
+  intro:`Trener dla początkujących — „pomagam zacząć” — z działającym treningiem i dietą online.`,
+  chips:["trener personalny","trening online","dieta","Fixly 5/5"],
+  bio:`<p>Trener personalny wyspecjalizowany w pracy z osobami, które zaczynają od zera: pierwsze miesiące na siłowni, budowanie nawyku, prosty plan żywieniowy. Prowadzi też treningi i porady dietetyczne online — sięgając klientów spoza Poddębic.</p>
+  <p>Jego oceny w serwisach zleceń (5 opinii, średnia 5/5) i aktywny profil trenerski potwierdzają stały dopływ klientów indywidualnych.</p>`,
+  extra:["Najlepszy w zespole kandydat do skalowania online: ma już działający model treningu zdalnego.",
+  "Uzupełnia ofertę centrum o dietetykę podstawową — naturalny upsell przy pakietach treningowych.",
+  "Jego hasło „pomagam początkującym zacząć” to gotowy komunikat rekrutacyjny dla nowej fali klientów po Nowym Roku."],
+  links:[["Instagram: @trener_od_podstaw","https://www.instagram.com/trener_od_podstaw"]]},
+ {slug:"kamil",name:"Kamil Kacprzak",role:`Fizjoterapeuta · „W Dobrych Rękach”`,img:"team_placeholder.jpg",
+  intro:`Mgr fizjoterapii z własnym gabinetem — od września 2026 przyjmuje w naszym centrum.`,
+  chips:["mgr fizjoterapii","terapia manualna","masaż leczniczy","ćwiczenia korekcyjne"],
+  bio:`<p>Magister fizjoterapii, prowadzący gabinet „W Dobrych Rękach” — od września 2026 roku przyjmuje także przy ul. Sienkiewicza 48, czyli w siedzibie Pro-Health. W zakresie: terapia manualna, masaż leczniczy i ćwiczenia korekcyjne.</p>
+  <p>Jego gabinet funkcjonuje w modelu współpracy siedzibowej — to dla centrum strategiczne: fizjoterapia wchodzi do oferty bez kosztów zatrudnienia. Pacjenci rezerwują wizyty przez profile branżowe, a opinie są bardzo pozytywne (wyróżnienie „Godny Polecenia”).</p>`,
+  extra:["Dokładny zakres współpracy (grafik, podział przychodów, wspólna recepcja) — do ustalenia z właścicielką; wpływa na wybór systemu rezerwacji.",
+  "Przyjmuje także w drugim punkcie w Poddębicach (ul. Piękna 19) — oba adresy figurują w katalogach.",
+  "Dla klientów centrum: najkrótsza droga od masażu (objawowego) do fizjoterapii (przyczynowej) pod jednym adresem."],
+  links:[["Strona: W Dobrych Rękach","https://www.wdobrychrekach.net.pl"]]},
+ {slug:"marcin",name:"Marcin Myszka",role:`Fizjoterapeuta · „W Dobrych Rękach”`,img:"team_placeholder.jpg",
+  intro:`Mgr fizjoterapii, absolwent SAN Łódź — druga para rąk gabinetu fizjoterapeutycznego w centrum.`,
+  chips:["mgr fizjoterapii","SAN Łódź","profile branżowe"],
+  bio:`<p>Magister fizjoterapii, absolwent Społecznej Akademii Nauk w Łodzi. W zespole „W Dobrych Rękach” od września 2026 — o jego przynależności do gabinetu świadczą publikacje zespołu i relacje współpracowników z Pro-Health.</p>
+  <p>Figuruje w branżowych serwisach dla fizjoterapeutów, gdzie zbiera opinie pacjentów. Szczegóły specjalizacji i grafik przyjęć w centrum — w ustalaniu; chętnie dowieziemy je na stronie po potwierdzeniu.</p>`,
+  extra:["Wykształcenie potwierdzone (mgr, SAN Łódź); zakres usług w centrum — do ustalenia z właścicielką.",
+  "Razem z Kamilem obsługuje fizjoterapię w godzinach, w których gabinet masażu pracuje pełną parą — jeden system rezerwacji dla obu.",
+  "Uwaga porządkowa: jego internetowy imiennik (twórca YouTube) to inna osoba — przy budowie widoczności warto to rozdzielić."],
+  links:[]},
+];
+
+const WIEDZA=[
+ [`Trener medyczny`,`Ból pleców — co mówią trenerzy medyczni`,`Ból pleców najczęściej nie zaczyna się w kręgosłupie, lecz w braku ruchu, siedzącym trybie życia i osłabionych mięśniach głębokich. Hubert Kowalczyk, trener medyczny Pro-Health, tłumaczy, dlaczego sam masaż to za mało — i co robić dalej.`,
+  `<p>Ból dolnego odcinka kręgosłupa to jedna z najczęstszych przyczyn wizyt u fizjoterapeuty i jednocześnie jedna z najbardziej przemilczanych dolegliwości: „przecież każdy ma plecy”. Tymczasem współczesna fizjoterapia mówi coś zaskakującego — w zdecydowanej większości przypadków ostry ból pleców nie wynika z poważnej patologii, tylko z przeciążenia i dekondycji: ciała, które za mało się rusza, a potem nagle dużo dźwiga.</p>
+  <p>Dlatego standardem opieki na świecie stała się tzw. opaska żółta — kierowanie pacjenta z bólem pleców na ruch jak najszybciej, zamiast zalecania leżenia i pełnego spoczynku. Ruch jest lekiem; brak ruchu podtrzymuje ból. To przełom w myśleniu, który dla wielu osób brzmi nielogicznie — przecież „boli, to nie ruszam”.</p>
+  <p>Rola trenera medycznego zaczyna się dokładnie tam, gdzie kończy się terapia manualna. Fizjoterapeuta i masażysta zdejmują ból i przywracają ruch w stawach; trener medyczny buduje siłę i nawyki, żeby ból nie wrócił. W Pro-Health te dwie role występują pod jednym dachem — co w praktyce oznacza, że pacjent nie zostaje sam po zakończeniu terapii.</p>
+  <p>Jak wygląda taka praca? Najpierw rozmowa i wywiad: skąd ból, kiedy się pojawia, co go nasila. Potem proste testy ruchowe i budowa planu, który zaczyna się od rzeczy podstawowych: oddychania, ustawienia miednicy, aktywacji mięśni głębokich. Dopiero potem dochodzi siła. To powolne — i właśnie dlatego działa.</p>
+  <p>Trzy najczęstsze błędy osób z bólami pleców: pierwsze — „poczekam, aż przejdzie” (przy przewlekłym bólu każdy kolejny tydzień utrwala wzorzec); drugie — „kupię pas i będę nosić” (pas zamiast mięśni to droga donikąd); trzecie — „wrócę na siłownię od razu do dużych ciężarów” (ciało potrzebuje progresji, nie próbowania sił).</p>
+  <p>Czego nie obiecujemy: że sześć tygodni magicznie zlikwiduje każdy ból. Program „Ból pleców w 6 tygodni”, który proponujemy w centrum, to struktura pracy — wywiad, progresja, kontrola efektu — a nie gwarancja medyczna. Przy objawach ostrzegawczych (nasilający się ból nocny, drętwienie nóg, zaburzenia zwieraczy) drogą jest lekarz, nie trening.</p>
+  <p>Najlepsza wiadomość jest taka, że plecy lubią rutynę. Piętnaście minut dziennie ruchu — spacer, mobilność, kilka ćwiczeń wzmacniających — robi przez rok więcej niż jeden intensywny tydzień wakacyjnej aktywności. Jeśli chcesz zacząć, umów się na rozmowę: poprowadzimy Cię od pierwszego kroku.</p>`],
+ [`Stopy`,`Stopy pod lupą — fundament, o który nikt nie dba`,`Stopy noszą nas przez całe życie i przez całe życie są ignorowane. Maja Ostrowska-Gralka, podolog Pro-Health, o tym, co mówią stopy o całym ciele — i kiedy czas na wizytę u specjalisty.`,
+  `<p>Stopa to mechanizm z dwudziestu sześciu kości, trzydziestu trzech stawów i ponad stu mięśni, więzadeł i ścięgien — najdoskonalsza konstrukcja amortyzująca, jaką nosimy na co dzień. A jednak traktujemy ją gorzej niż buty, w które wkładamy kilkaset złotych: bagiety za ciasne, obcasy przenoszące ciężar na przód, latanie po domu boso na twardych płytkach.</p>
+  <p>Stopy to też świetny informator. Modzele i nagniotki pokazują, gdzie przenosisz ciężar; ścieranie podeszwy butów po wewnętrznej krawędzi zdradza pronację; paznokcie wrastające często mówią o obuwiu i sposobie obcinania. Podolog czyta te znaki jak raport z twojej postawy i chodu.</p>
+  <p>Podologia to nie kosmetyka — to dziedzina z narzędziami medycznymi, sterylizacją i wiedzą anatomiczną. Różnica między „pedicure w salonie” a zabiegiem podologicznym jest jak między fryzjerem a trychologiem: podobny obszar, zupełnie inny poziom ingerencji i bezpieczeństwa.</p>
+  <p>Komu szczególnie zalecamy regularną opiekę podologiczną? Osobom z cukrzycą (stopy diabetyka wymagają profilaktyki, bo zmniejszona czutość potrafi zamienić drobne otarcie w poważny problem), seniorom (grube, twarde paznokcie trudne do samodzielnego obcięcia), sportowcom i biegaczom (przeciążenia, brodawki, otarcia) oraz każdemu z wrastającym paznokciem — to problem, który sam się nie rozwiąże.</p>
+  <p>Wrastający paznokieć zasługuje na osobny akapit, bo to najczęstszy powód wizyt „z bólem”, które dało się uniknąć. Zamiast czekania na stan zapalny i wizytę u chirurga, podologia oferuje rozwiązanie zachowawcze: tamponadę, a następnie klamrę korygującą — cienki drucik, który prowadzi płytkę do prawidłowego wzrostu. To proces rozłożony na tygodnie, ale pozwala uratować paznokieć.</p>
+  <p>Odciski i modzele to z kolei nie wada, tylko objaw: ciało buduje ochronę tam, gdzie jest nadmierny ucisk. Usunięcie odcisku bez zmiany przyczyny — niewygodnych butów, wady ustawienia stopy, sposobu chodu — to jak koszenie trawy, która i tak odrośnie. Dlatego po zabiegu podolog zawsze mówi, co zmienić dalej.</p>
+  <p>Najprostsza profilaktyka na start: chodź więcej boso po miękkim (trawa, dywan, piasek), rozciągaj łydki i podeszwy (rolowanie piłką), kupuj buty o pół numeru większe wieczorem (stopa lekko puchnie) i kontroluj paznokcie — obcinane prosto, nie za krótko. I umów się na wizytę, jeśli coś Cię zaniepokoi — diagnostyka jest szybsza i tańsza niż leczenie powikłań.</p>`],
+ [`Dotyk`,`Masaż leczniczy a relaksacyjny — czym się różnią`,`W cenniku Pro-Health masaż występuje w trzech odmianach: klasyczny, leczniczy i relaksacyjny. To nie trzy nazwy tej samej usługi — różni je cel, technika i to, co dzieje się z ciałem po wyjściu z gabinetu.`,
+  `<p>Masaż relaksacyjny ma jeden cel: wyciszenie układu nerwowego. Powolne, rytmiczne, płynne ruchy w stałym kierunku przepływu tkankowego. Obniżenie tętna, głębszy oddech, senność po zabiegu — to są jego mierniki sukcesu. Ciało po dobrym masażu relaksacyjnym jest „zrestartowane”, choć niekoniecznie „naprawione”.</p>
+  <p>Masaż leczniczy (terapeutyczny) pracuje z konkretnym problemem: napięciem mięśnia, punktem spustowym, blizną, ograniczeniem ruchomości. Techniki są dokładniejsze, głębsze, czasem punktowe — i bywają mocniejsze. Tu masażysta rozmawia z Tobą w trakcie zabiegu: pyta o odczucia, zmienia nacisk, testuje zakres ruchu. Efekt bywa odczuwalny przez kilka dni (mięśnie „przepracowane”) zanim przyjdzie ulga.</p>
+  <p>Masaż klasyczny to złoty środek — łączy oba cele: rozgrzanie i rozluźnienie tkanek z poprawą krążenia i ogólnym odprężeniem. Dla większości osób „chcę coś dla pleców, ale nie wiem czego” — to właśnie on.</p>
+  <p>Kiedy który? Po treningu i przy przewlekłym zmęczeniu — relaksacyjny lub klasyczny. Przy konkretnym bólu i sztywności — leczniczy, najlepiej po krótkiej rozmowie telefonicznej, co się dzieje. W stanie ostrym (świeży uraz, stan zapalny, gorączka) — żadne z powyższych: najpierw diagnoza.</p>
+  <p>Częste pytanie: czy masaż „wypcha” toksyny? Nie — to uproszczenie z dawnych podręczników. Masaż realnie poprawia miejscowe krążenie krwi i limfy, rozluźnia tkanki i obniża napięcie układu nerwowego; to wystarczająco dużo, bez magicznych obietnic. Podobnie z bólem: masaż potrafi zdjąć napięciowy ból głowy i karku, ale ból promieniujący do nogi czy drętwienie to temat dla fizjoterapeuty lub lekarza.</p>
+  <p>Jak często? Przy pracy biurowej raz na 2–4 tygodnie utrzymuje efekt; przy sporcie wyczynowym bywa częściej, pod cel. Na co uważać: masaż nie jest wskazany przy infekcjach, żylakach zapalnych, świeżich urazach i niektórych chorobach skóry — masażystka zawsze robi wywiad przed zabiegiem.</p>
+  <p>Najważniejsza zasada: masaż w naszym centrum to usługa zdrowotna wykonywana przez przeszkolone osoby — nie kosmetyka i nie „bajer”. Każda wizyta zaczyna się od krótkiej rozmowy o tym, po co przychodzisz. Dlatego różnica między odmianami nie jest marketingowa — to podział pracy nad Twoim ciałem.</p>`],
+ [`Dziecko`,`Karate dla dziecka: od czego zacząć`,`Rodzice pytają o dwie rzeczy: czy karate nie jest agresywne i czy dziecko „nadaje się” do sztuk walki. Po dwunastu edycjach Turnieju Małego Karateki wiemy, że kolejność pytań jest odwrotna — najpierw dziecko, potem sport.`,
+  `<p>Karate dla dzieci to w praktyce głównie nauka zasad: słuchania, czekania na swoją kolej, kontrolowania swojego ciała w przestrzeni, gdzie ćwiczą inni. Uderzenia i kopnięcia przychodzą później — i zawsze z kontrolą. Dziecko, które na treningu karate „uczy się walczyć”, w rzeczywistości uczy się przede wszystkim nie walczyć: rozpoznawać emocje, hamować odruchy, reagować spokojem.</p>
+  <p>Od czego zacząć? Od wizyty na sali. Większość klubów, w tym nasi trenerzy, zaprasza na pierwsze zajęcia próbne — dziecko patrzy, próbuje, a rodzic obserwuje, jak trener pracuje z grupą. To lepszy filtr niż jakiekolwiek opinie: widać, czy dzieci są zaangażowane, czy trener mówi do nich po imieniu, czy sala jest bezpieczna.</p>
+  <p>Wiek startu: najczęściej 5–6 lat, choć wszystko zależy od dziecka. Młodsze dzieci potrzebują zajęć krótszych i bardziej zabawowych; starsze (9–12) szybko przechodzą do techniki i pierwszych form. U nas treningi prowadzone są w grupach wiekowych, a zawodnicy z ambicjami trenują osobno w grupie kadry.</p>
+  <p>Co potrzeba na start? Wygodnego stroju sportowego i chęci. Kimono (gi) przydaje się po kilku tygodniach, gdy wiadomo, że dziecko zostaje — wtedy warto kupić je w rozmiarze z zapasem, bo dzieci rosną. Ochraniacze dochodzą później, przy pierwszych walkach kontrolowanych i turniejach.</p>
+  <p>A turniej? Pierwszy start to dla dziecka często większe przeżycie niż dla rodzica — i właśnie dlatego organizujemy Turniej Małego Karateki: zawody podążające za potrzebami najmłodszych, gdzie każde dziecko dostaje pamiątkowy medal, a atmosfera jest rodzinna, nie gladiatornia. Dwunasta edycja zgromadziła 136 zawodników z 6 klubów — to najlepszy dowód, że format działa.</p>
+  <p>Co z „moje dziecko jest nieśmiałe”? Nieśmiałość to najczęstszy powód zapisu — i najczęstszy sukces. Karate daje strukturę: jasne zasady, powtarzalność, widoczny postęp (stopnie, pasy). Dziecko nieśmiałe zaczyna stać prosto, mówić wyraźniej, pierwsze ukłony robi z dumą. Dziecko nadpobudliwe uczy się kanonu cierpliwości: stania w szeregu i czekania.</p>
+  <p>Jak wygląda ścieżka dalej? Regularne treningi, egzaminy na stopnie (pasy), pierwsze zawody, potem — dla chętnych — grupa zawodnicza. I coś, co w naszym środowisku działa naprawdę: wychowankowie klubu zostają instruktorami. Oliwia Staniak, dziś masażystka centrum, zaczynała jako zawodniczka i w 2026 zdobyła mistrzostwo Malta Cup. Droga jest realna.</p>
+  <p>Pytania o treningi dzieci w Poddębicach i Uniejowie zadawajcie pod numerem centrum: 609 037 081. Powiemy, które grupy rekrutują i kiedy pierwszy trening próbny.</p>`],
+ [`Regeneracja`,`Regeneracja po treningu — tydzień ma 168 godzin`,`Godzina treningu to bodziec; pozostałe 167 godzin tygodnia to czas, w którym ciało naprawdę się zmienia. O tym, dlaczego sen, masaż i spokój są częścią planu — a nie luksusem.`,
+  `<p>Trening rozbija, regeneracja buduje. Ta krótka formuła tłumaczy, dlaczego dwie osoby na identycznym planie osiągają różne efekty: różni je to, co dzieje się między treningami. Proces adaptacji — wzrost siły, sprawności, odporności — zachodzi w odpoczynku, a trening jest jedynie sygnałem „buduj to, co dziś obciążyłem”.</p>
+  <p>Trzy filary regeneracji, w kolejności ważności: sen, żywienie i ruch spontaniczny. Sen to okres szczytowej regeneracji hormonalnej — skracając go, skracasz efekty treningu; nie ma suplementu, który to nadrobi. Białko i płyny dostarczają materiału budulcowego. A „ruch spontaniczny” — spacery, schody, rozciąganie — utrzymuje krążenie i sprzyja odbudowie lepiej niż leżenie na kanapie.</p>
+  <p>Gdzie w tym miejscu masaż? Dokładnie tam, gdzie trudno go zastąpić: przy lokalnym zmęczeniu i napięciu. Masaż poprawia miejscowe krążenie, rozluźnia przeciążone grupy mięśniowe i obniża napięcie układu nerwowego — co po okresie startu treningowego (kiedy wszystko boli) bywa różnicą między „rzucę to” a „idę dalej”.</p>
+  <p>Praktyczny plan dla początkujących: dzień treningu — trening + spacer wieczorem; dzień po — rozciąganie 10 minut i sen minimum 7 godzin; raz w miesiącu — masaż całościowy jako przegląd ciała. To wszystko. Nie potrzebujesz lodowej kąpieli, butelek z rollera ani odżywek z bajerem — potrzebujesz powtarzalności.</p>
+  <p>Czego unikać? Przetrenowania — stanu, w którym kolejne jednostki treningowe przestają dawać efekt, a ból mięśniowy staje się stały, spada jakość snu i pojawia się rozdrażnienie. To sygnał, że wypadł filar regeneracji. Lekarstwem nie jest przerwanie treningów na miesiąc, tylko świadome zredukowanie obciążenia i dbanie o sen.</p>
+  <p>A ból? Zwykły ból mięśniowy po treningu (DOMS) to część adaptacji — pojawia się po 24–48 godzinach i mija. Ból stawowy, ostry, jednostronny lub promieniujący — to już nie DOMS, tylko sygnał do konsultacji: u nas z fizjoterapeutą „W Dobrych Rękach” lub trenerem medycznym. Rozróżnienie tych dwóch stanów to najważniejsza umiejętność samodzielnego trenującego.</p>
+  <p>Zapamiętaj proporcję: 1 godzina treningu, 8 godzin snu, 8000 kroków dziennie. Jeśli te trzy liczby są w twoim tygodniu — jesteś lepiej zregenerowany niż 90 procent osób na siłowni. Wszystko powyżej tego (masaż, sauna, odżywki) to optymalizacja, nie fundament.</p>`],
+ [`Biegacz`,`Stopy sportowca i biegacza`,`Bieganie to seria jednonóż skoków sterowanych stopą. Dlatego biegacze i sportowcy zawdzięczają podologowi tyle samo co trenerowi — i dlaczego „stopy sportowca” to osobny rozdział profilaktyki.`,
+  `<p>Przy każdym kroku biegowym stopa przyjmuje obciążenie równe dwu–trzem krokom masy ciała — przy maratonie daje to kilkaset ton łącznego obciążenia na każdą stopę. Nie ma w ciele drugiej struktury, która pracowałaby w takich warunkach przez całe życie bez serwisu.</p>
+  <p>Typowe problemy biegacza to zwykle kaskada jednej przyczyny: przeciążenie. Zapalenie rozcięgny podeszwowej (ból pod piętą rano), przeciążenie ścięgna Achillesa, modzele pod przedstopiem, otarcia, czarne paznokcie od butów za ciasnych na dłuższych dystansach. Każde z nich ma swój protokół — ale wszystkie zaczynają się od tego samego: przeglądu stopy i obuwia.</p>
+  <p>Czarny paznokiek biegacza to klasyk: mikrourazy płytki od zbyt luźnego buta albo zbyt długich paznokci. Wygląda dramatycznie, ale zwykle jest niegroźny — podolog ocenia, czy płytkę odciążyć, opracować czy pozostawić. Czasem jeden dobrze wykonany zabieg oszczędza miesiące problemów z wrastaniem.</p>
+  <p>Brodawki wirusowe to drugi „pamiątkowy” problem biegaczy i dzieci korzystających z basenów: wilgoć, mikrourazy, wspólna szatnia. Na mokrej skórze wirus brodawczaka szczęśliwie się mnoży. Leczenie w gabinecie podologicznym jest skuteczniejsze i bezpieczniejsze niż domowe żele — bo łączy opracowanie zmiany z lekiem i zabezpieczeniem.</p>
+  <p>Co robić profilaktycznie? Trzy rzeczy. Pierwsza: rotacja dwóch par butów do biegania (amortyzacja odpycha między treningami). Druga: praca nad mobilnością stopy i łydki — rolowanie podeszwy piłką, rozciąganie łydek po każdym treningu. Trzecia: przegląd podologiczny raz na sezon — tak jak wymieniasz łańcuch w rowerze, wymienia się opracowanie podeszew i paznokci.</p>
+  <p>U sportowców drużynowych (piłka nożna, siatkówka, karate) dochodzi charakterystyka obciążeń: skoki, zatrzymania, praca na macie w karate (stopa pracuje w kimono boso — inny profil otarć). Tu podologia spotyka się z fizjoterapią: problem stopy rzutuje na kolano, biodro i kręgosłup, więc warto patrzeć całościowo.</p>
+  <p>Kiedy zgłosić się pilnie? Ból, który zmienia sposób chodzenia; zaczerwienienie i ocieplenie stopy (możliwy stan zapalny); zmiana barwy paznokcia z towarzyszącym bólem; każda rana na stopie osoby z cukrzycą — bez wyjątku, tego samego dnia.</p>
+  <p>Centrum Pro-Health łączy gabinet podologiczny, masaż i fizjoterapię — dlatego sportowiec może u nas przejść całą ścieżkę: od przeglądu stopy, przez masaż regeneracyjny, po pracę nad przyczyną przeciążeń. Umów wizytę: 609 037 081.</p>`],
+];
+
+const SIGS=[
+ [`S1`,`Maja · Hubert · Oliwia`,`Regeneracja zawodnika (B2B)`,`Pakiety opieki dla klubów sportowych: masaż + podologia + trening medyczny w abonamencie. U nas pracuje zespół, który sam wychował medalistów MP — mówimy językiem trenerów.`,
+  {jak:`Abonament klubowy: N zawodników × pakiet miesięczny (masaż regeneracyjny + przegląd stóp + konsultacja medyczna). Start od jednego klubu zaprzyjaźnionego — na przykład środowiska karate Fudokan z Uniejowa, które centrum już zna od środka. Wariant minimalny: jeden dzień regeneracji w miesiącu na sali (stacjonarny „day pass" dla zawodników).`,
+   komu:`Klubom sportowym i akademiom w promieniu 30 km (karate, piłka nożna, lekkoatletyka), które chcą profesjonalnej opieki bez zatrudniania własnego personelu medycznego. Decyduje trener albo zarząd klubu — często osoba, która zna Maję z turniejów.`,
+   rynek:`W Polsce opieka medyczna klubów młodzieżowych to z reguły jeden fizjoterapeuta na zawołanie. Centrum łączące masaż, podologię i trenera medycznego pod jednym dachem może zbudować pozycję „klubowego lekarza stóp i regeneracji" w całym powiecie — bez konkurencji.`}],
+ [`S2`,`Maja · partnerzy Term`,`Pakiet turysty Term Uniejów`,`Masaż relaksacyjny koordynowany z pobytami w Termach Uniejów — dla gości szukających pełnego dnia relaksu bez szukania dalej. Centrum jest już partnerem turniejowym Terma: drzwi są otwarte.`,
+  {jak:`Wspólny pakiet: bilet do Term + masaż 45–60 min w Pro-Health (12 km od Uniejowa) albo — w wariancie ambitnym — weekendowy dyżur masażystki w obiekcie w dni szczytu. Start od vouchera sprzedażnego przy kasach Termów; marżę dzieli się umową partnerską.`,
+   komu:`Turystom relaksacyjnym i rodzicom zawodników przyjeżdżającym na turnieje w Uniejowie — dwie grupy, które już są w okolicy i szukają, jak spędzić czas. Wyjazd „na termy" naturalnie łączy się z masażem.`,
+   rynek:`Termy Uniejów przyciągają setki gości dziennie, a ich oferta wellbeing kończy się na basenie. Najbliższy konkurencyjny gabinet masażu w regionie nie ma umowy partnerskiej — pierwsze centrum, które ją podpisze, zasysa ten ruch.`}],
+ [`S3`,`Maja · Mateusz`,`„Mama trenuje, dziecko na karate"`,`Równoległe pasma: matka na „babskiej sile" lub treningu personalnym w tej samej godzinie, w której dziecko trenuje karate. Jedna podróż, dwa treningi, zero logistyki.`,
+  {jak:`Grafikowo nic nie kosztuje — wystarczy ustawić pasma równolegle i komunikować to jako produkt: „przyprowadzasz dziecko, a sama wracasz w formie". Wariant z karnetem rodzinnym (zniżka na dwa karnety w jednym domu) domyka decyzję. Rolki z „babskiej siły" (1–3,5 tys. wyświetleń) to gotowy kanał promocji.`,
+   komu:`Matkom dzieci na karate — osobom, które i tak przywożą dziecko na trening i czekają na korytarzu albo w samochodzie. To najcieplejszy ruch w promocji: klientka widzi trening na własne oczy co tydzień.`,
+   rynek:`Kluby sportowe w małych miastach tracą rodziców jako „kierowców", a nie trenujących. Nikt lokalnie nie sprzeda równoległości „dziecko + rodzic" jako produktu — a to jedyny model, który realnie usuwa barierę braku czasu.`}],
+ [`S4`,`Hubert · Kamil · Marcin`,`Zdrowe plecy dla firm`,`Pakiet B2B: warsztat ergonomii stanowiska + masaż biurowy + program ćwiczeń dla pracowników. Fizjoterapeuci i trener medyczny w jednym zespole — pełna pętla od diagnozy do wzmacniania.`,
+  {jak:`Oferta dla lokalnych pracodawców (produkcja, biura, gminne jednostki): godzinny warsztat z badaniem postawy, krótkie masaże stacjonarne na miejscu i — dla chętnych — kontynuacja w centrum (program „Ból pleców w 6 tygodni"). Start od 2–3 firm z okolicy, których pracownicy już są klientami gabinetu.`,
+   komu:`Właścicielom i szefom HR małych firm z Poddębic i Uniejowa, którzy mają absencje z powodu bólu pleców i szukają benefitu realnie użytecznego. Decyzja zapada szybko, bo koszt jednego warsztatu jest niski, a efekt widoczny od razu.`,
+   rynek:`Ból kręgosłupa to najczęstsza przyczyna absencji w Polsce, a firmy z regionu nie mają dostępu do doradztwa ergonomicznego bez wyjazdu do Łodzi. Zespół z fizjoterapeutą i trenerem medycznym w składzie ma wiarygodność medyczną, której sam masażysta nie zbuduje.`}],
+ [`S5`,`Hubert`,`„Ból pleców w 6 tygodni"`,`Zamknięty program trenera medycznego: wywiad, testy, sześć tygodni progresji i kontrola efektu. Dla osób, których masaż już nie wystarcza, a siłownia przeraża.`,
+  {jak:`Program grupowy 6 tygodni × 1 trening grupowy + plan domowy (grupa 8–12 osób). Wstęp: konsultacja indywidualna z badaniem ruchu; finał: powtórne testy i plan dalszej samodzielności. Cena pakietowa niższa niż 6× trening personalny — marża wyższa przez grupę, przystępność rośnie dzięki cenie. Wejście z reklamy lokalnej kierowanej na frazy bólu pleców.`,
+   komu:`Osobom 35–60 z przewlekłym bólem pleców od pracy siedzącej i fizycznej, po rehabilitacji albo przed nią — klientom, którzy już chodzą na masaż i pytają „co dalej". To naturalny upsell gabinetu: masaż zdejmuje objaw, program buduje ciało.`,
+   rynek:`Przewlekły ból kręgosłupa to w Polsce choroba cywilizacyjna, a między rehabilitacją a siłownią ziewa pustka: nikt lokalnie nie oferuje ustrukturyzowanego programu treningowego dla tej grupy. Trener medyczny to specjalizacja, której w powiecie poddębickim po prostu nie ma.`}],
+ [`S6`,`Maja`,`Stopy: sportowiec i diabetyk`,`Dwa programy opieki podologicznej stałej: przegląd sezonowy dla zawodników (biegacze, karate, piłkarze) i protokół profilaktyczny dla osób z cukrzycą. Klient w abonamencie, stopy pod kontrolą cały rok.`,
+  {jak:`Program SPORT: 4 przeglądy rocznie + doraźne interwencje (brodawki, otarcia, czarne paznokcie) w stałej cenie pakietowej. Program DIABETYK: przegląd co 6–8 tygodni z checklistą samokontroli i edukacją rodziny — bo przy utracie czucia drobna rana to potencjalny dramat. Oba w cenie niższej niż suma pojedynczych wizyt.`,
+   komu:`Sportowcom i biegaczom amatorom (coraz więcej w każdej gminie) oraz osobom z cukrzycą i ich rodzinom — grupie, która w małej miejscowości nie ma alternatywy: najbliższa porządna podologia diabetologiczna jest w Łodzi.`,
+   rynek:`Polska jest światowym liderem zachorowalności na cukrzycę, a system POZ nie nadąża z opieką stop. Podolog z certyfikatami i gabinetem w Poddębicach zamyka lukę, na którą w dużym mieście czeka się miesiącami — tu pacjent dostaje termin w tym samym tygodniu.`}],
+];
+
+const STEPS=[
+ [`1`,`Naprawa profilu Facebook — tydzień`,`Profil centrum nosi dziś status „Wkrótce zamknięcie" i martwy link do strony firmy — <b>każdy potencjalny klient, który to widzi, odbiera centrum jako zamykane</b>. To jedna zmiana w ustawieniach plus aktualne zdjęcia i godziny. Efekt natychmiastowy, koszt zerowy, bez tego każdy kolejny marketing pracuje w dół.`],
+ [`2`,`Profil firmy Google + opinie z QR`,`Centrum nie ma dziś zweryfikowanego profilu Google Business — a to pierwsze miejsce, gdzie trafia lokalny klient szukający „masaż Poddębice" czy „podolog w pobliżu". Zestaw: zweryfikowany profil, zdjęcia gabinetu, kody QR przy recepcji zbierające opinie po zabiegu. <b>10 opinii to dla lokalnej firmy przepustka do map.</b>`],
+ [`3`,`Cennik jako tekst na stronie`,`Cennik graficzny z 1.09.2026 nie jest czytelny dla wyszukiwarek ani dla osób ze słabym wzrokiem. Przepisanie cen na stronę jako tekstu (zrobione w tym prototypie) daje klientowi odpowiedź w dwóch kliknięciach — a Google powód, by pokazać centrum na frazy lokalne.`],
+ [`4`,`Rezerwacje online — start za 0 zł`,`Telefon przestaje być wąskim gardłem: Fitssey do 50 rezerwacji miesięcznie kosztuje zero, bez umowy i bez prowizji. Zanim system zarobi, najpierw odciąża Maję od „czy jest miejsce w piątek?" — a lista rezerwowa i przypomnienia SMS odbierają problem nieobecności.`],
+ [`5`,`Realne zdjęcia zamiast stockowych`,`Centrum ma autentyczny materiał: turnieje, medale, sala, gabinet, zespół. Podmiana zdjęć na realne (zgodnie z listą plików w tym prototypie) buduje zaufanie, którego stock nie kupi — a społeczność turniejów robi darmowy zasięg z każdym oznaczeniem.`],
+];
+const REZ=[
+ {tag:`Rekomendacja`,t:`Fitssey`,cena:`<b>0 zł do 50 rezerwacji miesięcznie</b>, dalej plany od ok. 29 zł netto. <b>Zero prowizji od zabiegów</b>, bez umowy — wypowiedzenie mailem.`,
+  plus:[`Start bezkosztowy — próg 50 rezerwacji centrum przekroczy w pierwszym miesiącu używania`,`Płatności BLIK/karta, przypomnienia SMS — odzyskane nieobecności`,`Karnety i vouchery w jednym systemie (spójne ze sklepem)`,`Model rosnący z liczbą rezerwacji — płacisz za to, czego używasz`],
+  minus:[`Mniejsza rozpoznawalność marki niż Booksy — klient sam musi trafić na profil centrum (stąd krok 2: profil Google)`],
+  dla:`Wybór domyślny dla centrum na start: bez ryzyka, bez prowizji od zabiegów za 150–180 zł, bez umów. Wdrożenie w dni, profil centrum dostępny od razu.`},
+ {tag:`Największa marka`,t:`Booksy`,cena:`<b>145 zł netto/mc + 35 zł netto za pracownika</b>, a opcja Boost pobiera <b>45% przychodu z rezerwacji</b> pozyskanych przez platformę.`,
+  plus:[`Największy ruch klientów w Polsce — aplikacja sama polega klientów w okolicy`,`Gotowe profile branżowe (masaż, podologia, trening)`],
+  minus:[`Przy 8 osobach zespołu abonament przekracza 400 zł netto/mc — <b>samych pracowników</b>`,`Boost 45%: jedna rezerwacja masażu 150 zł „od Booksy" kosztuje centrum 67,50 zł — więcej niż cały miesiąc Fitssey`,`Umowa i prowizje od ruchu, który w dużej mierze i tak jest lokalny`],
+  dla:`Ma sens, gdy centrum będzie głównie zyskiwać nowych klientów z ruchu aplikacji (duże miasto, duża konkurencja). W Poddębicach, gdzie klient przychodzi z polecenia, 45% przychodu za ruch, który i tak by przyszedł, to najdroższy możliwy model.`},
+ {tag:`Pełny pakiet`,t:`GYM System`,cena:`<b>od 199 zł netto/mc</b> — system klasy klubowej: grafiki, karnety, płatności, portal klienta.`,
+  plus:[`Funkcje dużego klubu: strefy, wejściówki, kontrola dostępu, raporty`,`Sprawdzony w sieciach klubów — solidność techniczna`],
+  minus:[`Cena i funkcje pisane pod siłownie i kluby fitness, nie pod gabinet 8-osobowego zespołu`,`Nadbudowa, której centrum nie użyje — płacenie za moduły klubowe`],
+  dla:`Gdyby centrum przekształciło się w pełny klub (siłownia open + sekcje + strefy), GYM System ma sens. Dziś to jak kupno ciężarówki na dojazdy do gabinetu.`},
+];
+const REZREK=`<div class="tag gold">Nasza rekomendacja</div>
+<h3 style="font-size:1.35rem;margin:6px 0 12px">Start: Fitssey za 0 zł — i dopiero po miesiącu danych decyzja</h3>
+<p style="margin-bottom:12px">Pierwsze 50 rezerwacji nie kosztuje nic, nie ma umowy ani prowizji. <b>Nie trzeba wierzyć na słowo — wystarczy sprawdzić.</b> Miesiąc pracy pokazuje trzy liczby, których dziś centrum nie zna: ile osób rezerwuje online, ilu nie przychodzi, które godziny pękają w szwach. Dopiero z tymi danymi ma sens pytanie, czy ruch z Booksy jest warty 45% przychodu.</p>
+<p style="margin-bottom:12px"><b>Kolejność:</b> (1) profil Google i naprawa Facebooka (kroki 1–2 planu), (2) Fitssey na masażach i podologii — największa rotacja, (3) po miesiącu dokładamy treningi i karate, (4) płatności online na końcu, gdy zespół zaufa narzędziu.</p>
+<p style="font-size:.9rem;color:var(--muted)"><b>Uczciwie, czego nie wiemy:</b> ceny Fitssey powyżej kilkuset rezerwacji miesięcznie ustala się indywidualnie; nie znamy też współpracy z polskim wsparciem na poziomie wdrożenia. To dwa telefony — nie powód do zwłoki, bo start i tak jest darmowy.</p>`;
+
+const EBOOKS=[
+ [`Zdrowe stopy od A do Z — przewodnik pacjenta`,`Maja Ostrowska-Gralka`,`Każdy, kto chce zrozumieć swoje stopy`,[`Stopy liczą się najbardziej — dlaczego`,`Anatomia stopy bez żargonu`,`Buty: co kupować, czego unikać`,`Pielęgnacja podstawowa krok po kroku`,`Odciski i modzele — czytać znaki`,`Kiedy do podologa, kiedy do lekarza`,`Samobadanie: 5 minut raz w miesiącu`]],
+ [`Wrastający paznokieć — zanim boli`,`Maja Ostrowska-Gralka`,`Osoby z bólem palca i nawracającym problemem`,[`Dlaczego paznokcie wrastają`,`Obcinanie, które nie szkodzi`,`Tamponada i klamra — jak działają`,`Czego nie robić na własną rękę`,`Stany zapalne: plan pierwszej pomocy`,`Buty i skarpety w trakcie leczenia`,`Kiedy rozważa się zabieg chirurgiczny`]],
+ [`Stopy diabetyka — profilaktyka krok po kroku`,`Maja Ostrowska-Gralka`,`Osoby z cukrzycą i ich bliscy`,[`Dlaczego cukrzycy wymaga innej opiegi`,`Codzienne oglądanie — checklista`,`Utrata czucia: jak ją nadrobić`,`Obuwie i skarpety dla stopy diabetyka`,`Drobne rany: protokół postępowania`,`Rozkład opieki: podolog, lekarz, diabetolog`,`Najczęstsze błędy, które kosztują najwięcej`]],
+ [`Stopy sportowca i biegacza`,`Maja Ostrowska-Gralka`,`Biegacze, sportowcy, rodzice zawodników`,[`Stopa przy kroku biegowym — obciążenia`,`Zapalenie rozcięgny: profilaktyka`,`Achilles i łydki — dbanie na co dzień`,`Czarne paznokcie i otarcia`,`Brodawki: szatnie, baseny, mata`,`Rotacja butów i przeglądy sezonowe`,`Plan tygodniowego przeglądu stopy`]],
+ [`Ból pleców w 6 tygodni — plan`,`Hubert Kowalczyk`,`Osoby z przewlekłym bólem pleców`,[`Dlaczego plecy bolą: przeciążenie i dekondycja`,`Tydzień 1–2: oddech i miednica`,`Tydzień 3–4: mięśnie głębokie`,`Tydzień 5–6: siła i progresja`,`Czego nie robić w trakcie programu`,`Sygnały ostrzegawcze — kiedy do specjalisty`,`Jak nie wrócić do bólu: rutyna na całe życie`]],
+ [`Plecy przy biurku — 21 dni mikroprzerw`,`Hubert Kowalczyk`,`Pracujący siedząco, kierowcy`,[`Siedzenie: co dokładnie się dzieje`,`Ustawienie stanowiska w 15 minut`,`Mikroprzerwy 60-sekundowe`,`Rozciąganie klatki i bioder`,`Wzmacnianie między spotkaniami`,`Wieczorna rozładunkowa rutyna`,`Plan 21 dni do wydruku`]],
+ [`Trening medyczny — od rehabilitacji do siłowni`,`Hubert Kowalczyk`,`Po urazach, z bólem przewlekłym`,[`Czym jest trening medyczny`,`Most: terapia → trening`,`Testy ruchowe, które możesz wykonać sam`,`Progresja obciążeń bez ryzyka`,`Ból podczas ćwiczeń: interpretacja`,`Współpraca z fizjoterapeutą`,`Gotowy plan pierwszych 8 tygodni`]],
+ [`Zacznij od zera — pierwsze 12 tygodni`,`Bartek Mikołajczyk`,`Początkujący, wracający po przerwie`,[`Pierwszy trening: co robić, żeby nie odpaść`,`Trzy sesje tygodniowo — minimum skuteczne`,`Technika przed ciężarem`,`Prosty plan żywieniowy bez liczenia każdej kalorii`,`Zaklinacz postępu: notatnik treningowy`,`Motywacja: system zamiast heroizmu`,`Co dalej po 12 tygodniach`]],
+ [`Siła na start — rekompozycja bez diet-cud`,`Adam Burski`,`Chcący zmienić sylwetkę`,[`Rekompozycja: mniej tłuszczu, więcej mięśnia`,`Cztery wzorce ruchu, które wystarczą`,`Trening siłowy krok po kroku`,`Jedzenie pod cel: białko na pierwszym planie`,`Sen i regeneracja jako część planu`,`Jak mierzyć postęp bez obsesji wagi`,`Najczęstsze błędy pierwszego roku`]],
+ [`Regeneracja — 168 godzin tygodnia`,`Hubert Kowalczyk · Maja Ostrowska-Gralka`,`Osoby trenujące i zmęczone życiem`,[`Trening rozbija, regeneracja buduje`,`Sen: najmocniejszy suplement`,`Ruch spontaniczny vs kanapa`,`Masaż w planie tygodnia`,`Ostre vs przewlekłe zmęczenie`,`Przetrenowanie: sygnały i wyjście`,`Plan regeneracyjny do wydruku`]],
+ [`Automasaż — roller i piłka w praktyce`,`Oliwia Staniak`,`Osoby z napięciami mięśniowymi`,[`Narzędzia: co kupić, co się przyda`,`Techniki rolowania nóg`,`Plecy i kark bez nadkręgowania`,`Stopy: piłka pod biurkiem`,`Kiedy masaż pomaga, a kiedy szkodzi`,`Sesja 10-minutowa całościowa`,`Rutyna pozabiegowa po treningu`]],
+ [`Odprężenie pod kontrolą — stres i sen`,`Oliwia Staniak`,`Osoby zestresowane, źle śpiące`,[`Stres: co się dzieje w ciele`,`Oddech, który obniża napięcie`,`Wieczorna higiena snu`,`Rytuały wyciszenia krok po kroku`,`Masaż jako antystres`,`Ekrany, kofeina, alkohol — audyt`,`Plan 4 tygodni lepszego snu`]],
+ [`Masaż partnerski w domu`,`Oliwia Staniak`,`Pary, rodziny z dziećmi`,[`Masaż w domu: granice i możliwości`,`Stanowisko i olejek — minimum`,`Plecy: 6 chwytów podstawowych`,`Nogi i stopy: szybka seria`,`Głowa i kark dla zapracowanych`,`Masaż dzieci przed snem`,`Bezpieczeństwo: czego nie robić`]],
+ [`Karate dla rodzica — jak wspierać młodego zawodnika`,`Maja Ostrowska-Gralka`,`Rodzice dzieci na karate`,[`Co daje karate — realnie`,`Rola rodzica na trybunach`,`Wspieranie bez presji`,`Pasy i egzaminy: jak pomagać w przygotowaniach`,`Wyposażenie: co kupować i kiedy`,`Ochraniacze i bezpieczeństwo walk`,`Najczęstsze błędy rodziców`]],
+ [`Od nieśmiałego do medalisty`,`Mateusz Gralka`,`Rodzice dzieci nieśmiałych i nadpobudliwych`,[`Dwa portrety: nieśmiały i nadpobudliwy`,`Struktura treningu jako lekarstwo`,`Pierwszy ukłon i pierwszy pas`,`Rola grupy rówieśniczej`,`Przygotowanie emocjonalne do startu`,`Co jeśli dziecko chce odejść`,`Historie z sali: zanim i po`]],
+ [`Żywienie młodego sportowca`,`Bartek Mikołajczyk`,`Rodzice zawodników, trenerzy`,[`Energia rosnącego organizmu`,`Śniadanie młodego zawodnika`,`Nawodnienie na treningu i turnieju`,`Dzień zawodów: co jeść i kiedy`,`Słodycze i fast food — uczciwie o miejscu w diecie`,`Suplementy: co (nie) ma sensu u dzieci`,`Prosty jadłospis tygodniowy`]],
+ [`Pierwszy turniej — przewodnik rodzica`,`Maja Ostrowska-Gralka`,`Rodzice przed pierwszym startem dziecka`,[`Turniej Małego Karateki: jak to wygląda`,`Dokumenty, opłaty, zgłoszenia`,`Pakowanie: checklista na dzień startu`,`Rozgrzewka i strefa kibica`,`Jak rozmawiać po przegranej i po wygranej`,`Medal dla każdego — dlaczego to działa`,`Po turnieju: ścieżka dalej`]],
+ [`Babska siła — trening kobiet w każdym wieku`,`Maja Ostrowska-Gralka`,`Kobiety trenujące i zaczynające`,[`Dlaczego siła, nie cardio`,`Obwody 4×6 — jak trenujemy`,`Ćwiczenia krok po kroku`,`Modyfikacje pod poziom`,`Trening a cykl i samopoczucie`,`Jedzenie proste pod energię`,`Rutyna, która przeżyje wakacje`]],
+ [`Trening w dojrzałym wieku`,`Maja Ostrowska-Gralka · Hubert Kowalczyk`,`Kobiety 45+, w tym w menopauzie`,[`Ciało się zmienia — plan też`,`Siła i kości: priorytety po 45`,`Trening a hormony w menopauzie`,`Utrata wagi bez restrykcji`,`Zdrowie stóp i równowaga`,`Współpraca z trenerem medycznym`,`Plan tygodnia do wydruku`]],
+ [`Kobido i pielęgnacja twarzy — domowy rytuał`,`Maja Ostrowska-Gralka`,`Osoby dbające o twarz naturalnie`,[`Kobido: skąd się wzięło`,`Napięcia mimiczne: twarz pracuje`,`Rytuał 10-minutowy na wieczór`,`Techniki: żuchwa, czoło, owal`,`Olejki i kosmetyki: minimum`,`Czego oczekiwać realnie`,`Masaż jako relaks całego ciała`]],
+];
+
+
+const SHOP=[
+ [`prod_ph_01.jpg`,`Voucher: masaż całego ciała 60 min`,`Vouchery`,`Prezent, który działa na plecy i głowę. Kod do wykorzystania w gabinecie w 6 miesięcy.`,`180 zł`],
+ [`prod_ph_02.jpg`,`Voucher: masaż pleców 45 min`,`Vouchery`,`Klasyczny, leczniczy lub relaksacyjny — do wyboru na miejscu.`,`150 zł`],
+ [`prod_ph_03.jpg`,`Voucher: zabieg podologiczny`,`Vouchery`,`Pełny zabieg podstawowy: paznokcie, pięty, odciski, maska, krótki masaż.`,`180 zł`],
+ [`prod_ph_04.jpg`,`Voucher kwotowy 100 / 200 / 300 zł`,`Vouchery`,`Obdarowany wybiera sam: masaż, stopy, trening. Edycje świąteczne i na Dzień Matki.`,`od 100 zł`],
+ [`prod_ph_05.jpg`,`Karnet: masaż pleców 4×45 min`,`Karnety`,`Cztery masaże w miesiącu, 10% taniej niż pojedynczo.`,`540 zł`],
+ [`prod_ph_06.jpg`,`Karnet 5+1: masaż całego ciała`,`Karnety`,`Pięć masaży 60 min, szósty gratis. Ważny 6 miesięcy.`,`900 zł`],
+ [`prod_ph_07.jpg`,`Opieka podologiczna: klamra 3 wizyty`,`Karnety`,`Założenie klamry + dwie kontrole w cenie pakietu.`,`400 zł`],
+ [`prod_ph_08.jpg`,`Trening personalny 1 / 4 / 8 / 12`,`Treningi`,`Z Hubertem, Adamem lub Bartkiem. Pakiety taniej za sesję.`,`po konsultacji`],
+ [`prod_ph_09.jpg`,`Karnet OPEN — zajęcia grupowe`,`Treningi`,`Nielimitowane treningi grupowe w miesiącu, w tym „babska siła”.`,`do ustalenia`],
+ [`prod_ph_10.jpg`,`Program „Babska siła” 12 tygodni`,`Treningi`,`Plan siłowy dla kobiet: 2 treningi/tydz., pomiary, grupa wsparcia.`,`do ustalenia`],
+ [`prod_ph_11.jpg`,`Konsultacja trenera medycznego`,`Treningi`,`60 min: wywiad, testy ruchowe, plan przy bólach pleców i stawów.`,`po konsultacji`],
+ [`prod_ph_12.jpg`,`Składka klubowa Bassai — miesiąc`,`Karate`,`Treningi 2×/tydz. w Uniejowie lub Poddębicach. Pakiet rodzinny: 2. dziecko taniej.`,`do ustalenia`],
+ [`prod_ph_13.jpg`,`Egzamin na stopień kyu`,`Karate`,`Egzamin + dyplom + nowy pas. Terminy 2× w roku.`,`do ustalenia`],
+ [`prod_ph_14.jpg`,`Obóz karate — lato / zima`,`Karate`,`Tydzień treningów i integracji. Kadra: Maja i Mateusz.`,`do ustalenia`],
+ [`prod_ph_15.jpg`,`Wpisowe: Turniej Małego Karateki`,`Karate`,`Start w cyklicznym turnieju w Uniejowie (12 edycji, ok. 136 zawodników).`,`do ustalenia`],
+ [`prod_ph_16.jpg`,`Pakiet startowy: kimono + pas + ochraniacze`,`Sprzęt`,`Komplet na pierwszy trening, dobrany na miejscu do rozmiaru.`,`po konsultacji`],
+ [`prod_ph_17.jpg`,`Roller do automasażu`,`Sprzęt`,`Piankowy walec do nóg i pleców — zestaw z instrukcją z ebooka.`,`89 zł`],
+ [`prod_ph_18.jpg`,`Piłka do rolowania stóp`,`Sprzęt`,`Gładka piłka pod biurko: podeszwy, łydki, punkty spustowe.`,`39 zł`],
+ [`prod_ph_19.jpg`,`Wkładki po konsultacji podologicznej`,`Sprzęt`,`Dobierane indywidualnie po badaniu stóp.`,`w przygotowaniu`],
+ [`prod_ph_20.jpg`,`Biblioteka Pro-Health: 20 ebooków`,`Ebooki`,`Wszystkie przewodniki zespołu w jednym pakiecie (PDF/EPUB).`,`149 zł`],
+ [`prod_ph_21.jpg`,`Ebook pojedynczy`,`Ebooki`,`Wybierz tytuł z zakładki Ebooki — stopy, plecy, regeneracja, karate, kobiety, senior.`,`29–59 zł`],
+ [`prod_ph_22.jpg`,`Pakiet audio: 8 tytułów`,`Audiobooki`,`Audiobooki czytane przez autorów + praktyki relaksacyjne.`,`199 zł`],
+ [`prod_ph_23.jpg`,`Audiobook pojedynczy`,`Audiobooki`,`40–90 minut, MP3 do pobrania od razu.`,`39–49 zł`],
+ [`prod_ph_24.jpg`,`Program wideo „Ból pleców w 6 tygodni”`,`Online`,`Kurs Huberta: 18 sesji wideo + PDF z planem. Propozycja produktu.`,`do ustalenia`],
+ [`prod_ph_25.jpg`,`Program wideo „Kata dla początkujących”`,`Online`,`Pierwsze kata krok po kroku z Mają — do ćwiczeń w domu. Propozycja.`,`do ustalenia`],
+ [`prod_ph_26.jpg`,`Regeneracja zawodnika`,`Pakiety`,`Masaż + fizjoterapia + trening w jednym abonamencie dla sportowców i klubów.`,`po konsultacji`],
+ [`prod_ph_27.jpg`,`Turysta Term: masaż + stopy`,`Pakiety`,`Dla gości Term Uniejów i Poddębic: masaż 60 min + pielęgnacja stóp po basenie.`,`330 zł`],
+ [`prod_ph_28.jpg`,`Mama trenuje, dziecko na karate`,`Pakiety`,`Równoległy slot: trening dla rodzica, karate dla dziecka. Jedna wizyta, dwa cele.`,`do ustalenia`],
+ [`prod_ph_29.jpg`,`Pakiet sponsora turnieju`,`Dla firm`,`Logo na macie, plakacie i medalach: 500 / 1000 / 2000 zł. Zasięg: gmina + Termy Uniejów.`,`od 500 zł`],
+ [`prod_ph_30.jpg`,`„Zdrowe plecy” dla zespołu`,`Dla firm`,`4 treningi + 2 masaże na pracownika. Wycena od 5 osób.`,`po konsultacji`]
+];
+const DUSZA=[
+ {tag:`Kandydat duszy #1`,t:`„Cały człowiek pod jednym dachem”`,d:`Ruch + dotyk + stopy: jedyne miejsce w promieniu 30 km, gdzie masażystka, podolog, fizjoterapeuta i trener widzą tego samego klienta. To nie lista usług — to metoda.`,
+  jak:`Kodyfikacja metody Pro-Health: wspólny wywiad (jedna ankieta zdrowotna dla wszystkich praktyków), zasada przekierowań wewnętrznych („to nie temat na masaż — umów się do Kamila”) i wspólne cele klienta ustalane przez zespół. Nazwa i rytuał: „Przegląd całego człowieka” raz na kwartał — klient przechodzi masaż + stopy + konsultację treningową w jednym tygodniu. Z tego rodzi się tożsamość, której nie skopiuje żaden konkurent, bo wymaga zespołu.`,
+  komu:`Klientom przewlekle zmęczonym i przeciążonym, które omijają pojedyncze gabinety, bo „nie wiedzą, od czego zacząć”. Wewnętrznie: całemu zespołowi — metoda porządkuje przekierowania i podnosi wartość każdej wizyty.`,
+  rynek:`Przychodnie integracyjne i centra medycyny naturalnej w miastach udowadniają, że „jedno miejsce, cały człowiek” to model premium. W powiecie poddębickim ta nisza jest pusta — a centrum ją już fizycznie zajmuje, wystarczy to nazwać.`},
+ {tag:`Kandydat duszy #2`,t:`„Szkoła mistrzów” — karate i turniej jako marka`,d:`12 edycji Turnieju Małego Karateki, 4 złota MP, mistrzyni Malta Cup w zespole, ścieżka „zawodnik → instruktor”. To nie sekcja karate — to mała akademia mistrzostwa sportowego.`,
+  jak:`Komunikacyjne domknięcie: każda karta treningowa karate zaczyna się od tradycji („tu wychowujemy medalistów MP”), turniej jest przedstawiany jako wydarzenie całego środowiska (nie „zawody naszego klubu”), a ścieżka Oliwii — jako oferta dla każdego dziecka („trenuj u nas, a możesz kiedyś sam prowadzić”). Nazwa programu kadry i ritual przyjęcia do kadry (rozmowa z rodzicami, plan zawodnika) formalizują to, co już się dzieje.`,
+  komu:`Rodzicom wybierającym klub (dla których medale i ciągłość trenerów to dowód jakości), zawodnikom (duma i przynależność), całemu środowisku lokalnemu (turniej jako święto powiatu).`,
+  rynek:`Kluby z własnym turniejem i kadrą medalową to w małych miastach rzadkość — zwykle są „przychodnią sportową” bez tożsamości. Marka „szkoły mistrzów” podnosi akceptowalną składkę (benchmark 100–180 zł) i przyciąga zawodników z sąsiednich gmin.`},
+ {tag:`Tożsamość · 3 kierunki`,t:`Logo 2026 — trzy kierunki do decyzji`,d:`<svg viewBox="0 0 300 90" style="width:100%;max-width:420px;display:block;margin:10px 0"><g><rect x="6" y="8" width="78" height="74" rx="16" fill="#0e2a3b"/><circle cx="45" cy="45" r="26" fill="none" stroke="#c9a25b" stroke-width="3.5"/><circle cx="45" cy="45" r="20" fill="none" stroke="#c9a25b" stroke-width="1.2" opacity=".55"/><text x="45" y="54" text-anchor="middle" font-family="Georgia,serif" font-size="21" font-weight="700" fill="#c9a25b">PH</text><text x="98" y="42" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#111418">A · Monogram kliniczny</text><text x="98" y="62" font-size="10.5" fill="#6b7078">granat + złoto · szpitalna czystość</text></g></svg><svg viewBox="0 0 300 90" style="width:100%;max-width:420px;display:block;margin:14px 0"><g><circle cx="45" cy="45" r="26" fill="none" stroke="#0e2a3b" stroke-width="3.5"/><path d="M31 55 q14 -26 28 -8" fill="none" stroke="#c9a25b" stroke-width="3.5" stroke-linecap="round"/><path d="M27 34 l-9 -9 M63 56 l9 9" stroke="#0e2a3b" stroke-width="3" stroke-linecap="round"/><text x="98" y="42" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#111418">B · Ruch i stopa</text><text x="98" y="62" font-size="10.5" fill="#6b7078">łuk stopy w okręgu · dynamika</text></g></svg><svg viewBox="0 0 300 90" style="width:100%;max-width:420px;display:block"><g><rect x="14" y="14" width="62" height="6" rx="3" fill="#c9a25b"/><rect x="14" y="14" width="20" height="62" rx="3" fill="#0e2a3b"/><rect x="34" y="14" width="6" height="62" fill="#0e2a3b" opacity=".35"/><rect x="46" y="14" width="6" height="62" fill="#0e2a3b" opacity=".6"/><rect x="58" y="14" width="6" height="62" fill="#0e2a3b" opacity=".85"/><rect x="70" y="14" width="6" height="62" rx="3" fill="#0e2a3b"/><text x="98" y="42" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#111418">C · Pas i szranki</text><text x="98" y="62" font-size="10.5" fill="#6b7078">stopnie karate · dziedzictwo Bassai</text></g></svg>Trzy kierunki logo do decyzji właścicielki — poniżej jak je rozstrzygnąć.`,
+  jak:`A (monogram PH w złotym pierścieniu na granacie — obecny projekt nav/stopki) mówi „klinika i powaga”; B (łuk stopy w ruchu) mówi „człowiek w ruchu” i jest najbardziej uniwersalny dla wszystkich usług; C (pas/stopnie) mówi „karate i dziedzictwo” — najmocniejsze emocjonalnie, ale najwęższe. Test decyzji: logo ma działać na szyldzie przy ulicy, na koszulce turniejowej i na paragonie. Rekomendacja robocza: A jako znak podstawowy (marka centrum) + C jako ewentualny znak klubowy sekcji karate — dwa poziomy tożsamości zamiast jednego kompromisowego.`,
+  komu:`Decyzja: właścicielka (ewentualnie z głosowaniem rodziców zawodników na znak klubowy — zaangażowanie społeczności w wybór C buduje przynależność).`,
+  rynek:`Marki premium zdrowotne używają stonowanych monogramów (kliniczna wiarygodność); marki sportowe — symboli dynamiki. Centrum jest oboma światami naraz, dlatego model dwupoziomowy (znak centrum + znak klubu) stosują najlepsze akademie sportowe.`},
+];
+const FUT=[
+ {tag:`Opcja · decyzja właścicielki`,t:`Karty sportowe (Multisport, Medicover)`,d:`Treningi grupowe i karate formalnie kwalifikują się do programów partnerskich — ale stawki są niejawne i negocjowane indywidualnie. To opcja, nie rekomendacja.`,
+  jak:`Procedura: zapytanie do 2–3 operatorów o stawki dla małych ośrodków, porównanie z ceną regularną (przy karate ~130 zł/mc akceptowalna stawka partnerska to zwykle 60–80% ceny), decyzja per usługa. Uwaga praktyczna: karty sportowe przyciągają ruch, ale obniżają średnią cenę wejścia — dla gabinetu masażu (150–180 zł) zwykle się nie opłacają, dla zajęć grupowych bywają sensowne.`,
+  komu:`Decyzja właścicielki. Argumenty za: nowi klienci bez marketingu. Argumenty przeciw: niższa marża, biurokracja rozliczeń, utrata elastyczności cenowej przy tak małej skali.`,
+  rynek:`W aglomeracjach karty sportowe odpowiadają za dużą część wejść do obiektów; w małych miastach ich penetracja jest wyraźnie niższa. Wiele kameralnych ośrodków świadomie z nich rezygnuje — to legalna i spójna strategia pozycjonowania premium.`},
+ {tag:`Zespół`,t:`Szkolenia instruktorskie i staż Oliwii`,d:`Ścieżka „zawodnik → instruktor” działa w klubie od lat — warto ją sformalizować: staż instruktorski dla Oliwii i wewnętrzne doszkalanie kadry.`,
+  jak:`Krok 1: staż Oliwii (studentka fizjoterapii, mistrzyni Malta Cup) przy grupach dziecięcych — od asystowania do samodzielnego prowadzenia pasa z nadzorem Mai. Krok 2: budżet doszkalający dla kadry (kursy masażu sportowego, podologia diabetologiczna, kurs instruktorski karate). Krok 3: po roku — oferta stażowa dla zdolnych zawodników (płatna półetatowo): klub zaczyna sam produkować trenerów.`,
+  komu:`Oliwii (naturalny pierwszy kandydat), potem kolejnym wychowankom. Dla centrum: odciążenie Mai (dziś 5 ról naraz) bez skoku kosztów zatrudnienia — stażysta rośnie wraz z grupą.`,
+  rynek:`Kluby, które mają kadrę z własnych wychowanków, mają niższą rotację trenerów i lepszą kulturę sali. W małym mieście to przewaga nie do skopiowania: łódzcy trenerzy nie dojadą na stałe, a wychowanek już jest na miejscu.`},
+ {tag:`Produkt grupowy`,t:`Warsztaty automasażu na sali`,d:`Godzinne warsztaty z rollerem i piłką: klient uczy się rolować nogi, plecy i stopy — a gabinet sprzedaje akcesoria i buduje ruch do fizjoterapii.`,
+  jak:`Format: 60–90 minut w grupie 10–15 osób, sobotnie przedpołudnie, cena przystępna (49–69 zł) z rollers/piłką w cenie lub do kupienia na miejscu. Prowadzi Oliwia lub Hubert. Każde warsztaty kończą się ofertą: „jeśli coś konkretnie boli — umów się na zabieg/diagnozę”. To edukacja, która sprzedaż robi sama, bez presji.`,
+  komu:`Klientom gabinetu (edukacja między wizytami), biegaczom, osobom pracującym siedząco, klubom biegowym z okolicy. Też: firmom jako mini-warsztat pracowniczy (wejście do pakietu B2B „Zdrowe plecy dla firm”).`,
+  rynek:`Warsztaty ruchowe to najniższy próg wejścia w płatne wydarzenie zdrowotne — konkurencji w Poddębicach zero, a temat „bolące plecy po pracy” ma popyt nieprzerwany. Akcesoria (roller 89 zł, piłka 39 zł w sklepie) domykają marżę.`},
+ {tag:`Zasięg`,t:`Podolog mobilny — wizyty domowe`,d:`Zabieg podologiczny z dojazdem (+40 zł) dla seniorów i osób z ograniczoną mobilnością — gabinet, który sam przyjeżdża do pacjenta.`,
+  jak:`Dyzur domowy 1–2 dni w tygodniu (np. środa) na obszarze Poddębic i gmin ościennych. Dopłata za dojazd 40 zł (pozycja w sklepie). Naturalni partnerzy: GOPS-y, koła seniora, pielęgniarki środowiskowe — one wiedzą, komu stopy wymagają opieki, a rodzina nie dowiezie. Rokroczny przegląd „u siebie” dla pakietu DIABETYK.`,
+  komu:`Seniorom (grube, twarde paznokcie — wizyta u fryzjera nie wystarcza), osobom z cukrzycą, niepełnosprawnym. W powiecie seniorzy rozproszeni po wsiach to duży odsetek populacji — i grupa całkowicie nieobsłużona konkurencyjnie.`,
+  rynek:`Usługi medyczne z dojazdem rosną najszybciej w segmentach senioralnych (brak kierowców w domach, wsi odsuwające się od usług). Marża na dyżurze jest niższa, ale dzień mobilny zapełnia się szybciej niż dzień w gabinecie — i buduje reputację, którą pieniądze nie kupią.`},
+ {tag:`Ekspansja`,t:`Druga sala i treningi online`,d:`Dwa kierunki wzrostu po zalaniu obecnego potencjału: powiększenie stacjonarne (druga sala/druga lokalizacja w Uniejowie) i cyfrowe (trening online Bartka, biblioteka audio).`,
+  jak:`Warunek brzegowy: obecna sala zapełniona w godzinach 16–20 (dane z rezerwacji). Wtedy: (a) druga lokalizacja w Uniejowie — naturalny zaplecze klubu Bassai i Termów, albo (b) rozbudowa treningu online (Bartek już prowadzi klientów zdalnych — wystarczy marka centrum i wspólny lejek). Druga droga jest tańsza: zero kosztów lokalu, zasięg poza powiat.`,
+  komu:`Klientom z Uniejowa i okolic (dojazd 12 km bywa barierą przy 2 treningach tygodniowo) oraz osobom bez dostępu do dobrego trenera personalnego lokalnie (online).`,
+  rynek:`Trening online w Polsce przestał być pandemiczną ciekawostką — trzymają się programy z realnym nadzorem i lokalną marką. Centrum z physycznych zasobami (sala, gabinet) buduje wiarygodność online, której czysto internetowi trenerzy nie mają.`},
+];
+const ONLINE=[
+ {tag:`Sponsoring`,t:`Pakiety sponsorskie turnieju online`,d:`500 / 1000 / 2000 zł — logo na materiałach, stoisko, nagroda w imieniu sponsora. Sprzedaż zaczyna się od partnerów, którzy już są: Gmina Uniejów i Termy Uniejów.`,
+  jak:`Oferta sponsorska jako jedna strona PDF/WWW (ta strona WWW może pełnić tę rolę): co sponsor dostaje na każdym poziomie, ile rodzin widzi jego logo (136 zawodników × rodziny + lokalne media) i jak wpłacić. Druga warstwa: mikro-sponsoring lokalnych firm (500 zł) sprzedawany telefonicznie przez Maję — w małych miastach sponsoring dzieje się rozmową, nie mailem.`,
+  komu:`Firmom lokalnym (budowlane, spożywcze, agencje), gminom, instytucjom publicznym. Najlepiej sprzedaje się pakiet środkowy 1000 zł — „obecność bez gadżetów”.`,
+  rynek:`Sponsoring youth sport to najtańszy lokalny PR i jednocześnie CSR, który firmy chcą pokazywać. Turniej z 12-letnią historią i medalami MP ma pozycję przetargową — może wybierać sponsorów, zamiast ich szukać.`},
+ {tag:`Produkt`,t:`Obozy karate — lato jako przychód`,d:`Obóz sportowy sekcji: tydzień intensywnego treningu, integra i zajęcia uzupełniające. Dla rodziców — bezpieczne wakacje w ruchu; dla klubu — skok formy i marża.`,
+  jak:`Start od obozu weekendowego (2 noce, lokalizacja blisko — np. obiekt z dostępem do sali w Uniejowie lub nad Wartą), potem tydzień w wakacje. Kalkulacja: koszt noclegu + wyżywienia + kadra podzielone przez 15–25 miejsc = cena uczestnika (rynek obozów sportowych: 1,2–2 tys. zł/tydzień). Zapisy i zaliczki online — te same narzędzie co rezerwacje.`,
+  komu:`Zawodnikom sekcji i ich rodzeństwu, dzieciom klientów centrum (obóz ogólnorozwojowy jako wariant lżejszy), a docelowo dzieciom z okolicznych gmin, dla których obóz w Łodzi jest za drogi/za daleko.`,
+  rynek:`Popyt na lokalne obozy sportowe rośnie — rodzice coraz częściej wybierają krótsze dystanse i znajome twarze zamiast wielkich obozów nad morzem. Klub z kadrą medalową sprzedaje obóz bez reklamy: wystarczy lista chętnych z treningów.`},
+ {tag:`Rytuał`,t:`Egzaminy na stopnie jako wydarzenie`,d:`Egzamin na pas to w małym klubie największe święto roku — galowość, rodzina na trybunach, zdjęcia. Zorganizowane dobrze: pokrywa koszty, buduje dumę i wypełnia kalendarz mediów społecznościowych.`,
+  jak:`Dwa razy w roku, sala przygotowana (tablica stopni, fotostrefa z pasami), rodzice zaproszeni, każdy egzamin kończy się wręczeniem i zdjęciem rodzinnym. Opłata egzaminacyjna pokrywa komisję i materiały (wysokość do ustalenia). Zdjęcia z egzaminów — po zgodach rodziców — to najskuteczniejszy content profilu (realny, emocjonalny, lokalny).`,
+  komu:`Dzieciom i rodzicom (pierwszy pas to świadectwo roku pracy), klubowi (rytuał wzmacnia retencję — dzieci rzadziej odchodzą przed egzaminem), profilowi centrum (zapas treści na kwartał).`,
+  rynek:`Kluby, które ceremonializują postęp, mają niższą rotację — rytuały przejścia to jeden z najstarszych mechanizmów wiązania ludzi ze wspólnotą. Zero konkurencji w kategorii „wydarzenie” w Poddębicach: jedyna sala, jedne drzwi, cała rodzina.`},
+ {tag:`Sklep`,t:`Sklep klubowy online`,d:`Koszulki Bassai, ochraniacze, sprzęt do karate i akcesoria regeneracyjne — najpierw na miejscu, potem z wysyłką. Mała marża, wielka przynależność.`,
+  jak:`Faza 1 (już zaproponowana w sklepie strony): koszulka klubowa 79 zł, roller, piłka — sprzedaż na miejscu i przez telefon. Faza 2: simple sklep internetowy lub zlecenia przez Messenger (w małej skali to wystarczy) z odbiorem na treningu. Faza 3: gear turniejowy — edycja limitowana na każdą edycję Turnieju Małego Karateki (pamiątka + przychód).`,
+  komu:`Zawodnikom i rodzicom (koszulki, ochraniacze), klientom centrum (akcesoria do automasażu), kibicom i absolwentom (limitowane edycje turniejowe — emocjonalny zakup pamiątkowy).`,
+  rynek:`Sprzedaż odzieży klubowej to standard dobrych akademii — marża jest drobna, ale każda koszulka na mieście działa jak szyld. Limitowane edycje eventowe (100 sztuk na turniej) wyprzedają się z reguły w dniu wydarzenia.`},
+ {tag:`Cykl`,t:`Liga trzech turniejów — sezon zamiast dnia`,d:`Trzy małe turnieje w roku (jesień, zima, wiosna) z klasyfikacją generalną i pucharem na koniec sezonu. Z jednego wydarzenia robi się marka cyklu — z własnym kalendarzem, sponsoringiem i tradycją.`,
+  jak:`Rozszerzenie obecnego Turnieju Małego Karateki o dwa mniejsze eventy (50–80 zawodników, sala własna lub uniejowska, niższe koszty). Klasyfikacja punktowa przez sezon, puchar klasyfikacji na finale. Sponsorzy podpisują się pod całym cyklem (drożej, na dłużej), a rodziny planują kalendarz wokół ligi — trzy razy więcej powodów, by przyjechać do Poddębic.`,
+  komu:`Klubom z regionu (gotowy kalendarz startów dla ich zawodników — trenerzy kochają przewidywalność), rodzicom (sezon zamiast jednodniowego wyjazdu), sponsorom (trzy eventy w jednej umowie).`,
+  rynek:`Cykle ligowe w sportach walki młodzieżowych rosną — rodzice wybierają stabilne kalendarze. Organizator ligi automatycznie staje się centrum środowiska lokalnego: to pozycja, której nie kupi się reklamą, tylko systematycznością.`},
+];
+const NOWE=[
+ {tag:`Cennik · masaż`,t:`Karnety na masaż — klient na cały sezon`,d:`Pojedynczy masaż 150–180 zł sprzedaje się raz; karnet sprzedaje nawyk. „Plecy 4×45 min za 540 zł” (−10%) to pierwszy krok od klienta okazjonalnego do stałego.`,
+  jak:`Trzy pozycje startowe: plecy 4× 540 zł (−10%), całe ciało 4× 648 zł (−10%, propozycja) oraz karnet 8× na masaż dowolny −15% (do ustalenia kwoty). Karnet kupuje się raz i przychodzi o wyznaczonych terminach — kalendarz gabinetu zapełnia się przewidywalnie, a klient zapłaci z góry. W dalszej kolejności: pakiety mama+córka (kobido dla dwóch).`,
+  komu:`Stałym klientom gabinetu (osoby przychodzące co 4–6 tygodni „na plecy”) oraz osobom kupującym vouchery — karnet to voucher dla samego siebie. Rynek: masaż 60 min w Polsce kosztuje 110–220 zł, ceny centrum są w środku stawki, więc rabat 10% nie zjada marży, a wyróżnia.`,
+  rynek:`Benchmark masażu 60 min w Polsce: 110–220 zł (Łódź i okolice). Centrum mieści się w widełkach, a pakiet −10% jest najczęstszym mechanizmem lojalnościowym w branży — nie wymaga technologii, wystarczy ołówek i pieczątka.`},
+ {tag:`Cennik · podologia`,t:`Pakiety podologiczne SPORT i DIABETYK`,d:`Podologia to usługa powtarzalna z natury — idealna do abonamentu. Dwa programy: przegląd sezonowy sportowca i profilaktyka stopy diabetyka.`,
+  jak:`Program SPORT: 4 przeglądy roczne w cenie pakietowej (np. 4×150 zł = 540 zł zamiast 600 zł) plus priorytet przy interwencjach. Program DIABETYK: wizyta co 6–8 tygodni w stałej cenie z niższą stawką za serię — bo regularność w tej grupie jest sprawą zdrowotną, nie komfortem. Pakiety łączą się naturalnie z gabinetem masażu (stopa + obwód nóg).`,
+  komu:`Sportowcom i biegaczom z regionu (przegląd sezonowy) oraz osobom z cukrzycą i rodzinom seniorów — w powiecie poddębickim nie ma innej podologii, więc pakiet „zajmuje” pacjenta na rok. Benchmark: pojedynczy zabieg 150–290 zł w Polsce; centrum przy 150–180 zł ma przestrzeń na pakiet bez cen dumpingowych.`,
+  rynek:`Polska notuje jeden z najwyższych wskaźników cukrzycy w Europie, a opieka stop diabetyka w POZ jest dziurawa jak sito. Program abonamentowy daje rodzinie spokój („stopy mamy ogarnięte”), a gabinetowi przewidywalny przychód z jednego domu przez lata.`},
+ {tag:`Cennik · trening`,t:`Trening personalny: pakiety 4 / 8 / 12`,d:`Sesja pojedyncza zostaje dla wypróbowania; efekt wymaga serii. Pakiety 4/8/12 z progresywną zniżką to standard rynku — i odpowiedź na „a ile treningów potrzebuję?”.`,
+  jak:`Struktura: 1 sesja (cena bazowa, lokalny benchmark ok. 100 zł), pakiet 4 (−5%), pakiet 8 (−10%), pakiet 12 (−15%) — kwoty do ustalenia z trenerami. Pierwsza konsultacja bezpłatna pozostaje. Pakiety kupowane online (Fitssey) lub na miejscu; karnet danej osoby prowadzi jeden trener, żeby nie rozbijać relacji.`,
+  komu:`Początkującym (pakiet 4 jako „bezpieczny start”), osobom pracującym nad sylwetką (8–12) i pacjentom po terapii kierowanym przez Huberta lub fizjoterapeutów „W Dobrych Rękach”. Domyka pętlę terapia → trening w jednym budynku.`,
+  rynek:`Benchmark treningu personalnego w regionie: ok. 100 zł/sesję (Łódź 90–150 zł). Pakiety progresywne to standard — klient kupuje cel („3 miesiące”),  a nie pojedynczą godzinę, więc średnia wartość klienta rośnie bez pozyskiwania nowych.`},
+ {tag:`Cennik · grupy`,t:`Karnet OPEN na zajęcia grupowe`,d:`„Babska siła” i grupy ogólnorozwojowe sprzedają się najlepiej jako nielimitowany karnet miesięczny — klient płaci raz i wchodzi, gdy może.`,
+  jak:`Jedna pozycja cenowa na start: OPEN miesięczny (widełki regionu 160–250 zł — dokładna kwota do ustalenia). Wersja z drugą osobą z domu −20%. Karnet nie ma limitu wejść, ale grupa ma limit miejsc (rezerwacje online pilnują listy). Później: OPEN 3-miesięczny z dodatkowym rabatem na sezon jesień–zima.`,
+  komu:`Kobietom z „babskiej siły” (największa rozpoznawalność: rolki po 1–3,5 tys. wyświetleń) oraz osobom wracającym do formy, które nie chcą decydować „na ile wejść”. Karnet rodzinny łączy się z karate dziecka — patrz sygnatura „Mama trenuje, dziecko na karate”.`,
+  rynek:`Benchmark karnetów grupowych w mniejszych miastach: 160–250 zł/mc. Centrum nie musi być najtańsze — musi być najprostsze w decyzji: jedna cena, wszystkie zajęcia grupowe, zero kombinowania.`},
+ {tag:`Cennik · karate`,t:`Karate: składka, rodzinny, obóz, egzaminy, sklep`,d:`Sekcja to pięć strumieni przychodu, nie jeden: składka miesięczna, zniżka rodzinna, obóz letni, opłaty egzaminacyjne i sklep klubowy.`,
+  jak:`Składka: benchmark polskich sekcji to ok. 130 zł/mc (do ustalenia; w Poddębicach realnie 100–150). Drugie dziecko z domu −20–30%. Obóz letni: produkt marżowy płatny jednorazowo (widełki rynkowe obozów sportowych 1,2–2 tys. zł/tydzień). Egzaminy na stopnie: opłata pokrywająca koszty i materiały i komisję. Sklep klubowy: koszulki Bassai, ochraniacze, sprzęt — marża drobna, ale buduje przynależność. Symulacja przychodu przy 130 zł/mc — w sekcji „Treningi & Karate” i w karcie SYMULACJA powyżej.`,
+  komu:`Rodzicom zawodników (składka + rodzinny), rodzicom i klubowi (obóz), dzieciom (egzaminy jako święto postępu), wszystkim (sklep). Każdy strumień zasilany jest tą samą grupą ludzi — bez dodatkowego marketingu.`,
+  rynek:`Karate dziecięce w Polsce to 100–180 zł/mc w zależności od regionu; centrum z własnym turniejem, medalami MP i ścieżką „zawodnik → instruktor” ma pozycję do górnej granicy widełek. Wpisowe (np. 100 zł) pokrywa koszty przyjęcia i wpisuje rodzinę w cykl.`},
+ {tag:`Przychód · turniej`,t:`Turniej jako wydarzenie sponsorskie`,d:`Turniej Małego Karateki ma 12 lat tradycji i partnerów (Gmina Uniejów, Termy Uniejów). Pakiety sponsorskie 500–2000 zł zamieniają koszt organizacyjny w przychód.`,
+  jak:`Trzy poziomy pakietów: 500 zł (logo na materiałach, podziękowanie na FB), 1000 zł (logo + stoisko na sali + wzmianka podczas gali), 2000 zł (nagroda w imieniu sponsora + obecność w komunikacji całego cyklu). Naturalni sponsorzy: lokalne firmy budowlane i spożywcze, gminy, Termy. Druga noga: wpisowe gościnnych klubów przy starcie zawodników spoza centrum.`,
+  komu:`Firmom lokalnym, które szukają taniego, głośnego sponsoringu (136 zawodników + rodziny + lokalne media = realny zasięg), gminom i instytucjom kultury sportu. Sponsoring turnieju dzieci kupuje się łatwiej niż płatną reklamę — i lepiej wygląda.`,
+  rynek:`Lokalny sponsoring sportu młodzieżowego to najtańszy PR w małych miastach: 500–2000 zł za obecność przy setkach rodzin z powiatu i okolic. Turniej z 12-letnią tradycją i medalami MP w tle nie musi nikogo prosić — może wybierać.`},
+];
+const MKT=[
+ {tag:`Fundament`,t:`Naprawa profilu Facebook`,d:`Status „Wkrótka zamknięcie” na profilu centrum to dziś najgłośniejszy komunikat — i mówi dokładnie odwrotnie, niż trzeba. Naprawa to godzina pracy i zerowy koszt.`,
+  jak:`Trzy kroki: zmiana statusu na aktywne godziny, aktualne zdjęcia (gabinet, sala, zespół — lista plików w tym prototypie), żywy link do strony w bio. Potem rytm: 2–3 posty tygodniowo z jednego źródła materiałów (treningi, turnieje, zabiegi). Facebook pozostaje głównym kanałem lokalnym w małym mieście — profil działa jak strona www dla połowy klientów.`,
+  komu:`Każdemu, kto szuka centrum w wyszukiwarce FB lub dostaje link od znajomej — czyli większości potencjalnych klientów w Poddębicach. Dziś ta osoba widzi „zamykamy”.`,
+  rynek:`W małych miastach FB to nadal medium nr 1 dla usług lokalnych (grupy gminne, polecenia, wydarzenia). Profil z błędnym statusem to tyle samo co zamknięta witryna sklepu — i nikt nie wejdzie, dopóki szyld nie powie „otwarte”.`},
+ {tag:`Treści`,t:`Dwa stałe cykle treści`,d:`„Trener medyczny odpowiada” (Hubert, co tydzień jedno pytanie klientów o ból i ruch) i „Stopy pod lupą” (Maja, sezonowe porady podologiczne). Stałe formaty, rozpoznawalna szata, zero improwizacji.`,
+  jak:`Każdy cykl to 10 minut tygodniowo: jedno pytanie od klienta (z gabinetu, z komentarzy) i odpowiedź 5–8 zdań z jednym zdjęciem. Cykle naprzemiennie: tydzień Hubert, tydzień Maja. Po kwartale najlepsze odpowiedzi stają się ebookami („Ból pleców — 20 pytań”) i nagraniami audio — treść pracuje trzykrotnie.`,
+  komu:`Obserwującym profil (lokalne mamy, seniorzy, zawodnicy i ich rodziny) oraz algorytmom — regularność i komentarze pod konkretnymi pytaniami podnoszą zasięg organiczny bez jednej złotówki reklamy.`,
+  rynek:`Format Q&A eksperckich to najtańszy content, który buduje autorytet — odpowiada na realne pytania, które ludzie i tak zadają w gabinecie. Konkurencja w regionie nie prowadzi żadnych stałych cykli: pusta półka.`},
+ {tag:`Opinie`,t:`Opinie z kodem QR przy recepcji`,d:`Po każdym zabiegu klient dostaje kartkę z kodem QR do profilu Google — dwa kliki i opinia opublikowana. Recenzje to lokalny SEO, dowód społeczny i najtańsza reklama naraz.`,
+  jak:`Wydruk A6 przy recepcji i na stoliku w poczekalni: „Pomogło? Zostaw dwie linijki — pomoże innym”. Prośba ustna Mai na pożegnanie podnosi konwersję 3–5×. Cel pierwszego kwartału: 10 opinii Google (próg wiarygodności), potem 30. Te same opinie wracają na stronę centrum (sekcja Opinie) jako karty z atrybucją.`,
+  komu:`Klientom po zabiegu (najlepszy moment — ból zszedł, wdzięczność świeża) i przyszłym klientom, którzy porównują gabinety w mapach Google przed pierwszą wizytą.`,
+  rynek:`Lokalne SEO bez opinii nie działa: profile z 10+ opiniami i zdjęciami wygrywają mapy na frazy „masaż Poddębice”. W powiecie większość konkurencji ma 0–3 opinie — próg 10 to realna przewaga w krótkim czasie.`},
+ {tag:`Widoczność`,t:`Profil Google Business centrum`,d:`Zweryfikowany profil firmy: adres Sienkiewicza 48, godziny, telefon, kategorie (gabinet masażu, podolog, klub sportowy), zdjęcia. Pierwszy wynik dla każdego, kto szuka lokalnie.`,
+  jak:`Zweryfikować profil (karta pocztowa lub telefon), wypełnić wszystkie pola, wgrać 10+ zdjęć (gabinet, sala, turniej, zespół), ustawić kategorie i obszar działania. Podpiąć stronę www jako źródło cen i umówić publikację pierwszych opinii z QR. Raz ustawiony profil pracuje latami — i jest darmowy.`,
+  komu:`Klientom szukającym „masaż/podolog/trening + Poddębice” w Google i Mapach — czyli każdemu, kto nie zna centrum z polecenia. To też kanał telefonu: kliknięcie „zadzwoń” z profilu.`,
+  rynek:`Większość decyzji o usłudze lokalnej zaczyna się od Google — a nieposiadanie profilu oznacza niewidzialność w tym miejscu. Konkurencja w powiecie ma słabe profile: kompletny profil z opiniami wygrywa bez budżetu reklamowego.`},
+ {tag:`Kreacja`,t:`Realne zdjęcia i rolki z sali`,d:`Rolki z „babskiej siły” mają 1–3,5 tys. wyświetleń — to gotowy, działający format. Podmiana stockowych zdjęć realnymi (turniej, medale, gabinet) domyka autentyczność marki.`,
+  jak:`Zasada nagrań: telefon pionowo, 15–30 sekund, jedno ćwiczenie lub jedna emocja (medal, ukłon, bańki na plecach). Materiał zbiera się przy okazji normalnych zajęć (zgody wizerunkowe!), montaż prosty. Rolki wrzucane na FB i ewentualnie IG centrum; najlepsze wklejane na stronę (Wydarzenia). Raz w miesiącu krótki materiał „miesiąc w centrum”.`,
+  komu:`Kobietom zainteresowanym „babską siłą” (grupa najlepiej reagująca), rodzicom wybierającym klub (chcą zobaczyć salę i trenera przed zapisem), klientom gabinetu (efekt zabiegu buduje zaufanie do cen).`,
+  rynek:`Krótkie wideo z realnych zajęć bije kreacje reklamowe w zasięgach organicznych — algorytmy promują autentyczny ruch. W regionie nikt nie prowadzi systematycznych rolek z sali: pierwszeństwo należy do centrum.`},
+ {tag:`Retencja`,t:`Rezerwacje online i przypomnienia SMS`,d:`Każdy klient zarezerwowany online dostaje przypomnienie SMS — nieobecności spadają, a telefon Mai przestaje być jedynym kanałem umawiania. Marketing, który pracuje na klientach, którzy już są.`,
+  jak:`Wdrożenie wg planu (krok 4): Fitssey na start, zero kosztów do 50 rezerwacji. SMS-y automatyczne dzień wcześniej; lista rezerwowa wypełnia zwolnione miejsca. Po miesiącu: raport frekwencji pokazuje, które godziny pękają — to dane do decyzji o pasmach i cenach, których dziś nikt nie ma.`,
+  komu:`Klientom (wygoda: umawianie wieczorem, bez telefonu w godzinach pracy) i Majie (odciążenie od logistyki — więcej czasu na zabiegi). Pośrednio: całemu zespołowi, bo grafik przestaje żyć w głowie jednej osoby.`,
+  rynek:`Nieobecności i „zapomniałem” to cichy koszt każdego gabinetu — przypomnienia SMS obniżają je o połowę. System za 0 zł, który zwraca choć jedną rezerwację miesięcznie, ma nieskończony ROI.`},
+];
+
+const NIEWIEMY=[
+ {tag:`Do ustalenia`,t:`Ceny treningów, grup i karate`,d:`Trening personalny, „babska siła”, karnet OPEN i składka karate nie mają dziś opublikowanych cen — na stronie podajemy wyłącznie benchmarki regionalne.`,
+  jak:`Do decyzji właścicielki: PT (benchmark ok. 100 zł/sesję), grupy (160–250 zł/mc), karate (ok. 130 zł/mc). Strona jest gotowa wpisać kwoty w trzech miejscach (cennik, karty usług, karta składki) bez zmiany kodu.`,
+  komu:`Wpływ: pozycja cenowa wobec konkurencji z Łodzi i regionu oraz rachunek symulacji sekcji karate.`,
+  rynek:`Publikacja cen podnosi konwersję strony (klient nie dzwoni, by zapytać „ile”) — ale wymaga decyzji strategicznej o pozycjonowaniu.`},
+ {tag:`Do potwierdzenia`,t:`Stopień 2 Dan i rola Mateusza`,d:`2 Dan Mateusza Gralki pochodzi z przekazu właścicielki — nie znaleźliśmy potwierdzenia w publicznych źródłach klubowych. Podajemy go z zastrzeżeniem.`,
+  jak:`Weryfikacja u władz UKK „Bassai” lub w dokumentach komisji egzaminacyjnej. Po potwierdzeniu — usunięcie zastrzeżenia z karty zespołu; w razie rozbieżności — korekta stopnia.`,
+  komu:`Wpływ: wiarygodność karty trenera karate i komunikacji „szkoły mistrzów”.`,
+  rynek:`Klienci klubów sportowych weryfikują stopnie trenerów — publiczna spójność chroni markę centrum.`},
+ {tag:`Do ustalenia`,t:`Model współpracy z „W Dobrych Rękach”`,d:`Grafik, podział przychodów i zakres współpracy siedzibowej z fizjoterapeutami — nieznane; wpływają na wybór systemu rezerwacji (jeden kalendarz czy dwa).`,
+  jak:`Rozmowa Maji z Kamilem i Marcinem: wspólne godziny, kto przyjmuje rezerwacje, jak rozliczane są wizyty. Strona i system czekają na decyzję — technicznie obie opcje (wspólny kalendarz / osobne profile) są gotowe.`,
+  komu:`Wpływ: UX klienta (jedno miejsce umawiania) i operacyjna prostota recepcji.`,
+  rynek:`Gabinety partnerskie z jednym punktem rezerwacji mają wyższą retencję pacjentów niż konkurencyjne podwójne kanały.`},
+ {tag:`Niejawne`,t:`Stawki kart sportowych`,d:`Treningi grupowe i karate kwalifikują się do programów typu Multisport — ale stawki partnerskie są niepubliczne i negocjowane indywidualnie per operator.`,
+  jak:`Jeśli właścicielka rozważy karty: zapytania do 2–3 operatorów, porównanie stawek z ceną regularną, decyzja per usługa (grupowe: może; masaż: raczej nie). Do tego czasu strona uczciwie komunikuje „płatność gotówką i kartą”.`,
+  komu:`Wpływ: potencjalny nowy ruch na zajęcia grupowe kosztem marży — decyzja strategiczna, nie techniczna.`,
+  rynek:`W małych miastach penetracja kart jest niższa niż w aglomeracjach — wiele ośrodków świadomie z nich rezygnuje bez utraty ruchu.`},
+];
+const AUDIO=[
+ {tag:`Technologia`,t:`Twój własny głos — z kilkuminutowej próbki`,d:`Audiobooki bez tygodni w studiu: krótka próbka głosu autorki lub autora wystarcza, by każdy tytuł z biblioteki przemówił jej lub jego głosem. Nagrania z syntezą głosu zawsze oznaczamy — zaufanie ponad wszystko.`,
+  dl:`produkcja skrócona z tygodni do dni`,cena:`technologia, nie produkt`,lektor:`autor/ka · za zgodą, z oznaczeniem syntezy`},
+ {tag:`Audiobook · STOPY`,t:`Zdrowe stopy od A do Z — wersja audio`,d:`Pełny przewodnik o stopach czytany przez Maję Ostrowską-Gralkę — do słuchania w samochodzie i na spacerze.`,
+  dl:`4 godz. 40 min`,cena:`49 zł`,lektor:`Maja Ostrowska-Gralka`},
+ {tag:`Audiobook · PLECY-RUCH`,t:`Ból pleców w 6 tygodni — wersja audio`,d:`Program Huberta Kowalczyka w formie audio: tygodniowe rozdziały i wskazówki do odsłuchu między sesjami treningowymi.`,
+  dl:`5 godz. 20 min`,cena:`49 zł`,lektor:`Hubert Kowalczyk`},
+ {tag:`Audiobook · REGENERACJA`,t:`Regeneracja — 168 godzin tygodnia (audio)`,d:`Sen, oddech i plan regeneracyjny — dwoje autorów, jedna narracja o odpoczynku, który buduje formę.`,
+  dl:`3 godz. 45 min`,cena:`39 zł`,lektor:`Hubert Kowalczyk · Maja Ostrowska-Gralka`},
+ {tag:`Praktyki audio`,t:`Automasaż z komendami — sesje prowadzone`,d:`Rozprowadzenie nóg, pleców i stóp prowadzone słowem: słuchasz i rolowanie robi się samo. Sześć sesji tematycznych.`,
+  dl:`2 godz. 05 min · 6 sesji`,cena:`39 zł`,lektor:`Oliwia Staniak`},
+ {tag:`Praktyki audio`,t:`Wieczorne wyciszenie — sesje na sen`,d:`Prowadzone odprężenie: oddech, ciało, cisza. Trzy sesje po 30 minut na koniec dnia — naturalny koniec dnia bez ekranu.`,
+  dl:`1 godz. 30 min · 3 sesje`,cena:`39 zł`,lektor:`Oliwia Staniak`},
+ {tag:`Audiobook · KARATE-RODZIC`,t:`Karate dla rodzica — wersja audio`,d:`Poradnik Mai dla rodziców zawodników: rola trybun, pasy i egzaminy, pierwszy turniej — w drodze na trening.`,
+  dl:`2 godz. 30 min`,cena:`39 zł`,lektor:`Maja Ostrowska-Gralka`},
+ {tag:`Audiobook · KARATE-RODZIC`,t:`Pierwszy turniej — audio na drogę`,d:`Krótki przewodnik rodzica na dzień zawodów: checklista, strefa kibica i rozmowy po medalu. Słuchasz po drodze na turniej.`,
+  dl:`1 godz. 40 min`,cena:`29 zł`,lektor:`Maja Ostrowska-Gralka`},
+ {tag:`Audiobook · KOBIETY`,t:`Babska siła — wersja audio`,d:`Trening kobiet w każdym wieku w formie audio: rozdziały o sile, obwodach i motywacji plus dwie sesje rozgrzewkowe do odsłuchu.`,
+  dl:`3 godz. 10 min`,cena:`39 zł`,lektor:`Maja Ostrowska-Gralka`},
+];
+
+/* Ceny rynkowe ebooków PL (poradniki PDF 30-90 zł; lead-magnet gratis) */
+const EPRICE=[`39 zł`,`29 zł`,`39 zł`,`39 zł`,`49 zł`,`29 zł`,`49 zł`,`39 zł`,`39 zł`,`39 zł`,`29 zł`,`39 zł`,`39 zł`,`29 zł`,`29 zł`,`39 zł`,`29 zł`,`39 zł`,`49 zł`,`29 zł`];
+
+/* RENDER */
+const tabsEl=document.getElementById('tabs');
+NAV.forEach(([id,label])=>{const b=document.createElement('button');b.textContent=label;b.dataset.id=id;b.onclick=()=>tab(id);tabsEl.appendChild(b);});
+function tab(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.id===id));
+  document.getElementById('tabs').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(revealScan,60);
+}
+document.getElementById('gallery').innerHTML=GALLERY.map(g=>`<img src="zdjecia/${g[0]}" alt="${g[1]}" title="${g[1]}" loading="lazy">`).join('');
+document.getElementById('classes').innerHTML=CLASSES.map((c,i)=>`<div class="card hoverable" onclick="openClass(${i})"><div class="tag">${c.lvl}</div><h3>${c.t}</h3><p>${c.d}</p><p style="margin-top:10px;font-weight:600;color:var(--sage-d);font-size:.85rem">Czytaj więcej →</p></div>`).join('');
+document.getElementById('team').innerHTML=TEAM.map((p,i)=>`<div class="team-card" onclick="openPerson(${i})"><div class="ph"><img src="zdjecia/team_placeholder.jpg" alt="${p.name}" loading="lazy"></div><div class="b"><h3>${p.name}</h3><div class="role">${p.role}</div><div class="intro">${p.intro}</div></div></div>`).join('');
+document.getElementById('wiedzaCards').innerHTML=WIEDZA.map(([tag,t,d],i)=>`<div class="card hoverable wcard" style="animation-delay:${i*0.12}s" onclick="openWiedza(${i})"><div class="tag">${tag}</div><h3>${t}</h3><p>${d}</p><p style="margin-top:10px;font-weight:600;color:var(--sage-d);font-size:.85rem">Czytaj więcej →</p></div>`).join('');
+function openWiedza(i){const [tag,t,d,full]=WIEDZA[i];
+  mo.innerHTML=`<button class="close" onclick="closeModal()">✕</button><div class="head" style="background:var(--sage-tint)"><div><div class="tag">${tag}</div><h2>${t}</h2></div></div><div class="body">${full}<button class="btn btn-primary" style="margin-top:8px" onclick="tab('zajecia');closeModal()">Zobacz zajęcia z tym związane</button></div>`;
+  bg.classList.add('open');document.body.style.overflow='hidden';}
+document.getElementById('sigs').innerHTML=SIGS.map(([c,who,t,d],i)=>`<div class="sig hoverable" onclick="openIdea('sig',${i})"><div class="code">${c}</div><div class="who">${who}</div><h3>${t}</h3><p>${d}</p><p style="margin-top:10px;font-weight:600;color:var(--sage-d);font-size:.85rem">Jak to sprzedać? →</p></div>`).join('');
+document.getElementById('duszaGrid').innerHTML=DUSZA.map((x,i)=>`<div class="card hoverable" onclick="openIdea('dusza',${i})"><div class="tag clay">${x.tag}</div><h3>${x.t}</h3><p>${x.d}</p><p style="margin-top:10px;font-weight:600;color:var(--clay);font-size:.85rem">Jak to sprzedać? →</p></div>`).join('');
+document.getElementById('futGrid').innerHTML=FUT.map((x,i)=>`<div class="fut hoverable" onclick="openIdea('fut',${i})"><div class="tag">${x.tag}</div><h3>${x.t}</h3><p>${x.d}</p><p style="margin-top:10px;font-weight:600;color:var(--sage-d);font-size:.85rem">Jak to sprzedać? →</p></div>`).join('');
+document.getElementById('onlineGrid').innerHTML=ONLINE.map((x,i)=>`<div class="card hoverable" onclick="openIdea('online',${i})"><div class="tag gold">${x.tag}</div><h3>${x.t}</h3><p>${x.d}</p><p style="margin-top:10px;font-weight:600;color:var(--gold);font-size:.85rem">Jak to sprzedać? →</p></div>`).join('');
+document.getElementById('noweGrid').innerHTML=NOWE.map((x,i)=>`<div class="card hoverable wcard" style="animation-delay:${i*0.06}s;border-top:3px solid var(--gold)" onclick="openIdea('nowe',${i})"><div class="tag gold">${x.tag}</div><h3>${x.t}</h3><p>${x.d}</p><p style="margin-top:10px;font-weight:600;color:var(--gold);font-size:.85rem">Jak to zrobić? →</p></div>`).join('');
+document.getElementById('kursMod').innerHTML=KURSMOD.map((k,i)=>`<div class="card hoverable" onclick="openKurs(${i})"><div class="tag">${k.tag}</div><h3>${k.t}</h3><p>${k.d}</p><p style="margin-top:10px;font-weight:600;color:var(--sage-d);font-size:.85rem">Szczegóły filaru →</p></div>`).join('');
+document.getElementById('kursBloki').innerHTML=KURSBLOK.map(([t,d],i)=>`<div class="card"><div class="tag">${String(i+1).padStart(2,'0')}</div><h3>${t}</h3><p>${d}</p></div>`).join('');
+function openKurs(i){const k=KURSMOD[i];
+  mo.innerHTML=`<button class="close" onclick="closeModal()">✕</button><div class="head" style="background:var(--sage-tint)"><div><div class="tag">${k.tag}</div><h2>${k.t}</h2></div></div><div class="body">${k.full}<h4>Dla kogo?</h4><p style="color:var(--muted)">${k.dla}</p><h4>Co daje</h4><ul>${k.ben.map(b=>`<li>${b}</li>`).join('')}</ul><button class="btn btn-primary" onclick="tab('kontakt');closeModal()">Umów trening próbny</button></div>`;
+  bg.classList.add('open');document.body.style.overflow='hidden';}
+document.getElementById('opinie').innerHTML=OPINIE.map(o=>`<div class="card" style="display:flex;flex-direction:column"><div style="font-family:var(--serif);font-size:2rem;color:var(--gold);line-height:1">„</div><p style="flex:1;font-size:1.02rem;color:var(--ink)">${o[1]}</p><div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--line)"><b>${o[0]}</b><div style="font-size:.8rem;color:var(--muted);margin-top:2px">${o[2]}</div></div></div>`).join('');
+document.getElementById('faq').innerHTML=FAQ.map(([q,a],i)=>`<div class="faq-item"><button class="faq-q" onclick="faqToggle(${i})">${q}<span id="fi${i}">+</span></button><div class="faq-a" id="fa${i}">${a}</div></div>`).join('');
+function faqToggle(i){const a=document.getElementById('fa'+i),s=document.getElementById('fi'+i);const open=a.classList.toggle('open');s.textContent=open?'–':'+';}
+document.getElementById('mktGrid').innerHTML=MKT.map((x,i)=>`<div class="fut hoverable wcard" style="animation-delay:${i*0.1}s" onclick="openIdea('mkt',${i})"><div class="tag">⚙️ ${x.tag}</div><h3>${x.t}</h3><p>${x.d}</p><p style="margin-top:10px;font-weight:600;color:var(--sage-d);font-size:.85rem">Jak to działa? →</p></div>`).join('');
+document.getElementById('nwmGrid').innerHTML=NIEWIEMY.map((x,i)=>`<div class="fut hoverable" onclick="openIdea('nwm',${i})"><div class="tag">? ${x.tag}</div><h3>${x.t}</h3><p>${x.d}</p><p style="margin-top:10px;font-weight:600;color:var(--muted);font-size:.85rem">Co i kiedy →</p></div>`).join('');
+document.getElementById('audio').innerHTML=AUDIO.map(a=>`<div class="ebook" style="border-left-color:var(--clay)"><div class="num">🎧 ${a.tag} · <span style="color:var(--sage-d)">${a.cena}</span></div><h3>${a.t}</h3><div class="aut">🎙 ${a.lektor} · ${a.dl}</div><p style="font-size:.86rem;color:var(--muted)">${a.d}</p><div class="peek" style="color:var(--clay)">Chcę to słuchać →</div></div>`).join('');
+document.getElementById('steps').innerHTML=STEPS.map(([n,t,d])=>`<div class="step"><div class="n">${n}</div><div><h3>${t}</h3><p>${d}</p></div></div>`).join('');
+document.getElementById('rezGrid').innerHTML=REZ.map(r=>`<div class="card" style="border-top:4px solid var(--sage);display:flex;flex-direction:column"><div class="tag">${r.tag}</div><h3 style="font-size:1.4rem">${r.t}</h3><p style="margin:10px 0 14px;color:var(--ink)">${r.cena}</p><div style="font-size:.88rem"><b style="color:var(--sage-d)">Za:</b><ul style="margin:6px 0 12px 18px;color:var(--muted)">${r.plus.map(p=>`<li style="margin-bottom:4px">${p}</li>`).join('')}</ul><b style="color:var(--clay)">Przeciw / niewiadome:</b><ul style="margin:6px 0 12px 18px;color:var(--muted)">${r.minus.map(p=>`<li style="margin-bottom:4px">${p}</li>`).join('')}</ul></div><p style="font-size:.9rem;margin-top:auto;padding-top:10px;border-top:1px solid var(--line)">${r.dla}</p></div>`).join('');
+document.getElementById('rezRek').innerHTML=REZREK;
+
+/* Kalkulacja — ceny z kalkulatora Fitssey (netto), brutto = +23% VAT */
+const FIT=[[`10 dzieci`,1300],[`20 dzieci`,2600],[`30 dzieci · scenariusz bazowy`,3900],[`40 dzieci`,5200],[`50 dzieci`,6500],[`60 dzieci · pełna sala`,7800]];
+const zl=n=>n.toFixed(2).replace('.',',')+' zł';
+document.getElementById('fitTbl').innerHTML=FIT.map(([r,n])=>{
+  const hi=r.includes(`bazowy`);
+  return `<tr style="border-bottom:1px solid var(--line);${hi?'background:var(--sage-tint);font-weight:700':''}">
+    <td style="padding:8px 6px">${r}</td>
+    <td style="text-align:right;padding:8px 6px">${n.toLocaleString('pl-PL')} zł</td>
+    <td style="text-align:right;padding:8px 6px">${(n*10).toLocaleString('pl-PL')} zł</td></tr>`;}).join('');
+
+const ROI=[
+ [`Wpisowe na start`,`Jednorazowe wpisowe 100 zł × liczba przyjętych dzieci. Jubileuszowa X edycja Turnieju Małego Karateki zgromadziła <b>136 zawodników</b> — przy takiej obsadzie miejsc w sekcji wpłaty startowe to <b>13 600 zł</b> jednorazowo na początek sezonu.`],
+ [`Pakiet sponsora turnieju`,`500–2000 zł od partnera. Dwóch stałych (Gmina Uniejów, Termy Uniejów) plus sponsorzy lokalni dają realnie <b>1–4 tys. zł na edycję</b> — pokrywa medale, salę i puchary.`],
+ [`Scenariusz bazowy`,`30 dzieci × 130 zł = <b>3 900 zł/mc</b> → <b>39 000 zł na sezon</b> (10 mies.). To jedna sekcja wiekowa — pełne cztery grupy przy 60 dzieciach to symulacja 78 000 zł/sezon.`],
+ [`Koszty — czego nie znamy`,`Wynagrodzenie trenera, koszt sali i ubezpieczenia zawodników ustala właścicielka — <b>bez tych trzech liczb marża pozostaje nieznana</b>. Celowo nie zgadujemy.`],
+];
+document.getElementById('roi').innerHTML=ROI.map(([t,d])=>`<div style="padding:12px 0;border-bottom:1px solid var(--line)"><div style="font-weight:700;color:var(--sage-d);font-size:.95rem;margin-bottom:4px">${t}</div><p style="font-size:.92rem;color:var(--muted)">${d}</p></div>`).join('')+`<p style="margin-top:14px;font-weight:600">Próg opłacalności: <b style="color:var(--gold)">trzy odzyskane wejściówki miesięcznie.</b> Wszystko powyżej to czysty zysk.</p>`;
+document.getElementById('ebooks').innerHTML=EBOOKS.map((e,i)=>`<div class="ebook" onclick="openEbook(${i})"><div class="num">EBOOK ${String(i+1).padStart(2,'0')} · <span style="color:var(--sage-d)">${EPRICE[i]}</span></div><h3>${e[0]}</h3><div class="aut">✍️ ${e[1]}</div><div class="peek">Zobacz spis treści →</div></div>`).join('');
+const SHOPCATS=[...new Set(SHOP.map(p=>p[2]))];let shopCat='Wszystko';
+function renderShop(){document.getElementById('shopFilters').innerHTML=['Wszystko',...SHOPCATS].map(c=>`<button class="chip${c===shopCat?' on':''}" onclick="shopCat='${c}';renderShop()">${c}</button>`).join('');
+document.getElementById('shop').innerHTML=SHOP.filter(p=>shopCat==='Wszystko'||p[2]===shopCat).map(([img,n,cat,d,pr])=>`<div class="prod"><div class="img" style="padding:0"><img src="zdjecia/produkty/${img}" alt="${n}" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div><div class="b"><div class="tag">${cat}</div><h3>${n}</h3><div class="desc">${d}</div><div class="row"><span class="price">${pr}</span><button onclick="tab('kontakt')">Zapytaj</button></div></div></div>`).join('');}
+renderShop();
+
+const bg=document.getElementById('modalBg'),mo=document.getElementById('modal');
+function openPerson(i){const p=TEAM[i];
+  mo.innerHTML=`<button class="close" onclick="closeModal()">✕</button><div class="head"><img src="zdjecia/team_placeholder.jpg" alt="${p.name}"><div><h2>${p.name}</h2><div class="role">${p.role}</div><div class="chips">${p.chips.map(c=>`<span class="chip">${c}</span>`).join('')}</div></div></div><div class="body">${p.bio}<h4>Czego mogłeś nie wiedzieć</h4><ul>${p.extra.map(x=>`<li>${x}</li>`).join('')}</ul>${p.links.length?`<div class="links">${p.links.map(l=>`<a href="${l[1]}" target="_blank">↗ ${l[0]}</a>`).join('')}</div>`:''}</div>`;
+  bg.classList.add('open');document.body.style.overflow='hidden';}
+function openEbook(i){const e=EBOOKS[i];
+  mo.innerHTML=`<button class="close" onclick="closeModal()">✕</button><div class="head" style="background:var(--sand)"><div><div class="tag gold">Ebook ${String(i+1).padStart(2,'0')} · spis treści</div><h2>${e[0]}</h2><div class="role" style="color:var(--gold)">✍️ ${e[1]} · dla: ${e[2]}</div></div></div><div class="body"><ol style="margin-left:18px;line-height:2">${e[3].map(c=>`<li>${c}</li>`).join('')}</ol><p style="margin-top:14px;color:var(--muted);font-size:.9rem">Pełna treść w przygotowaniu — to proponowany spis treści do rozpisania.</p><button class="btn btn-gold" onclick="tab('kontakt');closeModal()">Chcę ten ebook — ${EPRICE[i]}</button></div>`;
+  bg.classList.add('open');document.body.style.overflow='hidden';}
+function openIdea(type,i){
+  let x,eyebrow,accent;
+  if(type==='sig'){const s=SIGS[i];x={tag:s[0]+' · '+s[1],t:s[2],d:s[3],...s[4]};eyebrow='Produkt sygnaturowy';accent='var(--sage-tint)';}
+  else if(type==='dusza'){x=DUSZA[i];eyebrow='Produkt z duszą · '+x.tag;accent='var(--rose)';}
+  else if(type==='fut'){x=FUT[i];eyebrow='Krok w przyszłość · '+x.tag;accent='var(--lav)';}
+  else if(type==='mkt'){x=MKT[i];eyebrow='⚙️ Marketing automatyczny · '+x.tag;accent='var(--lav)';}
+  else if(type==='nowe'){x=NOWE[i];eyebrow='💡 Nowy dział · '+x.tag;accent='var(--sand)';}
+  else if(type==='nwm'){x=NIEWIEMY[i];eyebrow='Do ustalenia · '+x.tag;accent='var(--lav)';}
+  else{x=ONLINE[i];eyebrow='Sprzedaż online · '+x.tag;accent='var(--sand)';}
+  mo.innerHTML=`<button class="close" onclick="closeModal()">✕</button>
+  <div class="head" style="background:${accent}"><div><div class="tag">${eyebrow}</div><h2>${x.t}</h2></div></div>
+  <div class="body"><p style="color:var(--muted)">${x.d}</p>
+  <h4>🌱 Jak to uruchomić</h4><p>${x.jak}</p>
+  <h4>🤝 Komu to sprzedać</h4><p>${x.komu}</p>
+  <h4>📈 Zapotrzebowanie rynku dziś</h4><p>${x.rynek}</p>
+  <button class="btn btn-primary" onclick="tab('kontakt');closeModal()">Porozmawiajmy o tym pomyśle</button></div>`;
+  bg.classList.add('open');document.body.style.overflow='hidden';}
+function openClass(i){const c=CLASSES[i];
+  mo.innerHTML=`<button class="close" onclick="closeModal()">✕</button><div class="head" style="background:var(--sage-tint)"><div><div class="tag">${c.lvl}</div><h2>${c.t}</h2></div></div><div class="body">${c.full}<h4>Dla kogo?</h4><p style="color:var(--muted)">${c.dla}</p><h4>Co Ci to daje</h4><ul>${c.ben.map(b=>`<li>${b}</li>`).join('')}</ul><button class="btn btn-primary" onclick="tab('kontakt');closeModal()">Zapisz się — zapytaj o termin</button></div>`;
+  bg.classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){bg.classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* REVEAL on scroll */
+const io=new IntersectionObserver((es)=>{es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+function revealScan(){document.querySelectorAll('.panel.active .reveal:not(.in)').forEach(el=>io.observe(el));}
+revealScan();
+
+/* SCROLL PROGRESS + NAV SHRINK */
+const prog=document.getElementById('progress'),navEl=document.querySelector('nav');
+addEventListener('scroll',()=>{const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';navEl.classList.toggle('shrunk',h.scrollTop>80);},{passive:true});
+
+/* COUNT-UP statystyk */
+const ioN=new IntersectionObserver(es=>{es.forEach(x=>{if(!x.isIntersecting)return;ioN.unobserve(x.target);const el=x.target,end=+el.dataset.n,t0=performance.now();
+  (function f(t){const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(t0);});},{threshold:.5});
+document.querySelectorAll('.stat .n').forEach(el=>ioN.observe(el));
+
+/* LIGHTBOX galerii */
+const lb=document.createElement('div');lb.className='lb';lb.innerHTML='<img>';document.body.appendChild(lb);
+lb.onclick=()=>lb.classList.remove('open');
+function lbOpen(src){lb.querySelector('img').src=src;lb.classList.add('open');}
+document.getElementById('gallery').addEventListener('click',e=>{if(e.target.tagName==='IMG')lbOpen(e.target.src);});
+</script>
+</body>
+</html>
